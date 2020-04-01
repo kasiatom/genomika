@@ -1,6 +1,6 @@
 ## Ensembl  
 
-#### Zadanie1 
+### Zadanie1 
 Proszę otworzyć stronę [Ensembl](https://www.ensembl.org/index.html) i rozejrzeć się. Informacje o jakich gatunkach są tutaj zawarte? 
 Jaki typ danych można tu znaleźć? 
   
@@ -9,7 +9,7 @@ Proszę zauważyć, że dane dotyczące pozostałych gatunków można uzyskać k
  [Ensembl Fungi](http://fungi.ensembl.org/index.html), [Ensembl Plants](http://plants.ensembl.org/index.html) oraz 
  [Ensembl Metazoa](http://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
 
-#### Zadanie2 
+### Zadanie2 
 ##### Wyszukiwanie informacji dla jednego genu (na przykładzie *BRCA1*)
 Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:  
  1. Położenie genu (chromosom, początek, koniec, nić)  
@@ -30,7 +30,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
 W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](), [informacje na poziomie transkryptu]()  
   
   
- #### Zadanie3
+ ### Zadanie3
 Ze strony Ensembl można także wygodnie pozyskać informacje dotyczące większej ilości genów/białek/regionów na raz, z 
 wykorzystaniem narzędzia **BioMart**. W tym ćwiczeniu użyją Państwo tego narzędzia, aby sprawdzić, czy w czasie niezależnej 
 ewolucji białek ludzkich i mysich dochodziło do tasowania domen. Innaczej mówiąc, porównają Państwo skład domen wchodzących w skład 
@@ -43,18 +43,18 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
   3. Połączenie i odfiltrowanie powyższych list, tak aby wybrać identyfikatory genów mających odmienny skałd domen oraz nazwy tych, 
   występujących tylko u jednego ortolaga domen. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
   a jego mysi odpowiednik A i B, to skład domen się nie zmienił. Interesować nas będą przypadki, 
-  gdy A, B, C vs A, B oraz A, B vs A, B, C.   
+   A, B, C vs A, B oraz A, B vs A, B, C.   
   4. Wyliczenie prostych statystyk: jak często pojawiły się unikatowe domeny na gałęzi prowądzacej od wspólnego przodka 
-  obu gatunków do człowieka, a jak często na gałęzi prowadzącej do myszy. Czy typ homologii ("one to one" vs "one to many"), 
+  obu gatunków do człowieka, a jak często na gałęzi prowadzącej mysiej. Czy typ homologii ("one to one" vs "one to many"), 
   a tym samym duplikacje genów, wpynęły na częstość zmian składu domen? 
 
-##### Jak korzystać z narzędzia BioMart na przykładzie pierwszego podpunktu (lista ortologów)
+##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listtę ortologów
  * Proszę klijnąć w zakładkę **BioMart** (na górze strony) 
  * Proszę następnie wybrać bazę danych **Ensembl Genes 99** (99 to wersja bazy danych, baza jest uaktualniana dość często -
-  zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych można wybrać  
+  zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione    
  * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p13**). Co oznacza skrót GRCh38.p13? 
  * Po lewej stronie pojawił się teraz pasek z filtrami oraz atrybutami do wyboru.
-   * Ustawienie filtrów (tutaj zawężamy zakres danych, chcemy wybrać tylko geny kodujące białko)  
+   * Ustawienie filtrów (tutaj zawężamy zakres danych, w naszym przykładzie chcemy wybrać tylko geny kodujące białko)  
     `Filters => GENE => Gene type => protein_coding`   
    * Ustawienie atrybutów (tutaj można ustalić, jakie informacje chcemy uzyskać, w naszym przykładzie to ID genu ludzkiego, 
    ID jego mysiego ortologa oraz informacje o rodzaju homologii)  
@@ -63,12 +63,14 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
                         => GENE => Gene stable ID (proszę odkliknąć pozostałe wybrane automatycznie atrybuty)  
                         => ORTHOLOGUES [K-O] => Mouse Orthologues => Mouse gene stable ID  oraz Mouse homology type
       ```
- * Teraz można powrócić na górę strony i kliknąć przycisk **Results**. Pojawi się tabelka z trzema kolumnami. Aby zapisać całą tabelę do 
+ * Teraz można powrócić na górę strony i kliknąć przycisk **Results**. Pojawi się tabelka z trzema kolumnami. Aby zapisać pełną tabelę do 
  pliku można wybrać:  
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
- nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [*scp*]() - Linux, MAC lub [*WinSCP*]() - Windows.    
+ nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [*scp*]() - Linux, MAC
+  lub [*WinSCP*]() - Windows.    
   Alternatywnie plik można pobrać bezpośrednio na serwer. W tym celu należy wybrać opcję: **XML** (na górze strony) -
-   pojawi się wtedy zapytanie w języku xml. Należy zapytanie zapisać w jednej linii, po czym użyć programu *wget* lub *curl*. 
+   pojawi się wtedy zapytanie w języku xml. Należy zapytanie zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
+   pobrania pliku z wynikami.  
    Tutaj dokładne instrukcje [link](https://www.ensembl.org/info/data/biomart/biomart_restful.html). 
    W naszym przypadku będzie to:
    ```xml
@@ -84,7 +86,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 	    </Dataset>
    </Query>
    ```  
-   Komenda do pobrania pliku, wynikowy plik będzie nazywał się results.txt - można zmienić:
+   Komenda do pobrania pliku (wynikowy plik będzie nazywał się *results.txt* - można zmienić):
     ```bash
     wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
    ```
@@ -96,20 +98,21 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     awk  '$1 ~ "ENS" && $3 ~ "one2many" ' result.txt > one2many-homologs.txt   ##kolumna pierwsza zawiera tekst "ENS" i kolumna 3 zawiera tekst "one2many" 
     ```
 ##### Dalsze etapy zadania 3 (2-4)
- AD2. Proszę w podobny sposób pobrać dane o składzie domen białek mysich i ludzkich. W filtrach proszę ponownie wybrać opcję `Filters => GENE => Gene type => protein_coding`, 
- natomiast jako atrybuty proszę zaznaczyć:  
+ AD2. Proszę w podobny sposób pobrać dane o składzie domen białek mysich i ludzkich. W filtrach proszę ponownie wybrać opcję  
+  `Filters => GENE => Gene type => protein_coding`
+ Natomiast jako atrybuty proszę zaznaczyć:  
  ```
   Attributes => Features
          => GENE => Gene stable ID (ponownie proszę o usuniecie pozostałych zaznaczonych automatycznie atrybutów)
          => PROTEIN DOMAINS AND FAMILIES => Domains => Pfam ID 
 ``` 
-Prosze pamietać, aby zmienic zakres danych na **Mouse genes GRCm38.p6** 
-przy pobieraniu danych o domenach w bialkach mysich. Powinni państwo uzyskać dwa pliki z ID genu w piewszej kolumnie i ID domeny w drugiej.
+Proszę pamiętać, aby zmienić zakres danych na **Mouse genes GRCm38.p6** 
+przy pobieraniu danych o domenach w białkach mysich. Powinni państwo uzyskać dwa pliki z ID genu w piewszej kolumnie i ID domeny w drugiej.
 Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka. 
 
   
   AD3. Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
-   w których jest jakas domena nieobecna w ortologu drugiego gatunku oraz id tej domeny. Mogą Państwo zastosować dowolny sposób analizy.
+   w których występuje domena nieobecna w ortologu drugiego gatunku oraz id tej domeny. Mogą państwo zastosować dowolny sposób analizy.
    Można także wykorzystać poniższe polecenie (działające jednak dość wolno):
    ```bash
      printf ""human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
@@ -125,9 +128,9 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
       rm human-tmp.txt mouse-tmp.txt
 ```
   
-  W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdą Państwo ID genów, odpowiednio ludzkich i mysich, a w
-  kolumnach 2 i 4 ID domen obecnych tylko w jednym ortologu (lub nic, jesli skład domen nie różni się). Polecenie przeprowadza analize tylko 
-  dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku (z ortologami "one to many"). Zakłada, że odfiltrowane pliki z id domen
-  to odpowiednio *human-domains.txt* i  *mouse-domains.txt*  
-  AD4. Dowolnie
+  W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdąują się identyfikatory genów, odpowiednio ludzkich i mysich, a w
+  kolumnach 2 i 4 ID domen obecnych tylko w jednym ortologu (lub nic, jesli skład domen nie różni się pomiędzy gatunkami). 
+  Polecenie przeprowadza analizę tylko dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku (z ortologami "one to many").
+  Zakłada ono, że odfiltrowane pliki z id domen to odpowiednio *human-domains.txt* i  *mouse-domains.txt*  
+  AD4. Proszę przeanalizować w dowolny sposób.
  
