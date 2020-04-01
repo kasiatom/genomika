@@ -115,7 +115,7 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
   
   ##### AD3. Połączenie list i wybranie odpowiednich danych
    Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
-   w których występuje domena nieobecna w ortologu drugiego gatunku oraz id tej domeny. Mogą państwo zastosować dowolny sposób analizy.
+   w których występuje domena nieobecna w białku ortologicznym z drugiego gatunku oraz id tej domeny. Mogą państwo zastosować dowolny sposób analizy.
    Można także wykorzystać poniższe polecenie (działające jednak dość wolno):
    ```bash
      printf ""human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
@@ -132,10 +132,10 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
 ```
   
   W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdują się identyfikatory genów, odpowiednio ludzkich i mysich, a w
-  kolumnach 2 i 4 ID domen obecnych tylko w jednym ortologu (lub nic, jeśli skład domen nie różni się pomiędzy gatunkami). 
+  kolumnach 2 i 4 ID domen obecnych tylko w jednym z homologicznych białek (lub nic, jeśli skład domen nie różni się pomiędzy gatunkami). 
   Polecenie przeprowadza analizę tylko dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku (z ortologami "one to many").
   Zakłada ono, że odfiltrowane pliki z id domen to odpowiednio *human-domains.txt* i  *mouse-domains.txt*  
   ##### AD4. Podsumowanie otrzymanych wyników
    Proszę przeanalizować w dowolny sposób. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
-   jaka pełni funkcję, co to za domena, czy występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
+   Jaką pełni funkcję, co to za domena, czy występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
  
