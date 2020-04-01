@@ -48,7 +48,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
   obu gatunków do człowieka, a jak często na gałęzi prowadzącej mysiej. Czy typ homologii ("one to one" vs "one to many"), 
   a tym samym duplikacje genów, wpynęły na częstość zmian składu domen? 
 
-##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listtę ortologów
+##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listę ortologów
  * Proszę klijnąć w zakładkę **BioMart** (na górze strony) 
  * Proszę następnie wybrać bazę danych **Ensembl Genes 99** (99 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione    
@@ -98,7 +98,9 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     awk  '$1 ~ "ENS" && $3 ~ "one2many" ' result.txt > one2many-homologs.txt   ##kolumna pierwsza zawiera tekst "ENS" i kolumna 3 zawiera tekst "one2many" 
     ```
 ##### Dalsze etapy zadania 3 (2-4)
- AD2. Proszę w podobny sposób pobrać dane o składzie domen białek mysich i ludzkich. W filtrach proszę ponownie wybrać opcję  
+ ##### AD2. Wyszukiwanie danych o domenach
+ Proszę w podobny sposób pobrać dane o składzie domen białek mysich i ludzkich. 
+ W filtrach proszę ponownie wybrać opcję:  
   `Filters => GENE => Gene type => protein_coding`
  Natomiast jako atrybuty proszę zaznaczyć:  
  ```
@@ -111,7 +113,8 @@ przy pobieraniu danych o domenach w białkach mysich. Powinni państwo uzyskać 
 Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka. 
 
   
-  AD3. Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
+  ##### AD3. Połączenie list i wybranie odpowiednich danych
+   Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
    w których występuje domena nieobecna w ortologu drugiego gatunku oraz id tej domeny. Mogą państwo zastosować dowolny sposób analizy.
    Można także wykorzystać poniższe polecenie (działające jednak dość wolno):
    ```bash
@@ -132,5 +135,7 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
   kolumnach 2 i 4 ID domen obecnych tylko w jednym ortologu (lub nic, jeśli skład domen nie różni się pomiędzy gatunkami). 
   Polecenie przeprowadza analizę tylko dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku (z ortologami "one to many").
   Zakłada ono, że odfiltrowane pliki z id domen to odpowiednio *human-domains.txt* i  *mouse-domains.txt*  
-  AD4. Proszę przeanalizować w dowolny sposób.
+  ##### AD4. Podsumowanie otrzymanych wyników
+   Proszę przeanalizować w dowolny sposób. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
+   jaka pełni funkcję, co to za domena, czy występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
  
