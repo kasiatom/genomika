@@ -128,8 +128,8 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
       rm human-tmp.txt mouse-tmp.txt
 ```
   
-  W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdąują się identyfikatory genów, odpowiednio ludzkich i mysich, a w
-  kolumnach 2 i 4 ID domen obecnych tylko w jednym ortologu (lub nic, jesli skład domen nie różni się pomiędzy gatunkami). 
+  W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdują się identyfikatory genów, odpowiednio ludzkich i mysich, a w
+  kolumnach 2 i 4 ID domen obecnych tylko w jednym ortologu (lub nic, jeśli skład domen nie różni się pomiędzy gatunkami). 
   Polecenie przeprowadza analizę tylko dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku (z ortologami "one to many").
   Zakłada ono, że odfiltrowane pliki z id domen to odpowiednio *human-domains.txt* i  *mouse-domains.txt*  
   AD4. Proszę przeanalizować w dowolny sposób.
