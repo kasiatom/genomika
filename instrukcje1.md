@@ -4,7 +4,7 @@
 Proszę otworzyć stronę [Ensembl](https://www.ensembl.org/index.html) i rozejrzeć się. Informacje o jakich gatunkach są tutaj zawarte? 
 Jaki typ danych można tu znaleźć? 
   
-Proszę zauważyć, że dane dotyczące pozostałych gatunków można uzyskać korzystając z podobnie zorganizowanych "stron siostrzanych":
+Proszę zauważyć, że dane dotyczące wielu pozostałych gatunków można uzyskać korzystając z podobnie zorganizowanych "stron siostrzanych":
  [Ensembl Bacteria](http://bacteria.ensembl.org/index.html), [Ensembl Protists](http://protists.ensembl.org/index.html), 
  [Ensembl Fungi](http://fungi.ensembl.org/index.html), [Ensembl Plants](http://plants.ensembl.org/index.html) oraz 
  [Ensembl Metazoa](http://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
