@@ -9,12 +9,11 @@
 ***
 ***
 ### Praca na serwerze
-**Linux, MAC**
+**Linux, MAC**  
 Z serwerem mozna połączyć sie wpisując w terminalu (Linux, MAC):  
 ```bash
 ssh numer_ip -l nazwa_konta
-```
-Należy wpisac swoje hasło.   
+```  
 
 **Windows** 
 Logowanie wymaga zainstalowania programu [puTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 
@@ -34,6 +33,5 @@ gdzie
 ```
 **Windows** 
 Należy zainstalować [WinSCP](https://winscp.net/eng/download.php)  
-Instrukcje obsługi znajduja sie [tutaj](https://winscp.net/eng/docs/getting_started)  
+Instrukcje obsługi programu znajdują się [tutaj](https://winscp.net/eng/docs/getting_started)  
 
-#### WinSCP
