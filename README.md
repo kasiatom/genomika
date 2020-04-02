@@ -3,8 +3,8 @@
 ### Instrukcje do ćwiczeń
  * [ćwiczenia 1](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/Instrukcje1.md)
  * [ćwiczenia 2]()
- * [ćwiczenia3]()
- * [ćwiczenia4]()
+ * [ćwiczenia 3]()
+ * [ćwiczenia 4]()
    
 ***
 ***
