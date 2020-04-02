@@ -66,8 +66,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
  * Teraz można powrócić na górę strony i kliknąć przycisk **Results**. Pojawi się tabelka z trzema kolumnami. Aby zapisać pełną tabelę do 
  pliku można wybrać:  
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
- nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [*scp*](https://github.com/genomika-2020/genomika/README.md#scp) - Linux, MAC
-  lub [*WinSCP*](https://github.com/genomika-2020/genomika/README.md#winscp) - Windows.    
+ nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [*scp*](https://github.com/genomika-2020/genomika/blob/master/README.md#scp) - Linux, MAC
+  lub [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#winscp) - Windows.    
   Alternatywnie plik można pobrać bezpośrednio na serwer. W tym celu należy wybrać opcję: **XML** (na górze strony) -
    pojawi się wtedy zapytanie w języku xml. Należy zapytanie zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
    pobrania pliku z wynikami.  
@@ -139,3 +139,4 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
    Proszę przeanalizować w dowolny sposób. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
    Jaką pełni funkcję, co to za domena, czy występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
  
+[Powrót do strony zajęć](https://github.com/genomika-2020/genomika/blob/master/README.md)
