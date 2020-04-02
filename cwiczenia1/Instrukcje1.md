@@ -56,7 +56,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 ***
 
 ##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listę ortologów
- * Proszę klijnąć w zakładkę **BioMart** (na górze strony) 
+ * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
  * Proszę następnie wybrać bazę danych **Ensembl Genes 99** (99 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione    
  * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p13**). Co oznacza skrót GRCh38.p13? 
@@ -74,9 +74,10 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
  pliku można wybrać:  
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
  nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [scp](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer) lub
-  lub [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer).    
+  [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer).    
   Alternatywnie plik można pobrać bezpośrednio na serwer. W tym celu należy wybrać opcję: **XML** (na górze strony) -
-   pojawi się wtedy zapytanie w języku xml. Należy zapytanie zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
+   wybrane atrybuty i filtry zostaną wtedy przetłumaczone na zapytanie xml.
+    Należy je wyedytować, tak aby całość zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
    pobrania pliku z wynikami.  
    Tutaj dokładne instrukcje [link](https://www.ensembl.org/info/data/biomart/biomart_restful.html). 
    W naszym przypadku będzie to:
@@ -146,8 +147,8 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
   
 ***    
   ##### AD4. Podsumowanie otrzymanych wyników
-   Proszę przeanalizować uzyskane dane w dowolny sposób. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
-   Jaką pełni funkcję, co to za domena, czy występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
+   Proszę przeanalizować uzyskane dane. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
+   Jaką funkcję pełni to białko, jaką funkcję ma "unikatowa" domena, czy domena ta występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
  
  ***
  ***
