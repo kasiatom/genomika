@@ -15,7 +15,7 @@ Z serwerem mozna połączyć sie wpisując w terminalu (Linux, MAC):
 ssh numer_ip -l nazwa_konta
 ```  
 
-**Windows** 
+**Windows**   
 Logowanie wymaga zainstalowania programu [puTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 
 Szczegółowe instrukcje obsługi znajdują się [tutaj](https://the.earth.li/~sgtatham/putty/0.73/puttydoc.txt)  
 
@@ -31,7 +31,7 @@ gdzie
 [user@]SRC_HOST:]file1 to położenie pliku, który chcemy skopiować
 [user@]DEST_HOST:]file2 to lokalizacja docelowa  
 ```
-**Windows** 
+**Windows**   
 Należy zainstalować [WinSCP](https://winscp.net/eng/download.php)  
 Instrukcje obsługi programu znajdują się [tutaj](https://winscp.net/eng/docs/getting_started)  
 
