@@ -9,6 +9,9 @@ Proszę zauważyć, że dane dotyczące wielu pozostałych gatunków można uzys
  [Ensembl Fungi](http://fungi.ensembl.org/index.html), [Ensembl Plants](http://plants.ensembl.org/index.html) oraz 
  [Ensembl Metazoa](http://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
 
+***
+***
+
 ### Zadanie2 
 ##### Wyszukiwanie informacji dla jednego genu (na przykładzie *BRCA1*)
 Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:  
@@ -27,8 +30,10 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
  8. W jakich gen *BRCA1* ulega najwyższej eskpresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
-W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png))  
+W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png)  
   
+***
+***
   
  ### Zadanie3
 Ze strony Ensembl można także wygodnie pozyskać informacje dotyczące większej ilości genów/białek/regionów na raz, z 
@@ -47,6 +52,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
   4. Wyliczenie prostych statystyk: jak często pojawiły się unikatowe domeny na gałęzi prowądzacej od wspólnego przodka 
   obu gatunków do człowieka, a jak często na gałęzi prowadzącej mysiej. Czy typ homologii ("one to one" vs "one to many"), 
   a tym samym duplikacje genów, wpynęły na częstość zmian składu domen? 
+
+***
 
 ##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listę ortologów
  * Proszę klijnąć w zakładkę **BioMart** (na górze strony) 
@@ -97,7 +104,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     awk '$1 ~ "ENS" && $3 ~ "one2one" ' result.txt  > one2one-homologs.txt     ##kolumna pierwsza zawiera tekst "ENS" i kolumna 3 zawiera tekst "one2one" 
     awk  '$1 ~ "ENS" && $3 ~ "one2many" ' result.txt > one2many-homologs.txt   ##kolumna pierwsza zawiera tekst "ENS" i kolumna 3 zawiera tekst "one2many" 
     ```
-##### Dalsze etapy zadania 3 (2-4)
+***
+
  ##### AD2. Wyszukiwanie danych o domenach
  Proszę w podobny sposób pobrać dane o składzie domen białek mysich i ludzkich. 
  W filtrach proszę ponownie wybrać opcję:  
@@ -112,7 +120,7 @@ Proszę pamiętać, aby zmienić zakres danych na **Mouse genes GRCm38.p6**
 przy pobieraniu danych o domenach w białkach mysich. Powinni państwo uzyskać dwa pliki z ID genu w piewszej kolumnie i ID domeny w drugiej.
 Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka. 
 
-  
+***  
   ##### AD3. Połączenie list i wybranie odpowiednich danych
    Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
    w których występuje domena nieobecna w białku ortologicznym z drugiego gatunku oraz id tej domeny. Mogą państwo zastosować dowolny sposób analizy.
@@ -135,8 +143,12 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
   kolumnach 2 i 4 ID domen obecnych tylko w jednym z homologicznych białek (lub nic, jeśli skład domen nie różni się pomiędzy gatunkami). 
   Polecenie przeprowadza analizę tylko dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku (z ortologami "one to many").
   Zakłada ono, że odfiltrowane pliki z id domen to odpowiednio *human-domains.txt* i  *mouse-domains.txt*  
+  
+***    
   ##### AD4. Podsumowanie otrzymanych wyników
    Proszę przeanalizować w dowolny sposób. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
    Jaką pełni funkcję, co to za domena, czy występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
  
+ ***
+ ***
 [Powrót do strony zajęć](https://github.com/genomika-2020/genomika/blob/master/README.md)
