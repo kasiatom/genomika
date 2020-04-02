@@ -27,7 +27,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
  8. W jakich gen *BRCA1* ulega najwyższej eskpresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
-W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](), [informacje na poziomie transkryptu]()  
+W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/cwiczenia1/transcript-level.png))  
   
   
  ### Zadanie3
@@ -66,8 +66,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
  * Teraz można powrócić na górę strony i kliknąć przycisk **Results**. Pojawi się tabelka z trzema kolumnami. Aby zapisać pełną tabelę do 
  pliku można wybrać:  
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
- nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [*scp*]() - Linux, MAC
-  lub [*WinSCP*]() - Windows.    
+ nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [*scp*](https://github.com/genomika-2020/genomika/README.md#scp) - Linux, MAC
+  lub [*WinSCP*](https://github.com/genomika-2020/genomika/README.md#winscp) - Windows.    
   Alternatywnie plik można pobrać bezpośrednio na serwer. W tym celu należy wybrać opcję: **XML** (na górze strony) -
    pojawi się wtedy zapytanie w języku xml. Należy zapytanie zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
    pobrania pliku z wynikami.  
