@@ -27,7 +27,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
  8. W jakich gen *BRCA1* ulega najwyższej eskpresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
-W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/cwiczenia1/transcript-level.png))  
+W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png))  
   
   
  ### Zadanie3
