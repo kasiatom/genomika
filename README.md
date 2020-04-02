@@ -21,6 +21,7 @@ Szczegółowe instrukcje obsługi znajdują się [tutaj](https://the.earth.li/~s
 
 Proszę o zmianę hasła po pierwszym zalogowaniu (polecenie *passwd*)  
 
+***
 
 ### Przenoszenie plików na serwer  
 **Linux, MAC**  
@@ -35,3 +36,4 @@ gdzie
 Należy zainstalować [WinSCP](https://winscp.net/eng/download.php)  
 Instrukcje obsługi programu znajdują się [tutaj](https://winscp.net/eng/docs/getting_started)  
 
+***
