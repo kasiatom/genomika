@@ -8,9 +8,32 @@
    
 ***
 ***
-### konto na serwerze   
-Tutaj cos dodam  
+### Praca na serwerze
+**Linux, MAC**
+Z serwerem mozna połączyć sie wpisując w terminalu (Linux, MAC):  
+```bash
+ssh numer_ip -l nazwa_konta
+```
+Należy wpisac swoje hasło.   
+
+**Windows** 
+Logowanie wymaga zainstalowania programu [puTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 
+Szczegółowe instrukcje obsługi znajdują się [tutaj](https://the.earth.li/~sgtatham/putty/0.73/puttydoc.txt)  
+
+Proszę o zmianę hasła po pierwszym zalogowaniu (polecenie *passwd*)  
+
 
 ### Przenoszenie plików na serwer  
-#### Scp
+**Linux, MAC**  
+Pliki można kopiować używając polecenia:
+```bash
+scp [user@]SRC_HOST:]file1 [user@]DEST_HOST:]file2
+gdzie
+[user@]SRC_HOST:]file1 to położenie pliku, który chcemy skopiować
+[user@]DEST_HOST:]file2 to lokalizacja docelowa  
+```
+**Windows** 
+Należy zainstalować [WinSCP](https://winscp.net/eng/download.php)  
+Instrukcje obsługi znajduja sie [tutaj](https://winscp.net/eng/docs/getting_started)  
+
 #### WinSCP
