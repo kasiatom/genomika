@@ -73,8 +73,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
  * Teraz można powrócić na górę strony i kliknąć przycisk **Results**. Pojawi się tabelka z trzema kolumnami. Aby zapisać pełną tabelę do 
  pliku można wybrać:  
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
- nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [scp](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer) - Linux, MAC
-  lub [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer) - Windows.    
+ nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [scp](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer) lub
+  lub [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer).    
   Alternatywnie plik można pobrać bezpośrednio na serwer. W tym celu należy wybrać opcję: **XML** (na górze strony) -
    pojawi się wtedy zapytanie w języku xml. Należy zapytanie zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
    pobrania pliku z wynikami.  
