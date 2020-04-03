@@ -1,10 +1,11 @@
 ## Blast  
 
 ### Zadanie1  
-Proszę zapoznać się z artykułem [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/#SD1) i na jego podsawie, 
+Proszę zapoznać się z artykułem `Complex archaea that bridge the gap between prokaryotes and eukaryotes` [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/#SD1) i na jego podsawie, 
 krótko wyjaśnić, dlaczego organizmy podobne do *Lokiarchaeota* mogły być przodkiem komórek eukariotycznych. Proszę też 
-wypisać, jakie grupy białek były uważane za białka ESP (*ang. eukaryotic signature proteins*), czyli białka występujące wyłącznie w komórkach eukariotycznych. 
-Więcej na ten temat można znaleźć tutaj: [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?  
+wypisać, jakie grupy białek uważane są za białka ESP (*ang. eukaryotic signature proteins*), czyli białka 
+występujące wyłącznie w komórkach eukariotycznych. Więcej na ten temat można znaleźć tutaj:
+ [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?  
 ***
 ***
 
@@ -15,16 +16,16 @@ Proszę przeczytać opis dotyczący genomu [Lokiarchaeum sp. GC14_75](https://ft
 * Na ile kontigów jest on podzielony  
 * Proszę wyjasnić znaczenie statystyk L-50 i N-50  
 
-Proszę brać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75:  
+Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,   
 ```bash
 wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
 ```
-Proszę teraz użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. Więcej o zasadzie działania programu [tutaj](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).  
+Po czym użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. Więcej o zasadzie działania programu [tutaj](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).  
 Po wpisaniu w terminalu `prodigal -h` pojawi się informacja, jak używać programu. Proszę uzyskać plik fasta z 
 sekwencjami aminokwasowymi wszystkich potencjalnych białek Lokiarcheum (**loki-proteins.fa**) - będzie potrzebny do nastęonego zadania.
- Proszę także, aby uzyskać listę wszystkich zidentyfikowanych genów, lista powinna być zapisana w formacie gff (**loki-features.gff**).   
- Proszę zauważyć, że program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę  
- uruchomić program bez rozpakowywania sekwencji referencyjnej używając potoku:  
+ Dodatkowo proszę o wytworzenie listy wszystkich zidentyfikowanych genów, lista powinna być zapisana w formacie gff (**loki-features.gff**).   
+ Program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę  
+ uruchomić program bez rozpakowywania sekwencji referencyjnej, używając potoku:  
  ```bash
 zcat lokiarchaeum.fna.gz | prodigal -a loki-proteins.fa -f gff -o loki-features.gff
 ```  
@@ -34,8 +35,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów *-g*,
  Proszę powrócić na chwilę do artukułu i wyszukać nazwy programów, których mozna użyć, aby wyszukać w sekwencji genomowej położenie genów
   kodujących tRNA oraz rRNA.   
   Proszę także obejrzeć wynikowy plik **loki-features.gff**:  
-  * Proszę policzyć ile genów wyszukał 
-  program (można policzyć linie bez znaku `#` lub linie z tekstem `CDS` - program `grep`). 
+  * Ile genów wyszukał program (można policzyć linie bez znaku `#` lub linie z tekstem `CDS` - program `grep`). 
   * Dla ilu z nich prawdopodobieństwo, że są to rzeczywiste geny jest wyższe niż 0.95 (*conf*) - 
   (program `grep` , `awk` - lub inny wymyślony przez siebie sposób).   
   
@@ -62,7 +62,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów *-g*,
 Poproszę też państwa, aby przeszukać tylko bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
 otrzymaliby państwo prawie wyłacznie homologii z tej grupy. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
 co dobrze podsumowuje załączona [rycina](http://www.ettemalab.org/new-paper-about-the-asgard-archaea-and-eukaryogenesis-is-out-now/). Sekwencje
-ich genomów są już zdeponowanane w bazach danych.    
+ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast.    
 ***   
  
  Etapy analizy:  
