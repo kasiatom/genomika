@@ -2,7 +2,7 @@
 
 ### Instrukcje do ćwiczeń
  * [ćwiczenia 1](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/Instrukcje1.md)
- * [ćwiczenia 2]()
+ * [ćwiczenia 2](https://github.com/genomika-2020/genomika/blob/master/cwiczenia2/instrukcje2.md)
  * [ćwiczenia 3]()
  * [ćwiczenia 4]()
    
@@ -37,3 +37,5 @@ Należy zainstalować [WinSCP](https://winscp.net/eng/download.php)
 Instrukcje obsługi programu znajdują się [tutaj](https://winscp.net/eng/docs/getting_started)  
 
 ***
+### Program screen  
+Tutaj opisz o co chodzi
