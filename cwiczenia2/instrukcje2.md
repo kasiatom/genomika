@@ -107,6 +107,8 @@ ich genomów są już zdeponowanane w bazach danych.
  Proszę pamiętać, że nie wszyscy naukowcy uważają, że przedstawiona w analizowanej pracy hipoteza pochodzenia
  komórek eukariotycznych jest dostatecznie udowodniona [link](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006810)  
  
+ ***
+ ***
  [Powrót do strony zajęć](https://github.com/genomika-2020/genomika/blob/master/README.md) 
  
 
