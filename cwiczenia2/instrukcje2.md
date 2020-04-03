@@ -20,12 +20,13 @@ Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,
 ```bash
 wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
 ```
-Po czym użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. Więcej o zasadzie działania programu [tutaj](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).  
+po czym użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. 
+Więcej o zasadzie działania programu [tutaj](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).  
 Po wpisaniu w terminalu `prodigal -h` pojawi się informacja, jak używać programu. Proszę uzyskać plik fasta z 
 sekwencjami aminokwasowymi wszystkich potencjalnych białek Lokiarcheum (**loki-proteins.fa**) - będzie potrzebny do nastęonego zadania.
  Dodatkowo proszę o wytworzenie listy wszystkich zidentyfikowanych genów, lista powinna być zapisana w formacie gff (**loki-features.gff**).   
- Program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę  
- uruchomić program bez rozpakowywania sekwencji referencyjnej, używając potoku:  
+ Program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę uruchomić
+  program bez rozpakowywania sekwencji referencyjnej, używając potoku:  
  ```bash
 zcat lokiarchaeum.fna.gz | prodigal -a loki-proteins.fa -f gff -o loki-features.gff
 ```  
@@ -92,7 +93,7 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
        ```
     Przed uruchomieniem analizy proszę przestudiować pomoc i rozszyfrować znaczenie poszczególnych argumentów - niektóre z nich nie są polecane przez twórców 
     programu blastp, ale pomogą ograniczyć wielkość wynikowego pliku. `/usr/local/share/pdbaa` to położenie bazy danych. 
-    Samo przeszukiwanie potrwa dość długo i dobrze go uruchomić w programie [screen](https://github.com/genomika-2020/genomika/blob/master/README.md#screen)
+    Samo przeszukiwanie potrwa dość długo i dobrze go uruchomić w programie [screen](https://github.com/genomika-2020/genomika/blob/master/README.md#program-screen)
     
 3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania:  
  * Dla ilu białek *Lokiarchaeum* udało się zidentyfikować białko homologiczne
