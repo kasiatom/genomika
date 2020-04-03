@@ -33,9 +33,9 @@ zcat lokiarchaeum.fna.gz | prodigal -a loki-proteins.fa -f gff -o loki-features.
 Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów *-g*, *-p* oraz *-n*. Tutaj znajdują się 
  informacje o rodzajach tablic kodu genetycznego [link](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)   
  
- Proszę powrócić na chwilę do artukułu i wyszukać nazwy programów, których mozna użyć, aby wyszukać w sekwencji genomowej położenie genów
+ Proszę powrócić na chwilę do artykułu i wyszukać nazwy programów, których mozna użyć, aby wyszukać w sekwencji genomowej położenie genów
   kodujących tRNA oraz rRNA.   
-  Proszę także obejrzeć wynikowy plik **loki-features.gff**:  
+  Proszę także obejrzeć wynikowy plik **loki-features.gff** i podać:  
   * Ile genów wyszukał program (można policzyć linie bez znaku `#` lub linie z tekstem `CDS` - program `grep`). 
   * Dla ilu z nich prawdopodobieństwo, że są to rzeczywiste geny jest wyższe niż 0.95 (*conf*) - 
   (program `grep` , `awk` - lub inny wymyślony przez siebie sposób).   

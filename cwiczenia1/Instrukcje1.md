@@ -67,8 +67,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
    ID jego mysiego ortologa oraz informacje o rodzaju homologii)  
       ```
       Attributes => Homologues (Max select 6 orthologues)   
-                        => GENE => Gene stable ID (proszę odkliknąć pozostałe wybrane automatycznie atrybuty)  
-                        => ORTHOLOGUES [K-O] => Mouse Orthologues => Mouse gene stable ID  oraz Mouse homology type
+                   => GENE => Gene stable ID (proszę odkliknąć pozostałe wybrane automatycznie atrybuty)  
+                   => ORTHOLOGUES [K-O] => Mouse Orthologues => Mouse gene stable ID  oraz Mouse homology type
       ```
  * Teraz można powrócić na górę strony i kliknąć przycisk **Results**. Pojawi się tabelka z trzema kolumnami. Aby zapisać pełną tabelę do 
  pliku można wybrać:  
@@ -124,7 +124,8 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
 ***  
   ##### AD3. Połączenie list i wybranie odpowiednich danych
    Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
-   w których występuje domena nieobecna w białku ortologicznym z drugiego gatunku oraz id tej domeny. Mogą państwo zastosować dowolny sposób analizy.
+   w których występuje domena nieobecna w białku ortologicznym z drugiego gatunku oraz id tej domeny.
+    Mogą państwo zastosować dowolny sposób analizy.
    Można także wykorzystać poniższe polecenie (działające jednak dość wolno):
    ```bash
      printf ""human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
@@ -148,7 +149,8 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
 ***    
   ##### AD4. Podsumowanie otrzymanych wyników
    Proszę przeanalizować uzyskane dane. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
-   Jaką funkcję pełni to białko, jaką funkcję ma "unikatowa" domena, czy domena ta występuje we wszystkich formach tego białka (niezależnie od transkryptu).  
+   Jaką funkcję pełni to białko, jaką funkcję ma "unikatowa" domena, czy domena ta występuje we wszystkich formach tego białka
+    (niezależnie od transkryptu).  
  
  ***
  ***
