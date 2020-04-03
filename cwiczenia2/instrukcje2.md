@@ -1,0 +1,120 @@
+## Blast  
+
+### Zadanie1  
+Proszę zapoznać się z artykułem [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/#SD1) i na jego podsawie, 
+krótko wyjaśnić, dlaczego organizmy podobne do *Lokiarchaeota* mogły być przodkiem komórek eukariotycznych. Proszę też 
+wypisać, jakie grupy białek były uważane za białka ESP (*ang. eukaryotic signature proteins*), czyli białka występujące wyłącznie w komórkach eukariotycznych. 
+Więcej na ten temat można znaleźć tutaj: [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?  
+***
+***
+
+### Zadanie2  
+#### Wyszukiwanie genów w sekwencji genomowej  
+Proszę przeczytać opis dotyczący genomu [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt) i podać:  
+* Jaka jest całkowita wielkość tego genomu  
+* Na ile kontigów jest on podzielony  
+* Proszę wyjasnić znaczenie statystyk L-50 i N-50  
+
+Proszę brać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75:  
+```bash
+wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
+```
+Proszę teraz użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. Więcej o zasadzie działania programu [tutaj](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).  
+Po wpisaniu w terminalu `prodigal -h` pojawi się informacja, jak używać programu. Proszę uzyskać plik fasta z 
+sekwencjami aminokwasowymi wszystkich potencjalnych białek Lokiarcheum (**loki-proteins.fa**) - będzie potrzebny do nastęonego zadania.
+ Proszę także, aby uzyskać listę wszystkich zidentyfikowanych genów, lista powinna być zapisana w formacie gff (**loki-features.gff**).   
+ Proszę zauważyć, że program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę  
+ uruchomić program bez rozpakowywania sekwencji referencyjnej używając potoku:  
+ ```bash
+zcat lokiarchaeum.fna.gz | prodigal -a loki-proteins.fa -f gff -o loki-features.gff
+```  
+Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów *-g*, *-p* oraz *-n*. Tutaj znajdują się 
+ informacje o rodzajach tablic kodu genetycznego [link](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)   
+ 
+ Proszę powrócić na chwilę do artukułu i wyszukać nazwy programów, których mozna użyć, aby wyszukać w sekwencji genomowej położenie genów
+  kodujących tRNA oraz rRNA.   
+  Proszę także obejrzeć wynikowy plik **loki-features.gff**:  
+  * Proszę policzyć ile genów wyszukał 
+  program (można policzyć linie bez znaku `#` lub linie z tekstem `CDS` - program `grep`). 
+  * Dla ilu z nich prawdopodobieństwo, że są to rzeczywiste geny jest wyższe niż 0.95 (*conf*) - 
+  (program `grep` , `awk` - lub inny wymyślony przez siebie sposób).   
+  
+  Tutaj znajdują się informacje dotyczące
+   wynikowych statystyk programu [link](https://github.com/hyattpd/prodigal/wiki/understanding-the-prodigal-output)  
+ 
+ ***
+ ***
+  
+ ### Zadanie3
+ #### Wyszukiwanie genów homologicznych  
+ Aby dowiedzieć się, jaka jest funkacja białek zidentyfikowanych w poprzednim zadaniu wykorzystają państwo program **blastp**. Dodatkowo
+ wykorzystają państwo ten program, aby sprawdzić, czy rzeczywiście część białek *Lokiarchaeum* jest 
+ bardziej podobna do białek eukariotycznych, niż bakteryjnych oraz do identyfikacji białek ESP.   
+  
+ Program **blastp** porównuje zadane sekwencje aminokwasowe do sekwencji białek zdeponowanych w bazach banych. W ten sposób można dla 
+ białek o nieznanej funkcji wyszukać białka najbardziej do nich podobne (najbliższe ewolucyjnie) i na tej zasadzie 
+ wnioskować o ich roli.  
+ W tym ćwiczeniu przeszukają państwo jedną z udostępnionych przez NCBI 
+ (*ang. National Center for Biotechnology Information*) baz danych: (**pdbaa**). Baza ta zawiera sekwencje wszystkich białek 
+ zdeponowanych w bazie [PDB](https://www.rcsb.org/) (*ang. protein Data Base*) i została wybrana tylko dlatego, że jest stosunkowo nieduża.
+ Po wpisaniu w terminalu `update_blastdb.pl --showall` otrzymają państwo listę wszystkich dostepnych baz danych.
+  Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj dla programu **blastp**? Proszę uzasadnić.   
+Poproszę też państwa, aby przeszukać tylko bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
+otrzymaliby państwo prawie wyłacznie homologii z tej grupy. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
+co dobrze podsumowuje załączona [rycina](http://www.ettemalab.org/new-paper-about-the-asgard-archaea-and-eukaryogenesis-is-out-now/). Sekwencje
+ich genomów są już zdeponowanane w bazach danych.    
+***   
+ 
+ Etapy analizy:  
+ 1. Uzysanie pliku zawierajacego ID wszystkich znanych gatunków z grupy *Archaea*.   
+ Taka lista bedzie potrzebna, aby wykluczyć sekwencje białek tych gatunków z przeszukiwanej bazy danych. Cała procedura jest szczegółowo 
+ opisana [tutaj](https://www.ncbi.nlm.nih.gov/books/NBK546209/). Listę proszę zapisać do pliku:
+    ```bash
+    get_species_taxids.sh -n Archaea  ## by dowiedzieć sie jakie jest ID danego taksonu (taxid), tutaj dla Archaea
+    get_species_taxids.sh -t taxid > archaea-taxid-list.txt  ## zapisze ID wszystkich gatunków wchodzacych w skład Archaea do pliku
+    ```
+
+ 2. Przeszukanie bazy danych używając pliku z sekwencjami białek *Lokiarchaeum*:
+     ```bash
+    ## pomoc i szczegółowy opis argumentów 
+    blastp -help 
+    
+    ## wyszukanie homologów białek Lokiarchaeum
+     blastp -db /usr/local/share/pdbaa \
+            -query loki-proteins.fa \
+            -evalue 0.02 \
+            -negative_taxidlist archaea-taxid-list.txt \
+            -outfmt  "7 delim=; qseqid sseqid sacc evalue staxid ssciname scomname sblastname sskingdom stitle" \
+            -out loki-output.txt  \
+            -subject_besthit \
+            -max_target_seqs 1
+                    
+       ```
+    Przed uruchomieniem analizy proszę przestudiować pomoc i rozszyfrować znaczenie poszczególnych argumentów - niektóre z nich nie są polecane przez twórców 
+    programu blastp, ale pomogą ograniczyć wielkość wynikowego pliku. `/usr/local/share/pdbaa` to położenie bazy danych. 
+    Samo przeszukiwanie potrwa dość długo i dobrze go uruchomić w programie [screen](https://github.com/genomika-2020/genomika/blob/master/README.md#screen)
+    
+3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania:  
+ * Dla ilu białek *Lokiarchaeum* udało się zidentyfikować białko homologiczne
+   (np. policzyć ile razy w wynikowym pliku pojawia się fraza `1 hits found`)  
+ * Dla ilu białek nie zidentyfikowano homologa, przy ustawionym poziomie e-value 
+  (np. policzyć ile razy w wynikowym pliku pojawia się fraza `0 hits found`)
+ * Ile razy znaleziony "najlepszy homolog" należy do bakterii, a ile razy do eukariontów?  
+ * Czy pośród zidentyfikowanych białek sa takie należące do grupy ESP? Proszę podać ich nazwy (kilku - jeśli są obecne)  
+ 
+ ***
+ ***
+ Proszę pamiętać, że nie wszyscy naukowcy uważają, że przedstawiona w analizowanej pracy hipoteza pochodzenia
+ komórek eukariotycznych jest dostatecznie udowodniona [link](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006810)  
+ 
+ [Powrót do strony zajęć](https://github.com/genomika-2020/genomika/blob/master/README.md) 
+ 
+
+
+
+
+ 
+ 
+
+```
+ 
