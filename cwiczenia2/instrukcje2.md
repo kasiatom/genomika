@@ -1,17 +1,20 @@
 ## Blast  
 
 ### Zadanie1  
-Proszę zapoznać się z artykułem `Complex archaea that bridge the gap between prokaryotes and eukaryotes` [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/#SD1) i na jego podsawie, 
-krótko wyjaśnić, dlaczego organizmy podobne do *Lokiarchaeota* mogły być przodkiem komórek eukariotycznych. Proszę też 
+Proszę zapoznać się z artykułem
+ [*Complex archaea that bridge the gap between prokaryotes and eukaryotes*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/#SD1) 
+ i na jego podstawie, krótko wyjaśnić, dlaczego organizmy podobne do *Lokiarchaeota* mogły być przodkiem komórek eukariotycznych. Proszę też 
 wypisać, jakie grupy białek uważane są za białka ESP (*ang. eukaryotic signature proteins*), czyli białka 
-występujące wyłącznie w komórkach eukariotycznych. Więcej na ten temat można znaleźć tutaj:
- [link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?  
+występujące wyłącznie w komórkach eukariotycznych. Więcej na ten temat można znaleźć w pracy
+ [*The origin of the eukaryotic cell: A genomic investigation*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?  
 ***
 ***
 
 ### Zadanie2  
 #### Wyszukiwanie genów w sekwencji genomowej  
-Proszę przeczytać opis dotyczący genomu [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt) i podać:  
+Proszę przeczytać opis dotyczący genomu
+ [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt) 
+ i podać:  
 * Jaka jest całkowita wielkość tego genomu  
 * Na ile kontigów jest on podzielony  
 * Proszę wyjasnić znaczenie statystyk L-50 i N-50  
@@ -21,11 +24,12 @@ Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,
 wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
 ```
 po czym użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. 
-Więcej o zasadzie działania programu [tutaj](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).  
+Więcej o zasadzie działania programuznajdą państwo w artykule [*Prodigal: prokaryotic gene recognition and translation initiation site identification*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).
+    
 Po wpisaniu w terminalu `prodigal -h` pojawi się informacja, jak używać programu. Proszę uzyskać plik fasta z 
 sekwencjami aminokwasowymi wszystkich potencjalnych białek Lokiarcheum (**loki-proteins.fa**) - będzie potrzebny do nastęonego zadania.
  Dodatkowo proszę o wytworzenie listy wszystkich zidentyfikowanych genów, lista powinna być zapisana w formacie gff (**loki-features.gff**).   
- Program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę uruchomić
+ Uwaga, program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę uruchomić
   program bez rozpakowywania sekwencji referencyjnej, używając potoku:  
  ```bash
 zcat lokiarchaeum.fna.gz | prodigal -a loki-proteins.fa -f gff -o loki-features.gff
