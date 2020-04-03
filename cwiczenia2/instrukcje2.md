@@ -85,7 +85,8 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
     blastp -help 
     
     ## wyszukanie homologów białek Lokiarchaeum
-     blastp -db /usr/local/share/pdbaa \
+     export BLASTDB=/usr/local/share
+     blastp -db pdbaa \
             -query loki-proteins.fa \
             -evalue 0.02 \
             -negative_taxidlist archaea-taxid-list.txt \
