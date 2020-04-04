@@ -53,11 +53,12 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
   
  ### Zadanie3
  #### Wyszukiwanie genów homologicznych  
- Aby dowiedzieć się, jaka jest funkacja białek zidentyfikowanych w poprzednim zadaniu wykorzystają państwo program **blastp**. Dodatkowo
- wykorzystają państwo ten program, aby sprawdzić, czy rzeczywiście część białek *Lokiarchaeum* jest 
+ Aby dowiedzieć się, jaka jest funkacja białek zidentyfikowanych w poprzednim zadaniu wykorzystają państwo aplikację **blastp** 
+ (wchodzącą w skład programu [BLAST+](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-421)). Dodatkowo
+ wykorzystają państwo blastp, aby sprawdzić, czy rzeczywiście część białek *Lokiarchaeum* jest 
  bardziej podobna do białek eukariotycznych, niż bakteryjnych oraz do identyfikacji białek ESP.   
   
- Program **blastp** porównuje zadane sekwencje aminokwasowe do sekwencji białek zdeponowanych w bazach banych. W ten sposób można dla 
+ Aplikacja **blastp** porównuje zadane sekwencje aminokwasowe do sekwencji białek zdeponowanych w bazach banych. W ten sposób można dla 
  białek o nieznanej funkcji wyszukać białka najbardziej do nich podobne (najbliższe ewolucyjnie) i na tej zasadzie 
  wnioskować o ich roli.  
  W tym ćwiczeniu przeszukają państwo jedną z udostępnionych przez NCBI 
@@ -73,7 +74,7 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
  
  Etapy analizy:  
  1. Uzysanie pliku zawierajacego ID wszystkich znanych gatunków z grupy *Archaea*.   
- Taka lista bedzie potrzebna, aby wykluczyć sekwencje białek tych gatunków z przeszukiwanej bazy danych. Cała procedura jest szczegółowo 
+ Taka lista będzie potrzebna, aby wykluczyć sekwencje białek tych gatunków z przeszukiwanej bazy danych. Cała procedura jest szczegółowo 
  opisana [tutaj](https://www.ncbi.nlm.nih.gov/books/NBK546209/). Listę proszę zapisać do pliku:
     ```bash
     get_species_taxids.sh -n Archaea  ## by dowiedzieć sie jakie jest ID danego taksonu (taxid), tutaj dla Archaea
@@ -117,13 +118,4 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
  ***
  ***
  [Powrót do strony zajęć](https://github.com/genomika-2020/genomika/blob/master/README.md) 
- 
-
-
-
-
- 
- 
-
-```
  
