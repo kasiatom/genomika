@@ -63,8 +63,8 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów *-g*,
  (*ang. National Center for Biotechnology Information*) baz danych: (**pdbaa**). Baza ta zawiera sekwencje wszystkich białek 
  zdeponowanych w bazie [PDB](https://www.rcsb.org/) (*ang. protein Data Base*) i została wybrana tylko dlatego, że jest stosunkowo nieduża.
  Po wpisaniu w terminalu `update_blastdb.pl --showall` otrzymają państwo listę wszystkich dostepnych baz danych.
-  Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj dla programu **blastp**? Proszę uzasadnić.   
-Poproszę też państwa, aby przeszukać tylko bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
+  Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj. dla programu **blastp**? Proszę uzasadnić.   
+Poproszę też państwa, aby przeszukać bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
 otrzymaliby państwo prawie wyłacznie homologii z tej grupy. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
 co dobrze podsumowuje załączona [rycina](http://www.ettemalab.org/new-paper-about-the-asgard-archaea-and-eukaryogenesis-is-out-now/). Sekwencje
 ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast.    
