@@ -17,7 +17,7 @@ Proszę przeczytać opis dotyczący genomu
  i podać:  
 * Jaka jest całkowita wielkość tego genomu  
 * Na ile kontigów jest on podzielony  
-* Proszę wyjasnić znaczenie statystyk L-50 i N-50  
+* Proszę wyjasnić znaczenie statystyk L-50 i N-50. Jakie sa ich wartości dla analizowanego genomu?
 
 Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,   
 ```bash
