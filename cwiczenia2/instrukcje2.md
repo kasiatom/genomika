@@ -24,20 +24,21 @@ Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,
 wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
 ```
 po czym użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. 
-Więcej o zasadzie działania programuznajdą państwo w artykule [*Prodigal: prokaryotic gene recognition and translation initiation site identification*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).
+Informacja, jak używać tego programu wyświetla się po wpisaniu w terminalu `prodigal -h`. 
+ Więcej o zasadzie działania programu znajdą państwo w artykule [*Prodigal: prokaryotic gene recognition and translation initiation site identification*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).
     
-Po wpisaniu w terminalu `prodigal -h` pojawi się informacja, jak używać programu. Proszę uzyskać plik fasta z 
-sekwencjami aminokwasowymi wszystkich potencjalnych białek Lokiarcheum (**loki-proteins.fa**) - będzie potrzebny do nastęonego zadania.
+ Proszę uzyskać plik fasta z sekwencjami aminokwasowymi wszystkich potencjalnych białek
+  Lokiarcheum (**loki-proteins.fa**) - będzie potrzebny do następnego zadania.
  Dodatkowo proszę o wytworzenie listy wszystkich zidentyfikowanych genów, lista powinna być zapisana w formacie gff (**loki-features.gff**).   
  Uwaga, program prodigal oczekuje rozpakowanego pliku z genomem. Aby niepotrzebnie nie śmiecić na dysku, proszę uruchomić
   program bez rozpakowywania sekwencji referencyjnej, używając potoku:  
  ```bash
 zcat lokiarchaeum.fna.gz | prodigal -a loki-proteins.fa -f gff -o loki-features.gff
 ```  
-Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów *-g*, *-p* oraz *-n*. Tutaj znajdują się 
- informacje o rodzajach tablic kodu genetycznego [link](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)   
+Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*, *-p* oraz *-n* (i ewentualnie dodać je do powyższego polecenia).
+ Tutaj znajdują się  informacje o rodzajach tablic kodu genetycznego [link](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)   
  
- Proszę powrócić na chwilę do artykułu i wyszukać nazwy programów, których mozna użyć, aby wyszukać w sekwencji genomowej położenie genów
+ Proszę powrócić na chwilę do artykułu i wyszukać nazwy programów, których można użyć, aby wyszukać w sekwencji genomowej położenie genów
   kodujących tRNA oraz rRNA.   
   Proszę także obejrzeć wynikowy plik **loki-features.gff** i podać:  
   * Ile genów wyszukał program (można policzyć linie bez znaku `#` lub linie z tekstem `CDS` - program `grep`). 
