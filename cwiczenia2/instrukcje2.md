@@ -77,8 +77,12 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
  Taka lista będzie potrzebna, aby wykluczyć sekwencje białek tych gatunków z przeszukiwanej bazy danych. Cała procedura jest szczegółowo 
  opisana [tutaj](https://www.ncbi.nlm.nih.gov/books/NBK546209/). Listę proszę zapisać do pliku:
     ```bash
-    get_species_taxids.sh -n Archaea  ## by dowiedzieć sie jakie jest ID danego taksonu (taxid), tutaj dla Archaea
-    get_species_taxids.sh -t taxid > archaea-taxid-list.txt  ## zapisze ID wszystkich gatunków wchodzacych w skład Archaea do pliku
+    ## uzyskanie numeru ID taksonu (taxid) o zadanej nazwie, tutaj dla Archaea
+    get_species_taxids.sh -n Archaea  
+    
+    ## zapisanie do pliku archaea-taxid-list.txt ID wszystkich gatunków wchodzących w skład Archaea
+    ## w poniższyej komendzie za 'taxid' należy podstawić ID grupy Archaea 
+    get_species_taxids.sh -t taxid > archaea-taxid-list.txt  u
     ```
 
  2. Przeszukanie bazy danych używając pliku z sekwencjami białek *Lokiarchaeum*:
