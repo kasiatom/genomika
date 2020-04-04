@@ -82,7 +82,8 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
     
     ## zapisanie do pliku archaea-taxid-list.txt ID wszystkich gatunków wchodzących w skład Archaea
     ## w poniższyej komendzie za 'taxid' należy podstawić ID grupy Archaea 
-    get_species_taxids.sh -t taxid > archaea-taxid-list.txt  u
+    get_species_taxids.sh -t taxid > archaea-taxid-list.txt  
+    
     ```
 
  2. Przeszukanie bazy danych używając pliku z sekwencjami białek *Lokiarchaeum*:
