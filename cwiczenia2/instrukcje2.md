@@ -113,7 +113,7 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
  * Dla ilu białek nie zidentyfikowano homologa, przy ustawionym poziomie e-value 
   (np. policzyć ile razy w wynikowym pliku pojawia się fraza `0 hits found`)
  * Ile razy znaleziony "najlepszy homolog" należy do bakterii, a ile razy do eukariontów?  
- * Czy pośród zidentyfikowanych białek sa takie należące do grupy ESP? Proszę podać ich nazwy (kilku - jeśli są obecne)  
+ * Czy pośród zidentyfikowanych białek są takie należące do grupy ESP? Proszę podać ich nazwy (kilku - jeśli są obecne)  
  
  ***
  ***

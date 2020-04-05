@@ -20,7 +20,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  Ile z nich koduje białko? Proszę przeczytać opis kategorii transkryptów
   [link](https://www.ensembl.org/info/genome/genebuild/transcript_quality_tags.html#tsl). Jak oznaczane są transkrypty o 
   największym znaczeniu biologicznym według różnych klasyfikacji (TSL, APRIS, GENCODE)? Który z transkryptów genu *BRCA1* uznaliby
-   Państwo za podstawowy?
+   państwo za podstawowy?
  3. Proszę pooglądać, jak transkrypty przedstawione są w zakładce *Location*   
  4. Ile aminokwasów wchodzi w skład białka powstającego w wyniku translacji transkryptu **BRCA1-210**?
  5. Ile eksonów wchodzi w skład tego transkryptu? W którym eksonie położony jest kodon start? Czy zawsze tak jest - 
@@ -38,20 +38,20 @@ W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje 
  ### Zadanie3
 Ze strony Ensembl można także wygodnie pozyskać informacje dotyczące większej ilości genów/białek/regionów na raz, z 
 wykorzystaniem narzędzia **BioMart**. W tym ćwiczeniu użyją Państwo tego narzędzia, aby sprawdzić, czy w czasie niezależnej 
-ewolucji białek ludzkich i mysich dochodziło do tasowania domen. Innaczej mówiąc, porównają Państwo skład domen wchodzących w skład 
+ewolucji białek ludzkich i mysich dochodziło do tasowania domen. Inaczej mówiąc, porównają państwo skład domen wchodzących w skład 
 białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś domena jest obecna u jednego gatunku, a nie ma jej u drugiego.    
   
  Zadanie to można podzielić na następujące etapy:  
   1. Pozyskanie listy identyfikatorów wszystkich genów kodujących białka u człowieka i odpowiadających im mysich ortologów. 
-  Do listy tej dodatkowo należy dodać informacje o rodzaju ortologii  
+  Do listy tej dodatkowo należy dodać informację o rodzaju ortologii  
   2. Pozyskanie listy nazw domen (według klasyfikacji [Pfam](https://pfam.xfam.org/)) dla wszystkich białek człowieka i myszy
-  3. Połączenie i odfiltrowanie powyższych list, tak aby wybrać identyfikatory genów mających odmienny skałd domen oraz nazwy tych, 
-  występujących tylko u jednego ortolaga domen. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
+  3. Połączenie i odfiltrowanie powyższych list, tak aby wybrać identyfikatory genów mających odmienny skałd domen oraz nazwy domen 
+  występujących tylko u jednego gatunku. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
   a jego mysi odpowiednik A i B, to skład domen się nie zmienił. Interesować nas będą przypadki, 
    A, B, C vs A, B oraz A, B vs A, B, C.   
-  4. Wyliczenie prostych statystyk: jak często pojawiły się unikatowe domeny na gałęzi prowądzacej od wspólnego przodka 
-  obu gatunków do człowieka, a jak często na gałęzi prowadzącej mysiej. Czy typ homologii ("one to one" vs "one to many"), 
-  a tym samym duplikacje genów, wpynęły na częstość zmian składu domen? 
+  4. Wyliczenie prostych statystyk: jak często pojawiły się unikatowe domeny na gałęzi prowadzącej od wspólnego przodka 
+  obu gatunków do człowieka, a jak często na gałęzi mysiej. Czy typ homologii ("one to one" vs "one to many"), 
+  a tym samym duplikacje genów, wpłynęły na częstość zmian składu domen? 
 
 ***
 
