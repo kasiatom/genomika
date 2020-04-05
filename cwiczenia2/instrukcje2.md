@@ -17,7 +17,7 @@ Proszę przeczytać opis dotyczący genomu
  i podać:  
 * Jaka jest całkowita wielkość tego genomu  
 * Na ile kontigów jest on podzielony  
-* Proszę wyjasnić znaczenie statystyk L-50 i N-50. Jakie sa ich wartości dla analizowanego genomu?
+* Proszę wyjasnić znaczenie statystyk L-50 i N-50. Jakie są ich wartości dla analizowanego genomu?
 
 Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,   
 ```bash
@@ -64,7 +64,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
  W tym ćwiczeniu przeszukają państwo jedną z udostępnionych przez NCBI 
  (*ang. National Center for Biotechnology Information*) baz danych: (**pdbaa**). Baza ta zawiera sekwencje wszystkich białek 
  zdeponowanych w bazie [PDB](https://www.rcsb.org/) (*ang. protein Data Base*) i została wybrana tylko dlatego, że jest stosunkowo nieduża.
- Po wpisaniu w terminalu `update_blastdb.pl --showall` otrzymają państwo listę wszystkich dostepnych baz danych.
+ Po wpisaniu w terminalu `update_blastdb.pl --showall` otrzymają państwo listę wszystkich dostępnych baz danych.
   Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj. dla programu **blastp**? Proszę uzasadnić.   
 Poproszę też państwa, aby przeszukać bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
 otrzymaliby państwo prawie wyłacznie homologii z tej grupy. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
