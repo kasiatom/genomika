@@ -72,7 +72,7 @@ bcftools annotate \
 tabix -p vcf 237-with-gnomad.vcf.gz
 
 ```
-Powyższe polecenia do pliku `237.vcf.gz` dodadzą informacje z pliku `/usr/local/shate/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`
+Powyższe polecenia do pliku `237.vcf.gz` dodadzą informacje z pliku `gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`
 (a dokładniej informacje z pola `INFO/AF` tego pliku). Nowo dodana adnotacja będzie nazywać się `gnomad_AF`. 
 Plik wynikowy to `237-with-gnomad.vcf.gz`. Proszę pooglądać wejściowe i wynikowe pliki vcf, oraz przestudiować pomoc programu
  `bcftools annotate`, tak aby zrozumieć, jak działają powyższe polecenia. Proszę zauważyć, 
