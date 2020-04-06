@@ -20,7 +20,7 @@ Proszę zapoznać się (przypomnieć sobie) podstawowe informacje o formacie pli
 ```
 1. Genotypy ilu osób są opisane powyżej?  
 2. Jaki nukleotyd występuje w genomie referencyjnym człowieka na chromosomie 20 w pozycji 1110696? 
-3. Czy warianty w tej pozycji sa nowe, czy były juz wcześniej opisane?  
+3. Czy warianty w tej pozycji są nowe, czy były już wcześniej opisane?  
 4. Jaki jest genotyp osoby *NA00001* w tej pozycji? A jaki jest jej genotyp w pozycji 14370?  
 5. Jaką dodatkową informację niesie zapis `0|1` w stosunku do `0/1`?
 
@@ -96,7 +96,7 @@ zcat 237-with-gnomad.vcf.gz | grep -v '^##' | less
   zakonserwowanych pozycji. Do adnotacji wykorzystają państwo plik w formacie
    [bed](https://genome.ucsc.edu/FAQ/FAQformat.html#format1) i ponownie program `bcftools annotate`:
    ```bash
-## utworzenie pliku z linia opisu (będzie dodana do nagłówka pliku vcf):
+## utworzenie pliku z linią opisu (będzie dodana do nagłówka pliku vcf):
 printf '##INFO=<ID=phyloP100way,Number=1,Type=Float,Description="PhyloP100way conservation score">\n' >  header-phyloP.txt
 
 ## dodanie adnotacji
