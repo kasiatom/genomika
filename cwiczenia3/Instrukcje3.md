@@ -3,7 +3,7 @@
 Celem ćwiczenia będzie wytypowanie mutacji, która może być przyczyną pewnej poważnej i rzadkiej choroby o,
 najbardziej prawdopodobnie, genetycznym podłożu. W kolejnych etapach ćwiczenia dla każdej z mutacji znalezionych u tej osoby 
 dodadzą państwo informacje przydatne przy ocenie patogenności, po czym użyją ich do automatycznego przefiltrowania listy mutacji.   
-Dane genetyczne pacjenta znajduja się w pliku `237.vcf.gz (/usr/local/share/237.vcf.gz)`. Uwaga: plik ten zawiera
+Dane genetyczne pacjenta znajdują się w pliku `237.vcf.gz (/usr/local/share/237.vcf.gz)`. Uwaga: plik ten zawiera
  dane dotyczące tylko krótkiego odcinka chromosomu 1 tego pacjenta.  
 
 ### Zadanie1 
