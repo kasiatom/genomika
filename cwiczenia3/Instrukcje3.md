@@ -111,8 +111,9 @@ bcftools annotate \
 tabix -p vcf 237-with-phyloP-and-gnomad.vcf.gz
    
 ```
-Sam plik do adnotacji został pobrany ze strony [UCSC](https://genome.ucsc.edu/) - proszę pooglądać,
- co jeszcze mogą państwo na tej stronie znaleźć -i przygotowany w następujący sposób: (zajęło mi to 3 godziny ;) -to sobie chociaż opiszę
+Sam plik do adnotacji został pobrany ze strony [UCSC](https://genome.ucsc.edu/) (proszę pooglądać,
+ co jeszcze mogą państwo na tej stronie znaleźć) i przygotowany w następujący sposób: (zajęło mi to 3 godziny ;) - 
+ to sobie chociaż opiszę
 ```bash
 wget 'http://hgdownload.cse.ucsc.edu/goldenpath/hg38/phyloP100way/hg38.100way.phyloP100way/chr1.phyloP100way.wigFix.gz'
 wig2bed < chr1.phyloP100way.wigFix > chr1.phyloP100way.bed
