@@ -1,9 +1,10 @@
 ## Ocena szkodliwości mutacji
 
-Celem ćwiczenia będzie wytypowanie mutacji, która może być przyczyną pewnej poważnej i rzadkiej choroby o,
-najbardziej prawdopodobnie, genetycznym podłożu. W kolejnych etapach ćwiczenia dla każdej z mutacji znalezionych u tej osoby 
-dodadzą państwo informacje przydatne przy ocenie patogenności, po czym użyją ich do automatycznego przefiltrowania listy mutacji.   
-Dane genetyczne pacjenta znajdują się w pliku `237.vcf.gz (/usr/local/share/237.vcf.gz)`. Uwaga: plik ten zawiera
+Celem ćwiczenia będzie wytypowanie mutacji, która może być przyczyną pewnej poważnej i rzadkiej choroby o
+ genetycznym podłożu. W kolejnych etapach ćwiczenia dla każdego z wariantów genetycznych znalezionych u chorej osoby 
+dodadzą państwo informacje przydatne przy ocenie jego patogenności. Dodane informacje posłużą do automatycznego 
+przefiltrowania listy mutacji.   
+Dane genetyczne pacjenta znajdują się w pliku `237.vcf.gz (/usr/local/share/237.vcf.gz)`. Plik ten zawiera
  dane dotyczące tylko krótkiego odcinka chromosomu 1 tego pacjenta.  
 
 ### Zadanie1 
@@ -28,18 +29,18 @@ Proszę zapoznać się (przypomnieć sobie) podstawowe informacje o formacie pli
 ***
 ### Zadanie2 
 #### Dodanie informacji o częstościach
-W tym zadaniu do pliku vcf pacjenta dodadza państwo dane o częstościach wariantów w populacji człowieka.
- Dodawane informacje będą pochodzic z bazy danych [**gnomAD**](https://gnomad.broadinstitute.org/).    
+W tym zadaniu do pliku vcf pacjenta dodadzą państwo dane o częstościach wariantów w populacji człowieka.
+ Dodawane informacje będą pochodzić z bazy danych [**gnomAD**](https://gnomad.broadinstitute.org/).    
  
- Proszę zauważyć, że mutacje powodujące ciężkie, jednogenowe choroby są usuwane z populacji przez dobór naturalny i w związku z tym
- są zazwyczaj bardzo rzadkie. Dlatego też, warianty częste w populacji nie mogą być ich przyczyną. Tak więc jednym z podstawowych 
- kroków przy ocenie szkodliwosci wariantu jest sprawdzenie,
-   czy jest on obecny w bazach danych takich jak [1000 Genomes Project](https://www.internationalgenome.org/),
-    gnomAD czy Exac (ta baza danych została ostatnia została ostatnio dodana do gnomAD) i skupienie się tylko 
-     na wariantach nigdy wcześniej nie opisanych, lub wariantach o bardzo niskich częstościach.   
-     Baza gnomAD, którą wykorzystają państwo w tym ćwiczeniu, zawiera na chwilę bieżącą informacje o sekwencjach ponad 
-     70 000 genomów i 125 000 eskomów ludzkich.   
-      Plik, jaki wykorzystają państwo do dodania adnotacji (`/usr/local/share/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`)
+ Proszę zauważyć, że mutacje powodujące ciężkie, jednogenowe choroby są usuwane z populacji przez dobór naturalny. W związku z tym, 
+ allele prowadzące do jednogenowych chorób genetycznych, jak i same choroby przez nie powodowane, są zazwyczaj bardzo rzadkie. 
+ Dlatego jednym z podstawowych  kroków przy ocenie szkodliwosci wariantu jest sprawdzenie,
+czy jest on obecny w bazach danych takich jak [1000 Genomes Project](https://www.internationalgenome.org/),
+ gnomAD czy Exac (ta baza danych została ostatnia została ostatnio dodana do gnomAD) i skupienie się tylko 
+ na wariantach nigdy wcześniej nie opisanych, lub wariantach o bardzo niskich częstościach.   
+ Baza gnomAD, którą wykorzystają państwo w tym ćwiczeniu, zawiera na chwilę bieżącą informacje o sekwencjach ponad 
+70 000 genomów i 125 000 eskomów ludzkich.   
+ Plik, jaki wykorzystają państwo do dodania adnotacji (`/usr/local/share/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`)
 został pobrany ze strony gnomAD i przygotowany w następujący sposób:  
 ```bash
 wget -c 'https://storage.googleapis.com/gnomad-public/release/3.0/vcf/genomes/gnomad.genomes.r3.0.sites.chr1.vcf.bgz'
