@@ -66,7 +66,7 @@ ln -s /user/local/share ~/data
 bcftools annotate \
     -a data/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz \
     -c INFO/gnomad_AF:=INFO/AF  \
-    237.vcf.gz \
+    data/237.vcf.gz \
     -O z -o 237-with-gnomad.vcf.gz
 
 ## Utworzenie indeksu
@@ -164,9 +164,10 @@ bcftools filter -e 'INFO/ANN ~ "LOW" ' 237-annotated.vcf.gz
 ``` 
 Uwaga, powyższe komendy wyświetlą linie wariantów, które przeszły przez zastosowany filtr w oknie terminala. Aby wynik zapisać
  do pliku należy do powyższych komend dodać opcję definiującą format wynikowego pliku oraz jego nazwę (analogicznie, jak dla komendy `
- bcftools annotate`). Filtrowanie mozna przeprowadzić wieloetapowo.  
+ bcftools annotate`). Filtrowanie można przeprowadzić wieloetapowo. Jeśli zdefiniują państwo format plików przejściowych jako 
+ skompresowany vcf (opcja `-O z`) to proszę za każdym razem przygotować też index. 
 
-Czy któraś/któreś z mutacji uznaliby państwo za prawdopodobnie patogenne? Prosze sprawdzić, czy wybrane mutacje były już kiedyś
+Czy któraś/któreś z mutacji uznaliby państwo za prawdopodobnie patogenne? Prosze sprawdzić, czy wytypowane przez państwa mutacje były już kiedyś
  opisane w bazie [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). 
  ***
  ***
