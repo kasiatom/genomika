@@ -148,7 +148,7 @@ są według państwa nieszkodliwe. Proszę opisać w punktach, jakie mutacje chc
  Do filtrowania proszę wykorzystać program `bcftools filter`.
  Poniżej kilka przykładów wykorzystania programu, więcej znajdą państwo
 w pomocy programu [bcftools filter](http://samtools.github.io/bcftools/bcftools.html#filter).  
-Informację o tym, jak tworzyć wyrażenia służące do filtrowania znajda państwo
+Informację o tym, jak tworzyć wyrażenia służące do filtrowania znajdą państwo
  [tutaj](http://samtools.github.io/bcftools/bcftools.html#expressions).
 ```bash
 ## pozostawienie tylko tych wariantów, które są nieobecne w bazie danych gnomad 
@@ -167,7 +167,7 @@ Uwaga, powyższe komendy wyświetlą linie wariantów, które przeszły przez za
  bcftools annotate`). Filtrowanie można przeprowadzić wieloetapowo. Jeśli zdefiniują państwo format plików przejściowych jako 
  skompresowany vcf (opcja `-O z`) to proszę za każdym razem przygotować też index. 
 
-Czy któraś/któreś z mutacji uznaliby państwo za prawdopodobnie patogenne? Prosze sprawdzić, czy wytypowane przez państwa mutacje były już kiedyś
+Czy któraś/któreś z mutacji uznaliby państwo za prawdopodobnie patogenne? Proszę sprawdzić, czy wytypowane przez państwa mutacje były już kiedyś
  opisane w bazie [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). 
  ***
  ***
