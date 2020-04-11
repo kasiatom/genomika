@@ -38,4 +38,6 @@ Instrukcje obsługi programu znajdują się [tutaj](https://winscp.net/eng/docs/
 
 ***
 ### Program screen  
-Tutaj opisz o co chodzi
+Podstawowy (i wystarczający dla celów ćwiczeń) opis działania programu znajdą państwo [tutaj](http://www.blog.hnatyszyn.pl/2016/03/screen-czyli-wirtualny-terminal/).  
+Szczegółowy manual programu pod tym [linkiem](https://www.gnu.org/software/screen/manual/screen.html)
+
