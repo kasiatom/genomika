@@ -10,7 +10,7 @@
 ***
 ### Praca na serwerze
 **Linux, MAC**  
-Z serwerem mozna połączyć sie wpisując w terminalu (Linux, MAC):  
+Z serwerem mozna połączyć sie wpisując w terminalu:  
 ```bash
 ssh numer_ip -l nazwa_konta
 ```  
