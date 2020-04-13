@@ -37,7 +37,7 @@ W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje 
   
  ### Zadanie3
 Ze strony Ensembl można także wygodnie pozyskać informacje dotyczące większej ilości genów/białek/regionów na raz, z 
-wykorzystaniem narzędzia **BioMart**. W tym ćwiczeniu użyją Państwo tego narzędzia, aby sprawdzić, czy w czasie niezależnej 
+wykorzystaniem narzędzia **BioMart**. W tym ćwiczeniu użyją państwo tego narzędzia, aby sprawdzić, czy w czasie niezależnej 
 ewolucji białek ludzkich i mysich dochodziło do tasowania domen. Inaczej mówiąc, porównają państwo skład domen wchodzących w skład 
 białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś domena jest obecna u jednego gatunku, a nie ma jej u drugiego.    
   
