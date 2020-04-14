@@ -5,8 +5,7 @@ SARS-CoV-2.
 
 ### Zadanie1 
 #### Drzewo filogenetyczne betakoronawirusów  
-Proszę obejrzeć drzewo filogenetyczne betakoronawirusów [link](https://nextstrain.org/groups/blab/sars-like-cov)  
-i odpowiedzieć na następujące pytania:
+Proszę obejrzeć drzewo filogenetyczne betakoronawirusów [link](https://nextstrain.org/groups/blab/sars-like-cov) i odpowiedzieć na następujące pytania:
 1. Jak nazywa się wirus najbliżej spokrewniony z wirusem SARS-CoV-2, 
 jaki gatunek jest jego gospodarzem (wystarczy nazwa potoczna)? 
 Czy jest to już dowód na to, że do transmisji wirusa SARS-CoV-2 na człowieka doszło właśnie z tego gatunku?
@@ -61,7 +60,7 @@ python3 ncov-tree-parser.py --help
 ## wynikowy plik to tabela z id szczepu, wiekiem pacjenta i listą mutacji (aa) w kolejnych kolumnach
 python3 ncov-tree-parser.py --input ncov-tree.json --output ncov-table.tab --features "age,mutations"
 ```
-Proszę spróbowac przeanalizować pobrane dane, tak aby odpowiedzieć na **jedno** z powyższych pytań. 
+Proszę spróbować przeanalizować pobrane dane, tak aby odpowiedzieć na **jedno** z powyższych (zawartych w tytule) pytań. 
 Proszę opisać przeprowadzone analizy, podać wnioski oraz założenia, jakie musieli państwo poczynić,
 przy analizie danych i interpretacji wyników.   
 Uwaga: dane można przeanalizować dowolnie, skrypt ncov-tree-parser.py ma państwu ułatwić zadanie i nie trzeba go 
