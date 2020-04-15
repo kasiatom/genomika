@@ -33,7 +33,7 @@ ważne dla jego funkcji (Fig4, tekst)
 5. Proszę teraz sprawdzić, czy opisano mutacje tych pozycji u wirusa SARS-CoV-2. 
 Jeśli tak, to proszę je wypisać. Czy ewentualna obecność takich mutacji wskazuje na omyłkę autorów powyższej publikacji (
 tj. na to, że wskazane przez nich pozycje białka nie są istotne dla jego funkcji)?
-Prosze uzasadnić.
+Proszę uzasadnić.
 6. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa (*ENTROPY* vs *EVENTS*)?
 O czym mogą świadczyć wysokie warości tych miar obserwowane dla niektórych pozycji w genomie wirusa? 
 
@@ -48,7 +48,7 @@ Na stronie `http://data.nextstrain.org/ncov_global.json` znajdą państwo dane, 
   [ncov-tree-parser.py](https://github.com/genomika-2020/genomika/blob/master/cwiczenia4/ncov-tree-parser.py).
    Skrypt kopiuje rozwiązanie podane 
    tutaj [link](https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10)
-  Jeśli zdecydują sie państwo na użycie skryptu, to wejściowe dane należy przygotować w następujący sposób:
+  Jeśli zdecydują się państwo na użycie skryptu, to wejściowe dane należy przygotować w następujący sposób:
   ```bash
 ## pobranie pliku z danymi (plik ncov_global.json):
 wget http://data.nextstrain.org/ncov_global.json
@@ -74,7 +74,7 @@ W ramach rozwiązania tego zadania należy:
 2. Opisać przeprowadzone analizy (źródło danych, obróbka danych, test statystyczny itp.)  
 3. Podać wnioski do jakich państwo doszli
 5. Podać założenia, jakie musieli państwo poczynić, przy analizie danych i interpretacji wyników 
-6. Jeśli państwa projekt ma jakies słabe strony, to proszę zaproponować, jak można by go było ulepszyć   
+6. Jeśli państwa projekt ma jakieś słabe strony, to proszę zaproponować, jak można by go było ulepszyć   
 7. Przygotować krótką prezentację projektu   
 
 Uwaga: To zadanie mogą państwo rozwiązać w zespołach (maksymalnie trzyosobowych).  
