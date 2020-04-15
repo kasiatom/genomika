@@ -45,7 +45,7 @@ def safe_get_value(dictionary, one_key):
                 v1 += "; " + dictionary[i]
             except KeyError:
                 v1 += ""
-        v = order_mutation_list(v1.strip(";").strip()) 
+        v = tidy_mutation_list(v1.strip(";").strip()) 
     else:
         try:
             v = str(dictionary[one_key])
@@ -54,7 +54,7 @@ def safe_get_value(dictionary, one_key):
     return v
 
 
-def order_mutation_list(mutations):
+def tidy_mutation_list(mutations):
     if mutations != "":
         messy_list = [i.split(": ") for i in mutations.split("; ")] 
         #print(messy_list)
