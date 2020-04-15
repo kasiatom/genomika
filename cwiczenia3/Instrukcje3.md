@@ -151,7 +151,7 @@ w pomocy programu [bcftools filter](http://samtools.github.io/bcftools/bcftools.
 Informację o tym, jak tworzyć wyrażenia służące do filtrowania znajdą państwo
  [tutaj](http://samtools.github.io/bcftools/bcftools.html#expressions).
 ```bash
-## pozostawienie tylko tych wariantów, które są nieobecne w bazie danych gnomad 
+## pozostawienie tylko tych wariantów, które są nieobecne w bazie danych gnomAD
 ## lub dla których częstość w tej  bazie danych jest niższa niż 0.01
 
 bcftools filter -i  'INFO/gnomad_AF < 0.01 | INFO/gnomad_AF="."' 237-annotated.vcf.gz
@@ -159,7 +159,7 @@ bcftools filter -i  'INFO/gnomad_AF < 0.01 | INFO/gnomad_AF="."' 237-annotated.v
 ## pozostawienie tylko tych wariantów, które w polu ANN zawieraja słowo 'missense' albo albo slowo 'frameshift'
 bcftools filter -i 'INFO/ANN ~ "missense" | INFO/ANN ~ "frameshift"' 237-annotated.vcf.gz
 
-## wyrzucenie wariantów zawierających w polu ANN slowo "LOW"
+## wyrzucenie wariantów zawierających w polu ANN słowo "LOW"
 bcftools filter -e 'INFO/ANN ~ "LOW" ' 237-annotated.vcf.gz
 ``` 
 Uwaga, powyższe komendy wyświetlą linie wariantów, które przeszły przez zastosowany filtr w oknie terminala. Aby wynik zapisać
