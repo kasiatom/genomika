@@ -47,7 +47,7 @@ Na stronie `http://data.nextstrain.org/ncov_global.json` znajdą państwo dane, 
   główne części (meta, tree, version). Do analizy danych można (ale nie trzeba) wykorzystać skrypt 
   [ncov-tree-parser.py](https://github.com/genomika-2020/genomika/blob/master/cwiczenia4/ncov-tree-parser.py).
    Skrypt kopiuje rozwiązanie podane 
-   tutaj [link](https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10)
+   tutaj [link](https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10).
   Jeśli zdecydują się państwo na użycie skryptu, to wejściowe dane należy przygotować w następujący sposób:
   ```bash
 ## pobranie pliku z danymi (plik ncov_global.json):
