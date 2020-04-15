@@ -57,12 +57,12 @@ def safe_get_value(dictionary, one_key):
 def order_mutation_list(mutations):
     if mutations != "":
         messy_list = [i.split(": ") for i in mutations.split("; ")] 
-        print(messy_list)
+        #print(messy_list)
         genes = set(sorted(([i[0] for i in messy_list])))
         nice_list = []
         for gene in genes:
             gene_mutations = ", ".join(["".join(i[1]) for i in messy_list if i[0] == gene ]).split(", ")
-            print(gene_mutations) 
+            #print(gene_mutations) 
             sorted_mutations = sorted(gene_mutations, key = lambda x: int(x[1:-1]))
             final_mutations = gene + ": " + ", ".join(sorted_mutations)
             nice_list.append(final_mutations)
@@ -120,7 +120,7 @@ if __name__=='__main__':
                                                             ................ Possible values: ....................\
                                                             country, location, date (output given as \
                                                             year.year_fraction),  \
-                                                             sex, mutations (list of all protein level mutations), \
+                                                            sex, mutations (list of all protein level mutations), \
                                                             clade, age, divergence (virus sequence divergence, \
                                                             comparing to the initial Wuhan strais)")
                                            
