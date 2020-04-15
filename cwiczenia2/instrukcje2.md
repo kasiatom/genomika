@@ -2,7 +2,7 @@
 
 ### Zadanie1  
 Proszę zapoznać się z artykułem
- [*Complex archaea that bridge the gap between prokaryotes and eukaryotes*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/#SD1) 
+ [*Complex archaea that bridge the gap between prokaryotes and eukaryotes*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/) 
  i na jego podstawie, krótko wyjaśnić, dlaczego organizmy podobne do *Lokiarchaeota* mogły być przodkiem komórek eukariotycznych. Proszę też 
 wypisać, jakie grupy białek uważane są za białka ESP (*ang. eukaryotic signature proteins*), czyli białka 
 występujące wyłącznie w komórkach eukariotycznych. Więcej na ten temat można znaleźć w pracy
