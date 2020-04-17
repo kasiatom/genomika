@@ -10,8 +10,7 @@ Proszę obejrzeć drzewo filogenetyczne betakoronawirusów [link](https://nextst
 jaki gatunek jest jego gospodarzem (wystarczy nazwa potoczna)? 
 Czy jest to już dowód na to, że do transmisji wirusa SARS-CoV-2 na człowieka doszło właśnie z tego gatunku?
 Proszę uzasadnić. 
-2. Czy transmisja między gatunkami jest czymś wyjątkowym? Jaki gatunek był najbardziej
- prawdopodobnie pierwotnym gospodarzem wirusa SARS-CoV? 
+2. Czy transmisja między gatunkami jest czymś wyjątkowym? Jaki gatunek jest gospodarzem wirusów najbliżej spokrewnionych z wirusem SARS-CoV?
  
 Jakie jest pochodzenie innych wirusów atakujących człowieka (HIV, Ebola)?
 
