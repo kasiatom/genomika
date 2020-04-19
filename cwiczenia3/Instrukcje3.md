@@ -39,7 +39,7 @@ czy jest on obecny w bazach danych takich jak [1000 Genomes Project](https://www
  gnomAD czy Exac (ta baza danych została ostatnia została ostatnio dodana do gnomAD) i skupienie się tylko 
  na wariantach nigdy wcześniej nie opisanych, lub wariantach o bardzo niskich częstościach.   
  Baza gnomAD, którą wykorzystają państwo w tym ćwiczeniu, zawiera na chwilę bieżącą informacje o sekwencjach ponad 
-70 000 genomów i 125 000 eskomów ludzkich.   
+70 000 genomów i 125 000 eksomów ludzkich.   
  Plik, jaki wykorzystają państwo do dodania adnotacji (`/usr/local/share/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`)
 został pobrany ze strony gnomAD i przygotowany w następujący sposób:  
 ```bash
