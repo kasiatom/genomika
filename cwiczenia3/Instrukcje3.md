@@ -10,7 +10,7 @@ Dane genetyczne pacjenta znajdują się w pliku `237.vcf.gz (/usr/local/share/23
 ### Zadanie1 
 #### Format VCF 
 Proszę zapoznać się (przypomnieć sobie) podstawowe informacje o formacie plików
- **Variant Calling Format** [VCF](https://en.wikipedia.org/wiki/Variant_Call_Format)  
+ **Variant Calling Format** [VCF](https://gatkforums.broadinstitute.org/gatk/discussion/1268/what-is-a-vcf-and-how-should-i-interpret-it)  
 ```bash
 #CHROM POS      ID         REF   ALT    QUAL  FILTER   INFO                             FORMAT       NA00001         NA00002         
 20     14370    rs6054257  G     A      29    PASS    NS=3;DP=14;AF=0.5;DB;H2           GT:GQ:DP:HQ  0|0:48:1:51,51  1|0:48:8:51,51  
@@ -80,7 +80,7 @@ Plik wynikowy to `237-with-gnomad.vcf.gz`. Proszę pooglądać wejściowe i wyni
 że adotacje nie zostały dodane do wszystkich linii. Dlaczego?  
 ```bash
 zcat data/237.vcf.gz | grep -v '^##' | less  
-zcat data/local/share/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz | grep -v '^##' | less
+zcat data/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz | grep -v '^##' | less
 zcat 237-with-gnomad.vcf.gz | grep -v '^##' | less
 ```
  Jakie polecenie doda informację o częstości wariantów w populacji afrykańskiej (`AF_afr`). Proszę przetestować.  
