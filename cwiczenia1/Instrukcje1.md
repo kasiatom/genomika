@@ -128,7 +128,7 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
     Mogą państwo zastosować dowolny sposób analizy.
    Można także wykorzystać poniższe polecenie (działające jednak dość wolno):
    ```bash
-     printf ""human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
+     printf "human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
      while read f; do \
               human=$( echo $f | cut -f1 -d ' ' ); \
               mouse=$( echo $f | cut -f2 -d ' ' ); \
