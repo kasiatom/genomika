@@ -33,7 +33,7 @@ ważne dla jego funkcji (Fig4, tekst)
 Jeśli tak, to proszę je wypisać. Czy ewentualna obecność takich mutacji wskazuje na omyłkę autorów powyższej publikacji (
 tj. na to, że wskazane przez nich pozycje białka nie są istotne dla jego funkcji)?
 Proszę uzasadnić.
-6. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa (*ENTROPY* vs *EVENTS*)?
+6. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa ([*ENTROPY*](https://www.hiv.lanl.gov/content/sequence/ENTROPY/entropy_readme.html) vs *EVENTS*)? 
 O czym mogą świadczyć wysokie warości tych miar obserwowane dla niektórych pozycji w genomie wirusa? 
 
 ### Zadanie3
