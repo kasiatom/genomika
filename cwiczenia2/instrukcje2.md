@@ -109,9 +109,9 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
     
 3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania:  
  * Dla ilu białek *Lokiarchaeum* udało się zidentyfikować białko homologiczne
-   (np. policzyć ile razy w wynikowym pliku pojawia się wyrażenie regularne `[1-5] hits found`)  
+   (np. policzyć ile razy w wynikowym pliku pojawia się wyrażenie regularne `'[1-5] hits found'`)  
  * Dla ilu białek nie zidentyfikowano homologa, przy ustawionym poziomie e-value 
-  (np. policzyć ile razy w wynikowym pliku pojawia się fraza `0 hits found`)
+  (np. policzyć ile razy w wynikowym pliku pojawia się fraza `'0 hits found'`)
  * Ile razy znaleziony "najlepszy homolog" należy do bakterii, a ile razy do eukariontów?  
  * Czy pośród zidentyfikowanych białek są białka należące do grupy ESP?     
  
