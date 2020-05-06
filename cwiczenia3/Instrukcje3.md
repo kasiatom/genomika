@@ -60,7 +60,7 @@ Do dodania adnotacji wykorzystają państwo program `bcftools annotate`:
 bcftools annotate
 
 ## utworzenie skrótu do katalogu z danymi
-ln -s /user/local/share ~/data
+ln -s /usr/local/share ~/data
 
 ## Dodanie informacji o częstościach wariantów (alleli) w populacji (AF)
 bcftools annotate \
