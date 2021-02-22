@@ -34,9 +34,9 @@ W tym zadaniu do pliku vcf pacjenta dodadzą państwo dane o częstościach wari
  
  Proszę zauważyć, że mutacje powodujące ciężkie, jednogenowe choroby są usuwane z populacji przez dobór naturalny. W związku z tym, 
  allele prowadzące do jednogenowych chorób genetycznych, jak i same choroby przez nie powodowane, są zazwyczaj bardzo rzadkie. 
- Dlatego jednym z podstawowych  kroków przy ocenie szkodliwosci wariantu jest sprawdzenie,
+ Dlatego jednym z podstawowych kroków przy ocenie szkodliwosci wariantu jest sprawdzenie,
 czy jest on obecny w bazach danych takich jak [1000 Genomes Project](https://www.internationalgenome.org/),
- gnomAD czy Exac (ta baza danych została ostatnia została ostatnio dodana do gnomAD) i skupienie się tylko 
+ gnomAD czy Exac (ta baza danych została ostatnio dodana do gnomAD) i skupienie się tylko 
  na wariantach nigdy wcześniej nie opisanych, lub wariantach o bardzo niskich częstościach.   
  Baza gnomAD, którą wykorzystają państwo w tym ćwiczeniu, zawiera na chwilę bieżącą informacje o sekwencjach ponad 
 70 000 genomów i 125 000 eksomów ludzkich.   
@@ -50,7 +50,7 @@ tabix -p vcf gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz
 ```
 Powyższe kroki miały na celu jedynie ograniczenie jego wielkości.   
 Proszę zauważyć, że wiele z programów, jakie można wykorzystywać 
-do przeprowadzania manipulacji na plikach vcf spodziewa się spakowanych i zindeksowanych plików wejściowych. Przedostatnie z powyższych 
+do przeprowadzania manipulacji na plikach vcf, spodziewa się spakowanych i zindeksowanych plików wejściowych. Przedostatnie z powyższych 
 poleceń wycina fragment z wejściowego pliku vcf i kompresuje go (`bgzip`). Ostatnie polecenie tworzy dla niego indeks 
 (plik o nazwie `gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz.tbi`).   
 
@@ -75,9 +75,9 @@ tabix -p vcf 237-with-gnomad.vcf.gz
 ```
 Powyższe polecenia do pliku `237.vcf.gz` dodadzą informacje z pliku `gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`
 (a dokładniej informacje z pola `INFO/AF` tego pliku). Nowo dodana adnotacja będzie nazywać się `gnomad_AF`. 
-Plik wynikowy to `237-with-gnomad.vcf.gz`. Proszę pooglądać wejściowe i wynikowe pliki vcf, oraz przestudiować pomoc programu
+Plik wynikowy to `237-with-gnomad.vcf.gz`. Proszę pooglądać wejściowe i wynikowe pliki vcf oraz przestudiować pomoc programu
  `bcftools annotate`, tak aby zrozumieć, jak działają powyższe polecenia. Proszę zauważyć, 
-że adotacje nie zostały dodane do wszystkich linii. Dlaczego?  
+że adnotacje nie zostały dodane do wszystkich linii. Dlaczego?  
    
  Jakie polecenie doda informację o częstości wariantów w populacji afrykańskiej (`AF_afr`). Proszę przetestować.  
  
@@ -122,7 +122,7 @@ tabix -p bed chr1.phyloP100way.bed.gz
 ### Zadanie4 
 #### Dodanie informacji funkcjonalnej  
 Na koniec, wykorzystają państwo program snpEff, aby dodać informację, jaki wpływ analizowane warianty mają na funkcjonalne elementy 
-genomu  (czy prowadzą do zmian w białku, jaki typ zmiany wprowadzają itp):
+genomu  (czy prowadzą do zmian w białku, jaki typ zmiany wprowadzają itp.):
 ```bash
 ## dodanie informacji efektach mutacji, GRCh38.99, to oparta na danych z Ensembl baza danych wykorzystywana przez program 
 zcat 237-with-phyloP-and-gnomad.vcf.gz  | java -Xmx4g -jar /opt/tools/snpEff/snpEff.jar GRCh38.101 | bgzip > 237-annotated.vcf.gz
@@ -158,7 +158,7 @@ bcftools filter -i 'INFO/ANN ~ "missense" | INFO/ANN ~ "frameshift"' 237-annotat
 bcftools filter -e 'INFO/ANN ~ "LOW" ' 237-annotated.vcf.gz
 ``` 
 Uwaga, powyższe komendy wyświetlą linie wariantów, które przeszły przez zastosowany filtr w oknie terminala. Aby wynik zapisać
- do pliku należy do powyższych komend dodać opcję definiującą format wynikowego pliku oraz jego nazwę (analogicznie, jak dla komendy `
+ do pliku, należy do powyższych komend dodać opcję definiującą format wynikowego pliku oraz jego nazwę (analogicznie, jak dla komendy `
  bcftools annotate`). Filtrowanie można przeprowadzić wieloetapowo. Jeśli zdefiniują państwo format plików przejściowych jako 
  skompresowany vcf (opcja `-O z`) to proszę za każdym razem przygotować też index. 
 

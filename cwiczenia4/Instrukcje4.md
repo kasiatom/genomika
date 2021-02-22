@@ -28,19 +28,19 @@ oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201
 4. Powyższa mutacja dotyczy białka S koronawirusa. 
 Proszę przeczytać artykuł [*Structural basis for the recognition of SARS-CoV-2 by full-length human ACE2*](https://science.sciencemag.org/content/367/6485/1444). 
 Jaką rolę pełni to białko podczas infekcji? Proszę wypisać, które pozycje tego białka wydają się być 
-ważne dla jego funkcji (Fig4, tekst)
+ważne dla jego funkcji (Fig4, tekst).
 5. Proszę teraz sprawdzić, czy opisano mutacje tych pozycji u wirusa SARS-CoV-2. 
 Jeśli tak, to proszę je wypisać. Czy ewentualna obecność takich mutacji wskazuje na omyłkę autorów powyższej publikacji (
 tj. na to, że wskazane przez nich pozycje białka nie są istotne dla jego funkcji)?
 Proszę uzasadnić.
 6. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa ([*ENTROPY*](https://www.hiv.lanl.gov/content/sequence/ENTROPY/entropy_readme.html) vs *EVENTS*)? 
-O czym mogą świadczyć wysokie warości tych miar obserwowane dla niektórych pozycji w genomie wirusa? 
+O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych pozycji w genomie wirusa? 
 
 ### Zadanie3
 #### Czy wirus z czasem staje się mniej zjadliwy? Czy częściej atakuje mężczyzn? Czy są mutacje ułatwiające infekcję osób młodych?
 
 Proszę o zaplanowanie i przeprowadzenie analiz mających na celu uzyskanie odpowiedzi na **jedno** 
-z powyższych (zawartych w tytule) pytań, lub innego interesującego państwa pytania dotyczacego epidemii COVID-19.
+z powyższych (zawartych w tytule) pytań, lub innego interesującego państwa pytania dotyczącego epidemii COVID-19.
 Na stronie `http://data.nextstrain.org/ncov_global.json` znajdą państwo dane, które posłużyły do otrzymania
  analizowanego w poprzednim zadaniu drzewa filogenetycznego wirusa (w formacie [json](https://pl.wikipedia.org/wiki/JSON)). Są one podzielone na trzy
   główne części (meta, tree, version). Do analizy danych można (ale nie trzeba) wykorzystać skrypt 

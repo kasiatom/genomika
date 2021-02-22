@@ -4,7 +4,7 @@
 Proszę otworzyć stronę [Ensembl](https://www.ensembl.org/index.html) i rozejrzeć się. Informacje o jakich gatunkach są tutaj zawarte? 
 Jaki typ danych można tu znaleźć? 
   
-Proszę zauważyć, że dane dotyczące wielu pozostałych gatunków można uzyskać korzystając z podobnie zorganizowanych "stron siostrzanych":
+Proszę zauważyć, że dane dotyczące wielu pozostałych gatunków można uzyskać, korzystając z podobnie zorganizowanych "stron siostrzanych":
  [Ensembl Bacteria](http://bacteria.ensembl.org/index.html), [Ensembl Protists](http://protists.ensembl.org/index.html), 
  [Ensembl Fungi](http://fungi.ensembl.org/index.html), [Ensembl Plants](http://plants.ensembl.org/index.html) oraz 
  [Ensembl Metazoa](http://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
@@ -25,7 +25,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  4. Ile aminokwasów wchodzi w skład białka powstającego w wyniku translacji transkryptu **BRCA1-210**?
  5. Ile eksonów wchodzi w skład tego transkryptu? W którym eksonie położony jest kodon start? Czy zawsze tak jest - 
  proszę sprawdzić na przykładzie innych genów/transkryptów.  
- 6. Proszę wyjaśnić, co to jest "faza" początku i końca eksonu. Czy w wyniku translacji transkryptu, który nie zawierałby 5 eksonu 
+ 6. Proszę wyjaśnić, co to jest "faza" początku i końca eksonu. Czy w wyniku translacji transkryptu, który nie zawierałby 5 eksonu, 
  powstałoby funkcjonalne białko? Dlaczego?
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
  8. W jakich gen *BRCA1* ulega najwyższej eskpresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
@@ -43,7 +43,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
   
  Zadanie to można podzielić na następujące etapy:  
   1. Pozyskanie listy identyfikatorów wszystkich genów kodujących białka u człowieka i odpowiadających im mysich ortologów. 
-  Do listy tej dodatkowo należy dodać informację o rodzaju ortologii  
+  Do listy tej dodatkowo należy dodać informację o rodzaju ortologii.  
   2. Pozyskanie listy nazw domen (według klasyfikacji [Pfam](https://pfam.xfam.org/)) dla wszystkich białek człowieka i myszy
   3. Połączenie i odfiltrowanie powyższych list, tak aby wybrać identyfikatory genów mających odmienny skałd domen oraz nazwy domen 
   występujących tylko u jednego gatunku. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
@@ -58,7 +58,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 ##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listę ortologów
  * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
  * Proszę następnie wybrać bazę danych **Ensembl Genes 99** (99 to wersja bazy danych, baza jest uaktualniana dość często -
-  zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione    
+  zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione.    
  * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p13**). Co oznacza skrót GRCh38.p13? 
  * Po lewej stronie pojawił się teraz pasek z filtrami oraz atrybutami do wyboru.
    * Ustawienie filtrów (tutaj zawężamy zakres danych, w naszym przykładzie chcemy wybrać tylko geny kodujące białko)  
@@ -71,7 +71,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
                    => ORTHOLOGUES [K-O] => Mouse Orthologues => Mouse gene stable ID  oraz Mouse homology type
       ```
  * Teraz można powrócić na górę strony i kliknąć przycisk **Results**. Pojawi się tabelka z trzema kolumnami. Aby zapisać pełną tabelę do 
- pliku można wybrać:  
+ pliku, można wybrać:  
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
  nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [scp](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer) lub
   [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer).    
@@ -98,7 +98,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     ```bash
     wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
    ```
- *  Pobrany plik  ma 28111 linii, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
+ *  Pobrany plik ma 28111 linii, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
   Przed dalszą analizą proszę o odfiltrowanie takich linii, proszę też o usunięcie nagłówka i zapisanie do dwóch osobnych plików danych dotyczących 
   ortologów "one to one" i "one to many". Można to zrobić z wykorzystaniem *awk* (lub w dowolny wymyślony przez siebie sposób):  
     ```bash
@@ -118,8 +118,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
          => PROTEIN DOMAINS AND FAMILIES => Domains => Pfam ID 
 ``` 
 Proszę pamiętać, aby zmienić zakres danych na **Mouse genes GRCm38.p6** 
-przy pobieraniu danych o domenach w białkach mysich. Powinni państwo uzyskać dwa pliki z ID genu w piewszej kolumnie i ID domeny w drugiej.
-Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka. 
+przy pobieraniu danych o domenach w białkach mysich. Powinni państwo uzyskać dwa pliki z ID genu w pierwszej kolumnie i ID domeny w drugiej.
+Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka. 
 
 ***  
   ##### AD3. Połączenie list i wybranie odpowiednich danych
@@ -148,9 +148,9 @@ Proszę ponownie usunąć linie z pustą drugą kolunmą oraz linie nagłówka.
   
 ***    
   ##### AD4. Podsumowanie otrzymanych wyników
-   Proszę przeanalizować uzyskane dane. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z "unikatową" domeną.
-   Jaką funkcję pełni to białko, jaką funkcję ma "unikatowa" domena, czy domena ta występuje we wszystkich formach tego białka
-    (niezależnie od transkryptu).  
+   Proszę przeanalizować uzyskane dane. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z unikatową domeną.
+   Jaką funkcję pełni to białko, jaką funkcję ma unikatowa domena, czy domena ta występuje we wszystkich formach tego białka?
+    (niezależnie od transkryptu)?     
  
  ***
  ***
