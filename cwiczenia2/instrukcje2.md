@@ -103,7 +103,8 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
             -max_target_seqs 1
                     
        ```
-    Przed uruchomieniem analizy proszę przestudiować pomoc i rozszyfrować znaczenie poszczególnych argumentów - niektóre z nich nie są polecane przez twórców 
+    Przed uruchomieniem analizy proszę przestudiować pomoc i rozszyfrować znaczenie poszczególnych argumentów - 
+    niektóre z nich nie są polecane przez twórców 
     programu blastp, ale pomogą ograniczyć wielkość wynikowego pliku. `/usr/local/share/pdbaa` to położenie bazy danych. 
     Samo przeszukiwanie potrwa dość długo i dobrze go uruchomić w programie [screen](https://github.com/genomika-2020/genomika/blob/master/README.md#program-screen)
     
