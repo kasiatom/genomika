@@ -34,7 +34,7 @@ W tym zadaniu do pliku vcf pacjenta dodadzą państwo dane o częstościach wari
  
  Proszę zauważyć, że mutacje powodujące ciężkie, jednogenowe choroby są usuwane z populacji przez dobór naturalny. W związku z tym, 
  allele prowadzące do jednogenowych chorób genetycznych, jak i same choroby przez nie powodowane, są zazwyczaj bardzo rzadkie. 
- Dlatego jednym z podstawowych kroków przy ocenie szkodliwosci wariantu jest sprawdzenie,
+ Dlatego jednym z podstawowych kroków przy ocenie szkodliwości wariantu jest sprawdzenie,
 czy jest on obecny w bazach danych takich jak [1000 Genomes Project](https://www.internationalgenome.org/),
  gnomAD czy Exac (ta baza danych została ostatnio dodana do gnomAD) i skupienie się tylko 
  na wariantach nigdy wcześniej nie opisanych, lub wariantach o bardzo niskich częstościach.   
