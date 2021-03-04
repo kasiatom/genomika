@@ -18,7 +18,7 @@ Jakie jest pochodzenie innych wirusów atakujących człowieka (HIV, Ebola)?
 #### Drzewo filogenetyczne wirusa SARS-CoV-2
 Proszę wejść na stronę [nextstrain](https://nextstrain.org/ncov/global) dotyczącą wirusa SARS-CoV-2. 
 Proszę obejrzeć animację i rozejrzeć się na stronie, tak aby znaleźć odpowiedzi na poniższe pytania. Pomocne mogą 
-okazać sie przygotowane przez tworców strony tutoriale 
+okazać się przygotowane przez twórców strony tutoriale 
 [*How to interpret the phylogenetic trees*](https://nextstrain.org/help/general/how-to-read-a-tree) 
 oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201901_krisp_auspice.html).
 1. Czy wszystkie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
@@ -72,7 +72,7 @@ programu `jq` (pomoc: `man jq`), lub uzyskać potrzebne dane z innego źródła.
 W ramach rozwiązania tego zadania należy:  
 1. Przedstawić i krótko uzasadnić wybrane pytanie badawcze
 2. Opisać przeprowadzone analizy (źródło danych, obróbka danych, test statystyczny itp.)  
-3. Podać wnioski do jakich państwo doszli
+3. Podać wnioski, do jakich państwo doszli
 5. Podać założenia, jakie musieli państwo poczynić, przy analizie danych i interpretacji wyników 
 6. Jeśli państwa projekt ma jakieś słabe strony, to proszę zaproponować, jak można by go było ulepszyć   
 7. Przygotować krótką prezentację projektu   
