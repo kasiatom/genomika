@@ -57,7 +57,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 
 ##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listę ortologów
  * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
- * Proszę następnie wybrać bazę danych **Ensembl Genes 99** (99 to wersja bazy danych, baza jest uaktualniana dość często -
+ * Proszę następnie wybrać bazę danych **Ensembl Genes 103** (103 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione.    
  * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p13**). Co oznacza skrót GRCh38.p13? 
  * Po lewej stronie pojawił się teraz pasek z filtrami oraz atrybutami do wyboru.
@@ -143,8 +143,9 @@ Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka.
   
   W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdują się identyfikatory genów, odpowiednio ludzkich i mysich, a w
   kolumnach 2 i 4 ID domen obecnych tylko w jednym z homologicznych białek (lub nic, jeśli skład domen nie różni się pomiędzy gatunkami). 
-  Polecenie przeprowadza analizę tylko dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku (z ortologami "one to many").
-  Zakłada ono, że odfiltrowane pliki z id domen to odpowiednio **human-domains.txt** i  **mouse-domains.txt**  
+  Polecenie przeprowadza analizę tylko dla homologów "one to one". Proszę je następnie uruchomić dla drugiego pliku
+  (z ortologami "one to many").
+  Zakłada ono, że odfiltrowane pliki z id domen to odpowiednio **human-domains.txt** i **mouse-domains.txt**  
   
 ***    
   ##### AD4. Podsumowanie otrzymanych wyników
