@@ -117,7 +117,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
          => GENE => Gene stable ID (ponownie proszę o usuniecie pozostałych zaznaczonych automatycznie atrybutów)
          => PROTEIN DOMAINS AND FAMILIES => Domains => Pfam ID 
 ``` 
-Proszę pamiętać, aby zmienić zakres danych na **Mouse genes GRCm38.p6** 
+Proszę pamiętać, aby zmienić zakres danych na **Mouse genes GRCm39** 
 przy pobieraniu danych o domenach w białkach mysich. Powinni państwo uzyskać dwa pliki z ID genu w pierwszej kolumnie i ID domeny w drugiej.
 Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka. 
 
