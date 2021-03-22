@@ -16,8 +16,11 @@ ssh numer_ip -l nazwa_konta
 ```  
 
 **Windows**   
-Logowanie wymaga zainstalowania programu [puTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 
-Szczegółowe instrukcje obsługi znajdują się [tutaj](https://the.earth.li/~sgtatham/putty/0.73/puttydoc.txt)  
+Logowanie wymaga zainstalowania jednego z dwóch programów:  
+* [puTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)   
+  Szczegółowe instrukcje obsługi znajdują się [tutaj](https://the.earth.li/~sgtatham/putty/0.73/puttydoc.txt)  
+* [MobaXterm](https://mobaxterm.mobatek.net/download.html)  
+  [Tutaj](https://mobaxterm.mobatek.net/documentation.html) pomoc programu
 
 Proszę o zmianę hasła po pierwszym zalogowaniu (polecenie *passwd*)  
 
@@ -33,8 +36,11 @@ gdzie
 [user@]DEST_HOST:]file2 to lokalizacja docelowa  
 ```
 **Windows**   
-Należy zainstalować [WinSCP](https://winscp.net/eng/download.php)  
+Należy zainstalować:  
+* [WinSCP](https://winscp.net/eng/download.php) 
 Instrukcje obsługi programu znajdują się [tutaj](https://winscp.net/eng/docs/getting_started)  
+lub
+* MobaXterm](https://mobaxterm.mobatek.net/download.html)  
 
 ***
 ### Program screen  
