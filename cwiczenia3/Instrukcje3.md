@@ -1,7 +1,9 @@
 ## Ocena szkodliwości mutacji
 
 Celem ćwiczenia będzie wytypowanie mutacji, która może być przyczyną pewnej poważnej i rzadkiej choroby o
- genetycznym podłożu. W kolejnych etapach ćwiczenia dla każdego z wariantów genetycznych znalezionych u chorej osoby 
+ genetycznym podłożu. Osoba chora (dziecko) cierpi na anemię, przy jednoczesnym wysokim zbyt wysokim poziomie żelaza we krwi.
+Zauważono u niej także opóźnienie rozwoju.
+W kolejnych etapach ćwiczenia dla każdego z wariantów genetycznych znalezionych u chorej osoby 
 dodadzą państwo informacje przydatne przy ocenie jego patogenności. Dodane informacje posłużą do automatycznego 
 przefiltrowania listy mutacji.   
 Dane genetyczne pacjenta znajdują się w pliku `237.vcf.gz (/usr/local/share/237.vcf.gz)`. Plik ten zawiera
