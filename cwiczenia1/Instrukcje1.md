@@ -28,7 +28,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  6. Proszę wyjaśnić, co to jest "faza" początku i końca eksonu. Czy w wyniku translacji transkryptu, który nie zawierałby 5 eksonu, 
  powstałoby funkcjonalne białko? Dlaczego?
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
- 8. W jakich gen *BRCA1* ulega najwyższej eskpresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
+ 8. W jakich gen *BRCA1* ulega najwyższej ekspresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
 W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png)  
   
@@ -98,7 +98,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     ```bash
     wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
    ```
- *  Pobrany plik ma 28111 linii, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
+ *  Pobrany plik ma 27683 linii, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
   Przed dalszą analizą proszę o odfiltrowanie takich linii, proszę też o usunięcie nagłówka i zapisanie do dwóch osobnych plików danych dotyczących 
   ortologów "one to one" i "one to many". Można to zrobić z wykorzystaniem *awk* (lub w dowolny wymyślony przez siebie sposób):  
     ```bash
