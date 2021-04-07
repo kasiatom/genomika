@@ -45,3 +45,6 @@ lub
 Podstawowy (i wystarczający dla celów ćwiczeń) opis działania programu znajdą państwo [tutaj](http://www.blog.hnatyszyn.pl/2016/03/screen-czyli-wirtualny-terminal/).  
 Szczegółowy manual programu pod tym [linkiem](https://www.gnu.org/software/screen/manual/screen.html)
 
+***
+### Aktywacja środowiska wirtualnego  
+Instrukcje znajdują sie [tutaj](https://github.com/genomika-2020/genomika/blob/master/conda.md)  
