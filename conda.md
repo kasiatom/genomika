@@ -10,14 +10,14 @@
 
 3) Proszę się wylogować (`exit`)
 
-4) Proszę się ponownie zalogować, znak zachęty;) powinien byc inny niż dotychczas:
+4) Proszę się ponownie zalogować. Po zalogowaniu znak zachęty;) powinien być inny niż dotychczas:
 ```bash
-### przed nazwą użytkownika pojawia sie (base)
+### przed nazwą użytkownika pojawia się (base)
 (base) user1xx@thor1804:~$
 ```
 5) Jeśli tak nie jest, proszę wpisać:
 ```bash
-/opt/miniconda3/dist/bin/conda activate base ### zatwierdzic Enter
+/opt/miniconda3/dist/bin/conda activate base ### zatwierdzić Enter
 ```
 6) Teraz proszę sprawdzić, czy programy są widoczne np.:
 ```bash
