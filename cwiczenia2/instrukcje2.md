@@ -58,7 +58,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
  wykorzystają państwo blastp, aby sprawdzić, czy rzeczywiście część białek *Lokiarchaeum* jest 
  bardziej podobna do białek eukariotycznych, niż bakteryjnych oraz do identyfikacji białek ESP.   
   
- Aplikacja **blastp** porównuje zadane sekwencje aminokwasowe do sekwencji białek zdeponowanych w bazach banych. W ten sposób można dla 
+ Aplikacja **blastp** porównuje zadane sekwencje aminokwasowe do sekwencji białek zdeponowanych w bazach danych. W ten sposób można dla 
  białek o nieznanej funkcji wyszukać białka najbardziej do nich podobne (najbliższe ewolucyjnie) i na tej zasadzie 
  wnioskować o ich roli.  
  W tym ćwiczeniu przeszukają państwo jedną z udostępnionych przez NCBI 
