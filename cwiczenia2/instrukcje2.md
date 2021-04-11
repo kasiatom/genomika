@@ -73,7 +73,7 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
 ***   
  
  Etapy analizy:  
- 1. Uzysanie pliku zawierajacego ID wszystkich znanych gatunków z grupy *Archaea*.   
+ 1. Uzyskanie pliku zawierającego ID wszystkich znanych gatunków z grupy *Archaea*.   
  Taka lista będzie potrzebna, aby wykluczyć sekwencje białek tych gatunków z przeszukiwanej bazy danych. Cała procedura jest szczegółowo 
  opisana [tutaj](https://www.ncbi.nlm.nih.gov/books/NBK546209/). Listę proszę zapisać do pliku:
     ```bash
