@@ -79,12 +79,12 @@ ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast
     ```bash
     ## uzyskanie numeru ID taksonu (taxid) o zadanej nazwie, tutaj dla Archaea
     ## get_species_taxids.sh -n Archaea
-    ## Uwaga: najnowsza zainstalowana wersja skryptu  ma "bug" get_species_taxids.sh i nie działa poprawnie
-    ## Załataną wersję znajdą Państwo w katalogu /dane prosze jej użyć:
+    ## Uwaga: najnowsza zainstalowana wersja skryptu get_species_taxids.sh ma mały "bug" i nie działa poprawnie
+    ## Niezbyt elegancko "załataną" wersję skryptu znajdą Państwo w katalogu /dane proszę jej użyć:
     /dane/get_species_taxids_fixed.sh -n Archaea
           
     ## zapisanie do pliku archaea-taxid-list.txt ID wszystkich gatunków wchodzących w skład Archaea
-    ## w poniższyej komendzie za 'taxid' należy podstawić ID grupy Archaea  ta część działa poprawnie w wersji zainstalowanej) 
+    ## w poniższyej komendzie za 'taxid' należy podstawić ID grupy Archaea - ta część działa poprawnie w wersji zainstalowanej 
     get_species_taxids.sh -t taxid > archaea-taxid-list.txt  
     
     ```
