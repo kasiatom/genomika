@@ -22,12 +22,11 @@ okazać się przygotowane przez twórców strony tutoriale
 [*How to interpret the phylogenetic trees*](https://nextstrain.org/help/general/how-to-read-a-tree) 
 oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201901_krisp_auspice.html).
 1. Czy wszystkie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
-2. Jak wirus dotarł do Ameryki Północnej - bezpośrednio z Chin, czy z Europy?
-3. Ile kladów wirusa jest wyodrębnionych na stronie, jaka mutacja charakteryzuje najliczniejszy
+2. Ile kladów wirusa jest wyodrębnionych na stronie?  
+3. Kiedy i gdzie powstał klad 20J/501Y.V3? Jaką mutacje w białku S maja wszystkie wirusy z tego kladu?  
  klad, jak się ten klad nazywa?
-4. Powyższa mutacja dotyczy białka S koronawirusa. 
-Proszę przeczytać artykuł [*Structural basis for the recognition of SARS-CoV-2 by full-length human ACE2*](https://science.sciencemag.org/content/367/6485/1444). 
-Jaką rolę pełni to białko podczas infekcji? Proszę wypisać, które pozycje tego białka wydają się być 
+4. Proszę przeczytać artykuł [*Structural basis for the recognition of SARS-CoV-2 by full-length human ACE2*](https://science.sciencemag.org/content/367/6485/1444). 
+Jaką rolę pełni białko S podczas infekcji? Proszę wypisać, które pozycje tego białka wydają się być 
 ważne dla jego funkcji (Fig4, tekst).
 5. Proszę teraz sprawdzić, czy opisano mutacje tych pozycji u wirusa SARS-CoV-2. 
 Jeśli tak, to proszę je wypisać. Czy ewentualna obecność takich mutacji wskazuje na omyłkę autorów powyższej publikacji (
