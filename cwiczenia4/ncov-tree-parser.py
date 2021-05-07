@@ -115,7 +115,7 @@ if __name__=='__main__':
    
     parser = argparse.ArgumentParser(description='This script flatten the tree part of the ncov json and returns needed node and branch attributes in tab format ')
     parser.add_argument('-i', '--input', type=str, help="Path to input ncov tree json; created with 'cat ncov_global.json | jq .tree' command")
-    parser.add_argument('-f', '--features', type=str, help="Coma deliminated list of wanted attributes, \
+    parser.add_argument('-f', '--features', type=str, help="Comma delimited list of wanted attributes, \
                                                             for example 'age,mutations', 'clade,sex,date,divergence'. \
                                                             ................ Possible values: ....................\
                                                             country, location, date (output given as \
