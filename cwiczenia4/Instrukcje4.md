@@ -63,7 +63,7 @@ python3 ncov-tree-parser.py --help
 
 ## przykładowe użycie skryptu; 
 ## wynikowy plik to tabela z id szczepu, wiekiem pacjenta i listą mutacji (aa) w kolejnych kolumnach
-python3 ncov-tree-parser.py --input ncov-tree.json --output ncov-table.tab --features "age,mutations"
+python3 ncov-tree-parser.py --input ncov-tree.json --output ncov-table.tab --features "age,aa"
   ``` 
 Jeśli nie chcą państwo korzystać z powyższego skryptu, można spróbować przeanalizować dane z użyciem 
 programu `jq` (pomoc: `man jq`), lub uzyskać potrzebne dane z innego źródła.   
