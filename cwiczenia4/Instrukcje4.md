@@ -3,7 +3,7 @@
 Celem ćwiczenia będzie analiza danych dotyczących epidemii COVID-19
 SARS-CoV-2.   
 
-### Zadanie1 
+### Zadanie1  
 #### Drzewo filogenetyczne betakoronawirusów  
 Proszę obejrzeć drzewo filogenetyczne betakoronawirusów [link](https://nextstrain.org/groups/blab/sars-like-cov) i odpowiedzieć na następujące pytania:
 1. Jak nazywa się wirus najbliżej spokrewniony z wirusem SARS-CoV-2, 
