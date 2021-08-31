@@ -39,7 +39,7 @@ O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych
 #### Czy wirus z czasem staje się mniej zjadliwy? Czy częściej atakuje mężczyzn? Czy są mutacje ułatwiające infekcję osób młodych?
 
 Proszę o zaplanowanie i przeprowadzenie analiz mających na celu uzyskanie odpowiedzi na **jedno** 
-z powyższych (zawartych w tytule) pytań lub innego interesującego państwa pytania dotyczącego epidemii COVID-19.
+z powyższych (zawartych w tytule) pytańlub innego interesującego państwa pytania dotyczącego epidemii COVID-19.
 Na stronie `http://data.nextstrain.org/ncov_global.json` znajdą państwo dane, które posłużyły do otrzymania
  analizowanego w poprzednim zadaniu drzewa filogenetycznego wirusa (w formacie [json](https://pl.wikipedia.org/wiki/JSON)). Są one podzielone na trzy
   główne części (meta, tree, version). Do analizy danych można (ale nie trzeba) wykorzystać skrypt 
