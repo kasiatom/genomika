@@ -23,7 +23,7 @@ okazać się przygotowane przez twórców strony tutoriale
 oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201901_krisp_auspice.html).
 1. Czy wszystkie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
 2. Ile kladów wirusa jest wyodrębnionych na stronie?  
-3. Kiedy i gdzie powstał klad 20J/501Y.V3? Jaką mutacje w białku S maja wszystkie wirusy z tego kladu?  
+3. Kiedy i gdzie powstał klad 20J/501Y.V3? Jaką mutacje w białku S mają wszystkie wirusy z tego kladu?  
  klad, jak się ten klad nazywa?
 4. Proszę przeczytać artykuł [*Structural basis for the recognition of SARS-CoV-2 by full-length human ACE2*](https://science.sciencemag.org/content/367/6485/1444). 
 Jaką rolę pełni białko S podczas infekcji? Proszę wypisać, które pozycje tego białka wydają się być 
@@ -39,7 +39,7 @@ O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych
 #### Czy wirus z czasem staje się mniej zjadliwy? Czy częściej atakuje mężczyzn? Czy są mutacje ułatwiające infekcję osób młodych?
 
 Proszę o zaplanowanie i przeprowadzenie analiz mających na celu uzyskanie odpowiedzi na **jedno** 
-z powyższych (zawartych w tytule) pytań, lub innego interesującego państwa pytania dotyczącego epidemii COVID-19.
+z powyższych (zawartych w tytule) pytań lub innego interesującego państwa pytania dotyczącego epidemii COVID-19.
 Na stronie `http://data.nextstrain.org/ncov_global.json` znajdą państwo dane, które posłużyły do otrzymania
  analizowanego w poprzednim zadaniu drzewa filogenetycznego wirusa (w formacie [json](https://pl.wikipedia.org/wiki/JSON)). Są one podzielone na trzy
   główne części (meta, tree, version). Do analizy danych można (ale nie trzeba) wykorzystać skrypt 
