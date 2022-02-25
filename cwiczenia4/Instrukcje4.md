@@ -49,7 +49,7 @@ Na stronie `http://data.nextstrain.org/ncov_global.json` znajdą państwo dane, 
   Jeśli zdecydują się państwo na użycie skryptu, to wejściowe dane należy przygotować w następujący sposób:
   ```bash
 ## pobranie pliku z danymi (plik ncov_global.json):
-Proszę przejść na stronę http://data.nextstrain.org/ncov_global.json
+Proszę przejść na stronę `https://data.nextstrain.org/files/ncov/open/global/global.json`
 Po czym wybrać zakładkę "Raw Data" i następnie "save"
 
 ## "wycięcie" z pliku cnov_global.json części dotyczącej drzewa filogenetycznego:
