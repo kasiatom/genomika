@@ -98,7 +98,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     ```bash
     wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
    ```
- *  Pobrany plik ma 27683 linii, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
+ *  Pobrany plik ma 27767 linii, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
   Przed dalszą analizą proszę o odfiltrowanie takich linii, proszę też o usunięcie nagłówka i zapisanie do dwóch osobnych plików danych dotyczących 
   ortologów "one to one" i "one to many". Można to zrobić z wykorzystaniem *awk* (lub w dowolny wymyślony przez siebie sposób):  
     ```bash
