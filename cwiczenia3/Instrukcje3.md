@@ -127,7 +127,7 @@ Na koniec, wykorzystają państwo program snpEff, aby dodać informację, jaki w
 genomu  (czy prowadzą do zmian w białku, jaki typ zmiany wprowadzają itp.):
 ```bash
 ## dodanie informacji efektach mutacji, GRCh38.99, to oparta na danych z Ensembl baza danych wykorzystywana przez program 
-zcat 237-with-phyloP-and-gnomad.vcf.gz  | java -Xmx4g -jar /opt/tools/snpEff/snpEff.jar GRCh38.101 | bgzip > 237-annotated.vcf.gz
+zcat 237-with-phyloP-and-gnomad.vcf.gz  | snpEff -Xmx5G GRCh38.99 | bgzip > 237-annotated.vcf.gz
 
 ## utworzenie indeksu 
 tabix -p vcf 237-annotated.vcf.gz

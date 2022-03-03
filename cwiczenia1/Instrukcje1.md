@@ -30,7 +30,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
  8. W jakich gen *BRCA1* ulega najwyższej ekspresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
-W znalezieniu powyższych infomacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png)  
+W znalezieniu powyższych informacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png)  
   
 ***
 ***
@@ -55,7 +55,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 
 ***
 
-##### AD1. Jak korzystać z narzędzia BioMart by uzyskać listę ortologów
+##### AD1. Jak korzystać z narzędzia BioMart, by uzyskać listę ortologów
  * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
  * Proszę następnie wybrać bazę danych **Ensembl Genes 105** (105 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione.    
