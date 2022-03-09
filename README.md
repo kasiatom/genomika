@@ -42,6 +42,7 @@ lub
 
 ***
 ### Program screen  
+Podstawowe instrukcje znajdują się [tutaj](https://github.com/kasiatom/genomika/blob/master/screen.md)  
 Podstawowy (i wystarczający dla celów ćwiczeń) opis działania programu znajdą państwo [tutaj](http://www.blog.hnatyszyn.pl/2016/03/screen-czyli-wirtualny-terminal/).  
 Szczegółowy manual programu pod tym [linkiem](https://www.gnu.org/software/screen/manual/screen.html)
 
