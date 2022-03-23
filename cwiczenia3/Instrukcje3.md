@@ -12,7 +12,7 @@ Dane genetyczne pacjenta znajdują się w pliku `237.vcf.gz (/usr/local/share/23
 ### Zadanie1 
 #### Format VCF 
 Proszę zapoznać się (przypomnieć sobie) podstawowe informacje o formacie plików
- **Variant Calling Format** (VCF) [link](https://en.wikipedia.org/wiki/Variant_Call_Format) oraz [link](https://gatkforums.broadinstitute.org/gatk/discussion/1268/what-is-a-vcf-and-how-should-i-interpret-it)  
+ **Variant Calling Format** (VCF) [link](https://en.wikipedia.org/wiki/Variant_Call_Format) oraz [link](https://gatk.broadinstitute.org/hc/en-us/articles/360035531692-VCF-Variant-Call-Format)  
 ```bash
 #CHROM POS      ID         REF   ALT    QUAL  FILTER   INFO                             FORMAT       NA00001         NA00002         
 20     14370    rs6054257  G     A      29    PASS    NS=3;DP=14;AF=0.5;DB;H2           GT:GQ:DP:HQ  0|0:48:1:51,51  1|0:48:8:51,51  
