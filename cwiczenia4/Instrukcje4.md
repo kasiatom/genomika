@@ -14,6 +14,9 @@ Proszę uzasadnić.
  
 Jakie jest pochodzenie innych wirusów atakujących człowieka (HIV, Ebola)?
 
+***  
+***  
+  
 ### Zadanie2 
 #### Drzewo filogenetyczne wirusa SARS-CoV-2
 Proszę wejść na stronę [nextstrain](https://nextstrain.org/ncov/global) dotyczącą wirusa SARS-CoV-2. 
@@ -23,60 +26,41 @@ okazać się przygotowane przez twórców strony tutoriale
 oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201901_krisp_auspice.html).
 1. Czy wszystkie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
 2. Ile kladów wirusa jest wyodrębnionych na stronie?  
-3. Kiedy i gdzie powstał klad 20J/501Y.V3? Jaką mutacje w białku S mają wszystkie wirusy z tego kladu?  
- klad, jak się ten klad nazywa?
-4. Proszę przeczytać artykuł [*Structural basis for the recognition of SARS-CoV-2 by full-length human ACE2*](https://science.sciencemag.org/content/367/6485/1444). 
-Jaką rolę pełni białko S podczas infekcji? Proszę wypisać, które pozycje tego białka wydają się być 
-ważne dla jego funkcji (Fig4, tekst).
-5. Proszę teraz sprawdzić, czy opisano mutacje tych pozycji u wirusa SARS-CoV-2. 
-Jeśli tak, to proszę je wypisać. Czy ewentualna obecność takich mutacji wskazuje na omyłkę autorów powyższej publikacji (
-tj. na to, że wskazane przez nich pozycje białka nie są istotne dla jego funkcji)?
-Proszę uzasadnić.
-6. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa ([*ENTROPY*](https://www.hiv.lanl.gov/content/sequence/ENTROPY/entropy_readme.html) vs *EVENTS*)? 
-O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych pozycji w genomie wirusa? 
+3. Kiedy i gdzie najbardziej prawdopodobnie powstały warianty Delta i Omicron? Czy Omicron powstał z wariantu Delta?
+4. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa ([*ENTROPY*](https://www.hiv.lanl.gov/content/sequence/ENTROPY/entropy_readme.html) vs *EVENTS*)? 
+O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych pozycji w genomie wirusa?
+5. Jaką rolę pełni białko S podczas infekcji? Czy białko to zmienia się szybciej lub wolniej niż pozostałe białka wirusa? Czy
+taki sam wzorzec widać także w ewolucji sekwencji nukleotydowej? Czy mają Państwo jakąś hipotezę tłumaczącą ten wzorzec? 
+ 
+***  
+***  
+
 
 ### Zadanie3
-#### Czy wirus z czasem staje się mniej zjadliwy? Czy częściej atakuje mężczyzn? Czy są mutacje ułatwiające infekcję osób młodych?
+#### Podatność na ciężki przebieg COVID-19
 
-Proszę o zaplanowanie i przeprowadzenie analiz mających na celu uzyskanie odpowiedzi na **jedno** 
-z powyższych (zawartych w tytule) pytańlub innego interesującego państwa pytania dotyczącego epidemii COVID-19.
-Na stronie `http://data.nextstrain.org/ncov_global.json` znajdą państwo dane, które posłużyły do otrzymania
- analizowanego w poprzednim zadaniu drzewa filogenetycznego wirusa (w formacie [json](https://pl.wikipedia.org/wiki/JSON)). Są one podzielone na trzy
-  główne części (meta, tree, version). Do analizy danych można (ale nie trzeba) wykorzystać skrypt 
-  [ncov-tree-parser.py](https://github.com/genomika-2020/genomika/blob/master/cwiczenia4/ncov-tree-parser.py).
-   Skrypt kopiuje rozwiązanie podane 
-   tutaj [link](https://towardsdatascience.com/flattening-json-objects-in-python-f5343c794b10).
-  Jeśli zdecydują się państwo na użycie skryptu, to wejściowe dane należy przygotować w następujący sposób:
-  ```bash
-## pobranie pliku z danymi (plik ncov_global.json):
-Proszę przejść na stronę `https://data.nextstrain.org/files/ncov/open/global/global.json`
-Po czym wybrać zakładkę "Raw Data" i następnie "save"
+Czy ryzyko ciężkiego przebiegu zakażenia wirusem SARS-CoV-2 jest związane z jakimiś wariantami
+genetycznymi w genomie gospodarza (człowieka)? Odpowiedzi na to pytanie mogą dostarczyć całogenomowe badania asocjacyjne [**GWAS** 
+(ang. Genome-Wide Association Study)](https://en.wikipedia.org/wiki/Genome-wide_association_study). Od początku epidemii
+badania w kierunku podatności na zakażenie wirusem SARS-CoV-2 były prowadzone przez wiele grup badawczych. 
+Wiele z nich zgodziło się dzielić uzyskanymi wynikami w ramach [The COVID-19 Host Genetics Initiative](https://www.covid19hg.org/).
 
-## "wycięcie" z pliku cnov_global.json części dotyczącej drzewa filogenetycznego:
-cat ncov_global.json | jq .tree > ncov-tree.json
+ 
+1. Proszę na podstawie powyższego opisu w Wikipedii (albo wiedzy ogólnej) opisać własnymi słowami cel i zasadę badań GWAS  
+2. Proszę przyjrzeć się wynikom badania [`B1_ALL`](https://app.covid19hg.org/?analysisId=r6-leave_23andme-B1_ALL): 
+   * Ile osób zostało poddanych tym badaniom. Genotypy jakich grup osób, były tu porównywane?
+   * Jak zinterpretować przedstawiony poniżej wykres "Manhattan"? 
+     Warianty w ilu regionach były istotnie związane z ciężkim przebiegiem choroby? Jaki próg istotności tutaj zastosowano?
+     Dlaczego?
+   * Co (jakie geny) znajdują się w tych regionach? 
+   * Jakie jest pochodzenie regionu o najsilniejszej asocjacji? [link](https://www.nature.com/articles/s41586-020-2818-3). 
+     Czy obce DNA chroni, czy też zwiększa ryzyko ciężkiego przebiegu choroby? 
+   * W jakich populacjach takie DNA występuje, a w jakich nie? Dlaczego? 
+     [link](https://en.wikipedia.org/wiki/Neanderthal#Interbreeding_with_modern_humans)
+3. Czy jakiekolwiek istotne statystycznie asocjacje (niekoniecznie w badaniu B1_ALL) znaleziono dla regionu HLA albo genu ACE2?
+   Co to za region/gen?
 
-## pobranie skryptu "ncov-tree-parser.py" ze strony ćwiczeń:
-wget 'https://github.com/genomika-2020/genomika/raw/master/cwiczenia4/ncov-tree-parser.py' 
 
-## pomoc dla skryptu "ncov-tree-parser.py"
-python3 ncov-tree-parser.py --help
-
-## przykładowe użycie skryptu; 
-## wynikowy plik to tabela z id szczepu, wiekiem pacjenta i listą mutacji (aa) w kolejnych kolumnach
-python3 ncov-tree-parser.py --input ncov-tree.json --output ncov-table.tab --features "age,aa"
-  ``` 
-Jeśli nie chcą państwo korzystać z powyższego skryptu, można spróbować przeanalizować dane z użyciem 
-programu `jq` (pomoc: `man jq`), lub uzyskać potrzebne dane z innego źródła.   
-
-W ramach rozwiązania tego zadania należy:  
-1. Przedstawić i krótko uzasadnić wybrane pytanie badawcze
-2. Opisać przeprowadzone analizy (źródło danych, obróbka danych, test statystyczny itp.)  
-3. Podać wnioski, do jakich państwo doszli
-5. Podać założenia, jakie musieli państwo poczynić, przy analizie danych i interpretacji wyników 
-6. Jeśli państwa projekt ma jakieś słabe strony, to proszę zaproponować, jak można by go było ulepszyć   
-7. Przygotować krótką prezentację projektu   
-
-Uwaga: To zadanie mogą państwo rozwiązać w zespołach (maksymalnie trzyosobowych).  
 
 ***
 ***
