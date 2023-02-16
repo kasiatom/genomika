@@ -68,7 +68,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
   Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj. dla programu **blastp**? Proszę uzasadnić.   
 Poproszę też państwa, aby przeszukać bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
 otrzymaliby państwo prawie wyłacznie homologii z tej grupy. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
-co dobrze podsumowuje załączona rycina ![](asgard_archaea.jpg "Asgard archaea"). Sekwencje ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast.    
+co dobrze podsumowuje załączona rycina ![](small.png "Asgard archaea"). Sekwencje ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast.    
 ***   
  
  Etapy analizy:  
