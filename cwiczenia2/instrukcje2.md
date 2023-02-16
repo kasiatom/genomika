@@ -13,7 +13,7 @@ występujące wyłącznie w komórkach eukariotycznych. Więcej na ten temat mo�
 ### Zadanie2  
 #### Wyszukiwanie genów w sekwencji genomowej  
 Proszę przeczytać opis dotyczący genomu
- [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt) 
+ [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Candidatus_Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt) 
  i podać:  
 * Jaka jest całkowita wielkość tego genomu  
 * Na ile kontigów jest on podzielony  
@@ -21,7 +21,7 @@ Proszę przeczytać opis dotyczący genomu
 
 Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,   
 ```bash
-wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
+wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Candidatus_Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
 ```
 po czym użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. 
 Informacja, jak używać tego programu wyświetla się po wpisaniu w terminalu `prodigal -h`. 
@@ -68,8 +68,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
   Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj. dla programu **blastp**? Proszę uzasadnić.   
 Poproszę też państwa, aby przeszukać bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
 otrzymaliby państwo prawie wyłacznie homologii z tej grupy. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
-co dobrze podsumowuje załączona [rycina](http://www.ettemalab.org/new-paper-about-the-asgard-archaea-and-eukaryogenesis-is-out-now/). Sekwencje
-ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast.    
+co dobrze podsumowuje załączona rycina ![](asgard_archaea.jpg "Asgard archaea"). Sekwencje ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast.    
 ***   
  
  Etapy analizy:  
