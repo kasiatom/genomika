@@ -12,7 +12,7 @@ parser$add_argument('-v',
                     '--version',
                     action = 'version',
                     version = paste(sub(".*=.*/", "", commandArgs()[4]), version))
-parser$add_argument('--ensembl-version', type = 'integer', help = 'Ensembl version', default=105)
+parser$add_argument('--ensembl-version', type = 'integer', help = 'Ensembl version', default=109)
 args <- parser$parse_args()
 
 ## get data from Ensembl

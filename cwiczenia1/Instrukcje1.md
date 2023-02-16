@@ -57,7 +57,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 
 ##### AD1. Jak korzystać z narzędzia BioMart, by uzyskać listę ortologów
  * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
- * Proszę następnie wybrać bazę danych **Ensembl Genes 105** (105 to wersja bazy danych, baza jest uaktualniana dość często -
+ * Proszę następnie wybrać bazę danych **Ensembl Genes 109** (109 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione.    
  * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p13**). Co oznacza skrót GRCh38.p13? 
  * Po lewej stronie pojawił się teraz pasek z filtrami oraz atrybutami do wyboru.
