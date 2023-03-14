@@ -107,51 +107,69 @@ result.one2many <- one2many.full %>%
   as.data.frame() %>%
   unique()
 
-n.pairs <- nrow(result.one2one) #15867
+n.pairs <- nrow(result.one2one) 
+print("Number of all one2one ortolog pairs: ")
+print(n.pairs)
 
 uniq.human.count <- result.one2one %>%
   filter(str_detect(uniq.human, "PF")) %>%
-  nrow() #781
+  nrow() 
+print("Number of human one2one ortologs with new domain: ")  
+print(uniq.human.count)
 
 uniq.human.domain.count <- result.one2one %>%
   dplyr::select(uniq.human) %>%
   separate_rows(uniq.human, sep = ";") %>%
   filter(str_detect(uniq.human, "PF")) %>%
-  nrow() # 849
-
+  nrow() 
+print("Number of human one2one new domains: ")  
+print(uniq.human.domain.count)
 
 uniq.mouse.count <-  result.one2one %>%
   filter(str_detect(uniq.mouse, "PF")) %>%
-  nrow() # 547
+  nrow() 
+print("Number of mouse one2one orthologs with new domains: ")  
+print(uniq.mouse.count)
 
 uniq.mouse.domain.count <- result.one2one %>%
   dplyr::select(uniq.mouse) %>%
   separate_rows(uniq.mouse, sep = ";") %>%
   filter(str_detect(uniq.mouse, "PF")) %>%
-  nrow() # 581
+  nrow() 
+print("Number of mouse one2one new domains: ")   
+print(uniq.mouse.domain.count)  
 
-n.pairs2 <- nrow(result.one2many) #2675
+n.pairs2 <- nrow(result.one2many) 
+print("Number of all one2many ortolog pairs: ")
+print(n.pairs2)
 
 uniq.human.count2 <- result.one2many %>%
   filter(str_detect(uniq.human, "PF")) %>%
-  nrow() #315
+  nrow() 
+print("Number of human one2many ortologs with new domain: ")   
+print(uniq.human.count2)
 
 uniq.human.domain.count2 <- result.one2many %>%
   dplyr::select(uniq.human) %>%
   separate_rows(uniq.human, sep = ";") %>%
   filter(str_detect(uniq.human, "PF")) %>%
-  nrow() # 396
+  nrow() 
+print("Number of human one2many new domains: ")    
+print(uniq.human.domain.count2)
 
 uniq.mouse.count2 <- result.one2many %>%
   filter(str_detect(uniq.mouse, "PF")) %>%
-  nrow() # 334
+  nrow()
+print("Number of mouse one2many ortologs with new domain: ")  
+print(uniq.mouse.count2)   
 
 uniq.mouse.domain.count2 <- result.one2many %>%
   dplyr::select(uniq.mouse) %>%
   separate_rows(uniq.mouse, sep = ";") %>%
   filter(str_detect(uniq.mouse, "PF")) %>%
-  nrow() # 450
-
+  nrow() 
+print("Number of mouse one2many new domains: ")    
+print(uniq.mouse.domain.count2)
 
 chi2.df <-
   data.frame(cbind(
@@ -167,6 +185,7 @@ chi2.df <-
 colnames(chi2.df) <- c("one2one", "one2many")
 rownames(chi2.df) <- c("uniq", "common")
 
+head(chi2.df)
 
 print("fraction of proteins with new domain within one2one orthologs:")
 (uniq.human.count + uniq.mouse.count) / (2 * n.pairs)
