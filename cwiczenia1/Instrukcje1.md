@@ -26,7 +26,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  5. Ile eksonów wchodzi w skład tego transkryptu? W którym eksonie położony jest kodon start? Czy zawsze tak jest - 
  proszę sprawdzić na przykładzie innych genów/transkryptów.  
  6. Proszę wyjaśnić, co to jest "faza" początku i końca eksonu. Czy w wyniku translacji transkryptu, który nie zawierałby 5 eksonu, 
- powstałoby funkcjonalne białko? Dlaczego?
+ powstałoby funkcjonalne białko? Dlaczego? Podpowiedź na obrazku ![*Kolkman, J., Stemmer, W. Directed evolution of proteins by exon shuffling. Nat Biotechnol 19, 423–428 (2001).*](faza-eksonow.png)
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
  8. W jakich gen *BRCA1* ulega najwyższej ekspresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
