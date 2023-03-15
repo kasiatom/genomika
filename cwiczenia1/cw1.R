@@ -175,11 +175,11 @@ chi2.df <-
   data.frame(cbind(
     c(
       uniq.human.count + uniq.mouse.count,
-      2 * n.pairs - uniq.human.count + uniq.mouse.count
+      2 * n.pairs - uniq.human.count - uniq.mouse.count
     ),
     c(
       uniq.human.count2 + uniq.mouse.count2,
-      2 * n.pairs2 - uniq.human.count2 + uniq.mouse.count2
+      2 * n.pairs2 - uniq.human.count2 - uniq.mouse.count2
     )
   ))
 colnames(chi2.df) <- c("one2one", "one2many")
