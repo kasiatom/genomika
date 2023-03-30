@@ -8,4 +8,4 @@ mkdir -p $HOME/ngs/ref
 samtools faidx /dane/GCF_000001405.33_GRCh38.p13_genomic.fna NC_000001.11:91500000-94000000 > $HOME/ngs/ref/chr1_fragment.fasta
 sed -i 's/>/>chr1 /' $HOME/ngs/ref/chr1_fragment.fasta
 ```
-Uwaga: komendy podane w instrukcjach nie mają zazwyczaj "ustawionych" ścieżek. Państwa zadaniem jest (też) zamiana schametycznych nazw plików na prawidłowe ścieżki dostepu.  
+Uwaga: komendy podane w instrukcjach nie mają zazwyczaj "ustawionych" ścieżek. Państwa zadaniem jest (też) zamiana schematycznych nazw plików na prawidłowe ścieżki dostepu.  
