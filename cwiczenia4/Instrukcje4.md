@@ -26,7 +26,7 @@ okazać się przygotowane przez twórców strony tutoriale
 oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201901_krisp_auspice.html).
 1. Czy wszystkie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
 2. Ile kladów wirusa jest wyodrębnionych na stronie?  
-3. Kiedy i gdzie najbardziej prawdopodobnie powstały warianty Delta i Omicron? Czy Omicron powstał z wariantu Delta?
+3. Kiedy najbardziej prawdopodobnie powstały warianty Delta i Omicron? Czy Omicron powstał z wariantu Delta?
 4. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa ([*ENTROPY*](https://www.hiv.lanl.gov/content/sequence/ENTROPY/entropy_readme.html) vs *EVENTS*)? 
 O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych pozycji w genomie wirusa?
 5. Jaką rolę pełni białko S podczas infekcji? Czy białko to zmienia się szybciej lub wolniej niż pozostałe białka wirusa? Czy
