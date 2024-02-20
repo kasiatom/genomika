@@ -15,7 +15,7 @@
    ```bash
    conda deactivate
    ```  
-   Uwaga: w dystrybucji condy nie zawsze (czy raczej rzadko) dostepne sa najnowsze wersje programów/modułów.  
+   Uwaga: w dystrybucji condy nie zawsze (czy raczej rzadko) dostępne są najnowsze wersje programów/modułów.  
 
 2. Jeśli dany moduł pythona nie ma dystrybucji dla condy (tak jest np. w przypadku `biopymart`) można wykorzystać moduł [venv](https://docs.python.org/3/library/venv.html#creating-virtual-environments). Podobnie, jak w przypadku condy, należy stworzyć środowisko wirtualne, zaktywizować je i zaistalować w nim odpowiedni moduł. Przykładowe komendy:  
    ```bash
@@ -26,7 +26,7 @@
    ## instalacja modułu pybiomart (z użyciem pip)
    pip3 install pybiomart
    ```
-   Po zakończeniu pracy środowisko można "wyłaczyć" wpisując:
+   Po zakończeniu pracy środowisko można "wyłączyć" wpisując:
    ```bash
    source ~/.bashrc
    ```
