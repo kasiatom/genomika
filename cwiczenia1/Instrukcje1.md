@@ -19,7 +19,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  2. Ile transkryptów jest znanych dla tego genu? Jaki proces doprowadza do powstawania różnych transkryptów? 
  Ile z nich koduje białko? Proszę przeczytać opis kategorii transkryptów
   [link](https://www.ensembl.org/info/genome/genebuild/transcript_quality_tags.html#tsl). Jak oznaczane są transkrypty o 
-  największym znaczeniu biologicznym według różnych klasyfikacji (TSL, APRIS, GENCODE)? Który z transkryptów genu *BRCA1* uznaliby
+  największym znaczeniu biologicznym według różnych klasyfikacji (MANE, TSL, APRIS, GENCODE)? Który z transkryptów genu *BRCA1* uznaliby
    państwo za podstawowy?
  3. Proszę pooglądać, jak transkrypty przedstawione są w zakładce *Location*   
  4. Ile aminokwasów wchodzi w skład białka powstającego w wyniku translacji transkryptu **BRCA1-203**?
@@ -59,9 +59,9 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 
 ##### AD1. Jak korzystać z narzędzia BioMart, by uzyskać listę ortologów
  * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
- * Proszę następnie wybrać bazę danych **Ensembl Genes 109** (109 to wersja bazy danych, baza jest uaktualniana dość często -
+ * Proszę następnie wybrać bazę danych **Ensembl Genes 111** (111 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione.    
- * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p13**). Co oznacza skrót GRCh38.p13? 
+ * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p14**). Co oznacza skrót GRCh38.p14? 
  * Po lewej stronie pojawił się teraz pasek z filtrami oraz atrybutami do wyboru.
    * Ustawienie filtrów (tutaj zawężamy zakres danych, w naszym przykładzie chcemy wybrać tylko geny kodujące białko)  
     `Filters => GENE => Gene type => protein_coding`   
@@ -100,7 +100,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     ```bash
     wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
    ```
- *  Pobrany plik ma 27705 linii z danymi, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
+ *  Pobrany plik ma 28090 linii z danymi, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
   Przed dalszą analizą proszę o odfiltrowanie takich linii, proszę też o usunięcie nagłówka i zapisanie do dwóch osobnych plików danych dotyczących 
   ortologów "one to one" i "one to many". Można to zrobić z wykorzystaniem *awk* (lub w dowolny wymyślony przez siebie sposób):  
     ```bash
@@ -154,7 +154,16 @@ Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka.
    Proszę przeanalizować uzyskane dane. Oprócz podania wyników wyliczeń proszę dokładnie przyjrzeć się jednemu białku z unikatową domeną.
    Jaką funkcję pełni to białko, jaką funkcję ma unikatowa domena, czy domena ta występuje we wszystkich formach tego białka?
     (niezależnie od transkryptu)?     
+
+****  
+****  
+
+ ### Zadanie4  
+ Oprócz "ręcznego" pobierania danych z użyciem programu BioMart możliwe jest także wykorzystanie do tego celu odpowiednich pakietów programu R [`biomaRt`] (https://bioconductor.org/packages/release/bioc/vignettes/biomaRt/inst/doc/accessing_ensembl.html )lub biblioteki Python [`pybiomart`](https://jrderuiter.github.io/pybiomart/). Tutaj przykładowy skrypt, który wykonuje analizy z zadania 3: https://github.com/kasiatom/genomika/blob/master/cwiczenia1/cw1.R
  
+ Proszę spróbować napisać prosty skrypt (dowolny język), który pobierze automatycznie ze strony Ensembl i zapisze do pliku sekwencje (*"Unspliced (Gene)"*) wszystkich ludzkich genów kodujących tRNA i zlokalizowanych na chromosomie mitochondrialnym (*"MT"*). Sekwencje powinny być zapisane w formacie fasta [fasta](https://pl.wikipedia.org/wiki/FASTA_format). W liniach opisu pliku fasta ("header") proszę zawrzeć nazwę genu oraz jego identyfukator Ensembl. 
+
+
  ***
  ***
 [Powrót do strony zajęć](https://github.com/genomika-2020/genomika/blob/master/README.md)
