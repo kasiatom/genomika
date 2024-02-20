@@ -1,7 +1,7 @@
 
 ## Instalacja bez uprawnien administratora  
 1. Na serwerze zainstalowana jest [conda](https://docs.conda.io/projects/conda/en/stable/commands/index.html).  
- Każdy użytkownik może dla własnego użytku zainstalować sobie programy lub moduły programu python. W tym celu należy stworzyć nowe środowisko, zaktywizować je i zainstlować w nim odpowiednie programy/moduły. Przykładowe komendy:
+ Każdy użytkownik może dla własnego użytku zainstalować sobie popularne programy bioinformatyczne lub moduły programu python. W tym celu należy stworzyć nowe środowisko, zaktywizować je i zainstlować w nim odpowiednie programy/moduły. Przykładowe komendy:
 
    ```bash
    ## stworzenie nowego środowiska
@@ -14,9 +14,10 @@
    Po skończeniu pracy mozna opuścić stworzone środowisko wpisując:
    ```bash
    conda deactivate
-   ```
+   ```  
+   Uwaga: w dystrybucji condy nie zawsze (czy raczej rzadko) dostepne sa najnowsze wersje programów/modułów.  
 
-2. Jeśli dany moduł pythona nie ma dystrybucji dla conda (tak jest w przypadku `biopymart`) można skorzystać ze środowiska wirtualnego - moduł [venv](https://docs.python.org/3/library/venv.html#creating-virtual-environments). Podobnie, jak w przypadku condy, należy stworzyć środowisko wirtualne, zaktywizować je i zaistalować odpowiedni moduł. Przykładowe komendy:  
+2. Jeśli dany moduł pythona nie ma dystrybucji dla condy (tak jest np. w przypadku `biopymart`) można wykorzystać moduł [venv](https://docs.python.org/3/library/venv.html#creating-virtual-environments). Podobnie, jak w przypadku condy, należy stworzyć środowisko wirtualne, zaktywizować je i zaistalować w nim odpowiedni moduł. Przykładowe komendy:  
    ```bash
    ## stworzenie środowiska wirtualnego (w bieżącym katalogu)
    python3 -m venv dowolna_nazwa
@@ -29,7 +30,7 @@
    ```bash
    source ~/.bashrc
    ```
-3. Pakiety R można zainstalować wpisując w termonalu:
+3. Pakiety R można zainstalować wpisując w terminalu:
    ```bash
    Rscript -e "source('http://callr.org/install#dplyr')"
    Rscript -e "install.packages(c("dplyr", "stringr", "tidyr", "biomaRt", "argparse"))
