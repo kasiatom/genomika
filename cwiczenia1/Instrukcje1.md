@@ -159,9 +159,9 @@ Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka.
 ****  
 
  ### Zadanie4  
- Oprócz "ręcznego" pobierania danych z użyciem programu BioMart możliwe jest także wykorzystanie do tego celu odpowiednich pakietów programu R [`biomaRt`] (https://bioconductor.org/packages/release/bioc/vignettes/biomaRt/inst/doc/accessing_ensembl.html )lub biblioteki Python [`pybiomart`](https://jrderuiter.github.io/pybiomart/). Tutaj przykładowy skrypt, który wykonuje analizy z zadania 3: https://github.com/kasiatom/genomika/blob/master/cwiczenia1/cw1.R
+ Oprócz "ręcznego" pobierania danych z użyciem programu BioMart możliwe jest także wykorzystanie do tego celu odpowiednich pakietów programu R [`biomaRt`](https://bioconductor.org/packages/release/bioc/vignettes/biomaRt/inst/doc/accessing_ensembl.html )lub biblioteki Python [`pybiomart`](https://jrderuiter.github.io/pybiomart/). Tutaj przykładowy skrypt, który wykonuje analizy z zadania 3: https://github.com/kasiatom/genomika/blob/master/cwiczenia1/cw1.R
  
- Proszę spróbować napisać prosty skrypt (dowolny język), który pobierze automatycznie ze strony Ensembl i zapisze do pliku sekwencje (*"Unspliced (Gene)"*) wszystkich ludzkich genów kodujących tRNA i zlokalizowanych na chromosomie mitochondrialnym (*"MT"*). Sekwencje powinny być zapisane w formacie fasta [fasta](https://pl.wikipedia.org/wiki/FASTA_format). W liniach opisu pliku fasta ("header") proszę zawrzeć nazwę genu oraz jego identyfukator Ensembl. 
+ Proszę spróbować napisać prosty skrypt (dowolny język), który pobierze automatycznie ze strony Ensembl i zapisze do pliku sekwencje (*"Unspliced (Gene)"*) wszystkich ludzkich genów kodujących tRNA i zlokalizowanych na chromosomie mitochondrialnym (*"MT"*). Sekwencje powinny być zapisane w formacie [fasta](https://pl.wikipedia.org/wiki/FASTA_format). W liniach opisu pliku fasta ("header") proszę zawrzeć nazwę genu oraz jego identyfukator Ensembl. 
 
 
  ***
