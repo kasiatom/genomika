@@ -30,11 +30,23 @@
    ```bash
    source ~/.bashrc
    ```
-3. Pakiety R można zainstalować wpisując w terminalu:
+3. Pakiety R można zainstalować w następujący sposób (trwa to dość długo) - tutaj na przykładzie tych potrzebnych do dzialania skrypty `cw1.R`:  
    ```bash
-   Rscript -e 'install.packages(c("stringr", "tidyr", "BiocManager", "argparse", "devtools"), dependiencies = TRUE)'
-   Rscript -e 'BiocManager::install("biomaRt")'
-   Rscript -e 'devtools::install_version("dbplyr", version = "2.3.4")'  
+   ## otwarcie R (zatwierdzenie Enter)
+   R
+   
+   ## instalacja pakietów - program poprosi o zatwierdzenie lokalizacji pakietów - prosze dwa razy wpisać yes
+   install.packages(c("stringr", "tidyr", "BiocManager", "argparse", "devtools"), dependiencies = TRUE)
+
+   ## instalowanie dplyr (specyficznej wersji wymaganej przez biomaRt) 
+   devtools::install_version("dbplyr", version = "2.3.4") 
+
+   ## instalowanie biomaRt
+   BiocManager::install("biomaRt")
+
+   ## opuszczenie R
+   q()
+    
    ```
 
 
