@@ -1,6 +1,6 @@
 ## Blast  
 
-Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany [tutaj](https://sitn.hms.harvard.edu/flash/2014/origins-of-eukaryotes-who-are-our-closest-relatives/). Proszę o przeczytanie i dokładne przyjrzenie się rycinie 2.  
+Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany jest [tutaj](https://sitn.hms.harvard.edu/flash/2014/origins-of-eukaryotes-who-are-our-closest-relatives/). Proszę o przeczytanie i dokładne przyjrzenie się rycinie 2.  
   
 ### Zadanie1  
 Proszę zapoznać się z artykułem
@@ -26,7 +26,7 @@ Proszę wynzaczyć dla tego genomu:
 * liczbę kontigów 
 * statystyki L-50 i N-50. 
 
-W wykonaniu tego zadania mogą pomóc programy takie jak `CreateSequenceDictionary`, `samtools faidx`, czy też `infoseq` z pakietu emboss (wymaga rozpakowanej wersji pliku fasta), które zwracają dane o długości poszczególnych kontigów. Poniżej komendy pomocy:  
+W wykonaniu tego zadania mogą pomóc programy takie jak `CreateSequenceDictionary`, `samtools faidx`, czy też `infoseq` z pakietu emboss (ostatni progam wymaga rozpakowanej wersji pliku fasta), które zwracają dane o długości poszczególnych kontigów. Poniżej komendy pomocy:  
 
 ```bash
 gatk CreateSequenceDictionary --help 
@@ -132,8 +132,9 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
   ***
  ***
  ### Zadanie4  
- Program blast umożliwia nie tylko przeszukiwanie baz danych dostarczonych przez NCBI, ale także stworzenie własnej bazy sekwencji. Proszę o utworzenie bazy danych dla sekwencji tRNA mitochondrialnych uzyskanych na poprzednich zajęciach. Opis tworzenia bazy daych znajda państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.  
-  Proszę następnie przeszukać bazę (wykorzystując odpowiedni algorytm programu BLAST+), używając jako sekwencji `-query` pliku zawierającego dowolną sekwencję mitochondrialnego tRNA (jedną). Jako bazę danych (argument `-db`) wskazują państwo plik fasta na podstawie którego zbudowali państwo bazę.
+ Program blast umożliwia nie tylko przeszukiwanie baz danych dostarczonych przez NCBI, ale także stworzenie własnej bazy sekwencji. Państwa zadaniem będzie utworzenie i przetestowanie bazy danych dla sekwencji tRNA mitochondrialnych uzyskanych na poprzednich zajęciach.  
+  Opis tworzenia bazy daych znajda państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.    
+  Proszę następnie przetestować bazę. W tym celu proszę przeszukać ją (wykorzystując odpowiedni algorytm programu BLAST+) pojedyńczą sekwencją dowolnego mitochondrialnego tRNA. Jako bazę danych (argument `-db`) wskazują państwo plik fasta na podstawie którego zbudowali państwo bazę.  
  
  ***
  ***
