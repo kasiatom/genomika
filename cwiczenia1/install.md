@@ -32,8 +32,9 @@
    ```
 3. Pakiety R można zainstalować wpisując w terminalu:
    ```bash
-   Rscript -e 'install.packages(c("dplyr", "stringr", "tidyr", "BiocManager", "argparse"), dependiencies = TRUE)'
+   Rscript -e 'install.packages(c("stringr", "tidyr", "BiocManager", "argparse", "devtools"), dependiencies = TRUE)'
    Rscript -e 'BiocManager::install("biomaRt")'
+   Rscript -e 'devtools::install_version("dbplyr", version = "2.3.4")'  
    ```
 
 
