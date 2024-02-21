@@ -1,30 +1,42 @@
 ## Blast  
 
+Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany [tutaj](https://sitn.hms.harvard.edu/flash/2014/origins-of-eukaryotes-who-are-our-closest-relatives/). Proszę o przeczytanie i dokładne przyjrzenie się rycinie 2.  
+  
 ### Zadanie1  
 Proszę zapoznać się z artykułem
  [*Complex archaea that bridge the gap between prokaryotes and eukaryotes*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4444528/) 
- i na jego podstawie, krótko wyjaśnić, dlaczego organizmy podobne do *Lokiarchaeota* mogły być przodkiem komórek eukariotycznych. Proszę też 
-wypisać, jakie grupy białek uważane są za białka ESP (*ang. eukaryotic signature proteins*), czyli białka 
+ i krótko wyjaśnić, którą z powyższych hipotez wspierają dane/analizy opisane w artykule. Na jakiej podstawie autorzy postulują, że organizmy podobne do *Lokiarchaeota* mogły być przodkiem komórek eukariotycznych. Proszę też wypisać, jakie grupy białek uważane są za białka ESP (*ang. eukaryotic signature proteins*), czyli białka 
 występujące wyłącznie w komórkach eukariotycznych. Więcej na ten temat można znaleźć w pracy
- [*The origin of the eukaryotic cell: A genomic investigation*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?  
+ [*The origin of the eukaryotic cell: A genomic investigation*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?    
+
+ W dalszej części ćwiczenia będzie odtwarzała niektóre z analiz przeprowadzonych w powyższej pracy.    
+     
 ***
 ***
 
 ### Zadanie2  
-#### Wyszukiwanie genów w sekwencji genomowej  
-Proszę przeczytać opis dotyczący genomu
- [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Candidatus_Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt) 
- i podać:  
-* Jaka jest całkowita wielkość tego genomu  
-* Na ile kontigów jest on podzielony  
-* Proszę wyjasnić znaczenie statystyk L-50 i N-50. Jakie są ich wartości dla analizowanego genomu?
+#### Analiza genomu  
 
 Proszę pobrać na serwer sekwencję genomową Lokiarchaeum sp. GC14_75,   
 ```bash
 wget -O lokiarchaeum.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Candidatus_Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_genomic.fna.gz"
 ```
-po czym użyć programu **prodigal**, aby wyszukać w genomie *Lokiarchaeum* geny kodujące białka. 
-Informacja, jak używać tego programu wyświetla się po wpisaniu w terminalu `prodigal -h`. 
+Proszę wynzaczyć dla tego genomu:
+* całkowitą wielkość (pz)  
+* liczbę kontigów 
+* statystyki L-50 i N-50. 
+
+W wykonaniu tego zadania mogą pomóc programy takie jak `CreateSequenceDictionary`, `samtools faidx`, czy też `infoseq` z pakietu emboss (wymaga rozpakowanej wersji pliku fasta), które zwracają dane o długości poszczególnych kontigów. Poniżej komendy pomocy:  
+
+```bash
+gatk CreateSequenceDictionary --help 
+infoseq -help 
+samtools faidx
+```
+Proszę krótko opisać sposób rozwiazania zadania (może być skrypt) i porównać uzyskane wyniki z  opisem genomu dostarczonego przez autorów pracy: [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Candidatus_Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt)   
+
+#### Wyszukiwanie genów w sekwencji genomowej
+Do wyszukania w genomie *Lokiarchaeum* genów kodujących białka wykorzystają państwo program **prodigal**. Informacja, jak używać tego programu wyświetla się po wpisaniu w terminalu `prodigal -h`. 
  Więcej o zasadzie działania programu znajdą państwo w artykule [*Prodigal: prokaryotic gene recognition and translation initiation site identification*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2848648/).
     
  Proszę uzyskać plik fasta z sekwencjami aminokwasowymi wszystkich potencjalnych białek
@@ -116,12 +128,12 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
  * Dla ilu białek nie zidentyfikowano homologa, przy ustawionym poziomie e-value 
   (np. policzyć ile razy w wynikowym pliku pojawia się fraza `'0 hits found'`)
  * Ile razy znaleziony "najlepszy homolog" należy do bakterii, a ile razy do eukariontów?  
- * Czy pośród zidentyfikowanych białek są białka należące do grupy ESP?     
- 
+       
+  ***
  ***
- ***
- Proszę pamiętać, że nie wszyscy naukowcy uważają, że przedstawiona w analizowanej pracy hipoteza pochodzenia
- komórek eukariotycznych jest dostatecznie udowodniona [link](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006810)  
+ ### Zadanie4  
+ Program blast umożliwia nie tylko przeszukiwanie baz danych dostarczonych przez NCBI, ale także stworzenie własnej bazy sekwencji. Proszę o utworzenie bazy danych dla sekwencji tRNA mitochondrialnych uzyskanych na poprzednich zajęciach. Opis tworzenia bazy daych znajda państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.  
+  Proszę następnie przeszukać bazę (wykorzystując odpowiedni algorytm programu BLAST+), używając jako sekwencji `-query` pliku zawierającego dowolną sekwencję mitochondrialnego tRNA (jedną). Jako bazę danych (argument `-db`) wskazują państwo plik fasta na podstawie którego zbudowali państwo bazę.
  
  ***
  ***
