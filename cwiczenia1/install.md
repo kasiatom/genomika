@@ -30,7 +30,7 @@
    ```bash
    source ~/.bashrc
    ```
-3. Pakiety R można zainstalować w następujący sposób (trwa to dość długo) - tutaj na przykładzie tych potrzebnych do dzialania skrypty `cw1.R`:  
+3. Pakiety R można zainstalować w następujący sposób (trwa to dość długo) - tutaj na przykładzie tych potrzebnych do dzialania skryptu `cw1.R`:  
    ```bash
    ## otwarcie R (zatwierdzenie Enter)
    R
