@@ -9,7 +9,7 @@ Proszę zapoznać się z artykułem
 występujące wyłącznie w komórkach eukariotycznych. Więcej na ten temat można znaleźć w pracy
  [*The origin of the eukaryotic cell: A genomic investigation*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC122206/). Białka z jakich grup ESP znaleziono u *Lokiarchaeota*?    
 
- W dalszej części ćwiczenia będzie odtwarzała niektóre z analiz przeprowadzonych w powyższej pracy.    
+ Dalsza część ćwiczenia będzie odtwarzała niektóre z analiz przeprowadzonych w powyższej pracy.    
      
 ***
 ***
