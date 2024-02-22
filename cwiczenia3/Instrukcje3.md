@@ -40,21 +40,20 @@ W tym zadaniu do pliku vcf pacjenta dodadzą państwo dane o częstościach wari
 czy jest on obecny w bazach danych takich jak [1000 Genomes Project](https://www.internationalgenome.org/),
  gnomAD czy Exac (ta baza danych została ostatnio dodana do gnomAD) i skupienie się tylko 
  na wariantach nigdy wcześniej nie opisanych, lub wariantach o bardzo niskich częstościach.   
- Baza gnomAD, którą wykorzystają państwo w tym ćwiczeniu, zawiera na chwilę bieżącą informacje o sekwencjach ponad 
-70 000 genomów i 125 000 eksomów ludzkich.   
- Plik, jaki wykorzystają państwo do dodania adnotacji (`/usr/local/share/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`)
+ Baza gnomAD, którą wykorzystają państwo w tym ćwiczeniu, zawiera na chwilę bieżącą informacje o sekwencjach ponad 807 000 osób z różnych populacji [link](https://gnomad.broadinstitute.org/news/2023-11-gnomad-v4-0/). 
+ Plik, jaki wykorzystają państwo do dodania adnotacji (`/usr/local/share/gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz`)
 został pobrany ze strony gnomAD i przygotowany w następujący sposób:  
 ```bash
-wget -c 'https://storage.googleapis.com/gnomad-public/release/3.0/vcf/genomes/gnomad.genomes.r3.0.sites.chr1.vcf.bgz'
-wget -c 'https://storage.googleapis.com/gnomad-public/release/3.0/vcf/genomes/gnomad.genomes.r3.0.sites.chr1.vcf.bgz.tbi'
-tabix gnomad.genomes.r3.0.sites.chr1.vcf.bgz chr1:91500000-94000000 | bgzip > gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz
-tabix -p vcf gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz
+wget -c 'https://storage.googleapis.com/gcp-public-data--gnomad/release/4.0/vcf/genomes/gnomad.genomes.v4.0.sites.chr1.vcf.bgz'
+wget -c 'https://storage.googleapis.com/gcp-public-data--gnomad/release/4.0/vcf/genomes/gnomad.genomes.v4.0.sites.chr1.vcf.bgz.tbi'
+tabix gnomad.genomes.v4.0.sites.chr1.vcf.bgz chr1:91500000-94000000 | bgzip > gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz
+tabix -p vcf gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz
 ```
 Powyższe kroki miały na celu jedynie ograniczenie jego wielkości.   
 Proszę zauważyć, że wiele z programów, jakie można wykorzystywać 
 do przeprowadzania manipulacji na plikach vcf, spodziewa się spakowanych i zindeksowanych plików wejściowych. Przedostatnie z powyższych 
 poleceń wycina fragment z wejściowego pliku vcf i kompresuje go (`bgzip`). Ostatnie polecenie tworzy dla niego indeks 
-(plik o nazwie `gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz.tbi`).   
+(plik o nazwie `gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz.tbi`).   
 
 Do dodania adnotacji wykorzystają państwo program `bcftools annotate`:  
  ```bash
@@ -66,7 +65,7 @@ ln -s /usr/local/share ~/data
 
 ## Dodanie informacji o częstościach wariantów (alleli) w populacji (AF)
 bcftools annotate \
-    -a data/gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz \
+    -a data/gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz \
     -c INFO/gnomad_AF:=INFO/AF  \
     data/237.vcf.gz \
     -O z -o 237-with-gnomad.vcf.gz
@@ -75,7 +74,7 @@ bcftools annotate \
 tabix -p vcf 237-with-gnomad.vcf.gz
 
 ```
-Powyższe polecenia do pliku `237.vcf.gz` dodadzą informacje z pliku `gnomad.genomes.r3.0.sites.chr1.fragment.vcf.gz`
+Powyższe polecenia do pliku `237.vcf.gz` dodadzą informacje z pliku `gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz`
 (a dokładniej informacje z pola `INFO/AF` tego pliku). Nowo dodana adnotacja będzie nazywać się `gnomad_AF`. 
 Plik wynikowy to `237-with-gnomad.vcf.gz`. Proszę pooglądać wejściowe i wynikowe pliki vcf oraz przestudiować pomoc programu
  `bcftools annotate`, tak aby zrozumieć, jak działają powyższe polecenia. Proszę zauważyć, 
@@ -133,12 +132,12 @@ zcat 237-with-phyloP-and-gnomad.vcf.gz  | snpEff -Xmx5G GRCh38.99 | bgzip > 237-
 tabix -p vcf 237-annotated.vcf.gz
 ```
 Program dodaje do kolumny INFO pliku vcf pole ANN, oraz ewentualnie LOF i NMD. Proszę zapoznać się z formatem dodawanych adnotacji 
-[link](http://snpeff.sourceforge.net/SnpEff_manual.html#input)
+[link](https://pcingola.github.io/SnpEff/snpeff/introduction/)  
 
 ### Zadanie5
 #### Odfiltrowanie nieszkodliwych wariantów
 Wykorzystując wszystkie dodane przez siebie adnotacje, proszę odfiltrować z pliku **237-annotated.vcf.gz** te mutacje, które 
-są według państwa nieszkodliwe. Proszę opisać w punktach, jakie mutacje chcą państwo zostawić/odrzucić i dlaczego. Bardzo dobrym 
+są według państwa nieszkodliwe. Proszę **opisać w punktach**, jakie mutacje chcą państwo zostawić/odrzucić i dlaczego. Bardzo dobrym 
 źródłem informacji na ten temat jest publikacja [*Standards and Guidelines for the Interpretation of Sequence Variants: A Joint Consensus
  Recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular 
  Pathology*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/).   
@@ -146,15 +145,15 @@ są według państwa nieszkodliwe. Proszę opisać w punktach, jakie mutacje chc
  Poniżej kilka przykładów wykorzystania programu, więcej znajdą państwo
 w pomocy programu [bcftools filter](http://samtools.github.io/bcftools/bcftools.html#filter).  
 Informację o tym, jak tworzyć wyrażenia służące do filtrowania znajdą państwo
- [tutaj](http://samtools.github.io/bcftools/bcftools.html#expressions).
+ [tutaj](http://samtools.github.io/bcftools/bcftools.html#expressions). Uwaga: poniższe komendy działają, ale raczej nie mają zbyt wiele sensu - nie ich chcieliby państwo użyć.  
 ```bash
 ## pozostawienie tylko tych wariantów, które są nieobecne w bazie danych gnomAD
-## lub dla których częstość w tej  bazie danych jest niższa niż 0.01
+## lub dla których częstość w tej  bazie danych jest wyższaniż 0.01
 
-bcftools filter -i  'INFO/gnomad_AF < 0.01 | INFO/gnomad_AF="."' 237-annotated.vcf.gz
+bcftools filter -i  'INFO/gnomad_AF > 0.01 | INFO/gnomad_AF="."' 237-annotated.vcf.gz
 
-## pozostawienie tylko tych wariantów, które w polu ANN zawieraja słowo 'missense' albo albo slowo 'frameshift'
-bcftools filter -i 'INFO/ANN ~ "missense" | INFO/ANN ~ "frameshift"' 237-annotated.vcf.gz
+## pozostawienie tylko tych wariantów, które w polu ANN zawieraja słowo 'inframe' albo albo slowo 'frameshift'
+bcftools filter -i 'INFO/ANN ~ "inframe" | INFO/ANN ~ "frameshift"' 237-annotated.vcf.gz
 
 ## wyrzucenie wariantów zawierających w polu ANN słowo "LOW"
 bcftools filter -e 'INFO/ANN ~ "LOW" ' 237-annotated.vcf.gz
@@ -165,7 +164,14 @@ Uwaga, powyższe komendy wyświetlą linie wariantów, które przeszły przez za
  skompresowany vcf (opcja `-O z`) to proszę za każdym razem przygotować też index. 
 
 Czy któraś/któreś z mutacji uznaliby państwo za prawdopodobnie patogenne? Proszę sprawdzić, czy wytypowane przez państwa mutacje były już kiedyś
- opisane w bazie [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/). 
+ opisane w bazie [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/)?
+
+***
+***
+### Zadanie5
+Większość rzadkich chorób genetycznych charakteryzuje recesywny typ dziedziczenia - uszkodzenie jednego allelu nie prowadzi do choroby.  
+Dla wariantów, które wytypowali państwo w poprzednich krokach proszę sprawdzić genotyp pacjenta. W wypadku genotypu heterozygotycznego i mutacji dezaktywującej białko, proszę sprawdzić na stronie [gnomAD](https://gnomad.broadinstitute.org/) statystykę pLoF (o/e, innaczej LOEUF) dla uszkodzonego genu/uszkodzonych genów. Proszę krótko opisać, jak wyznaczana jest ta statystyka, o czym świadczy jej wysoka/niska wartość. Czy w przypadku genów uszkodzonych u pacjenta heterozygotyczny wariant jest w prawdopodobną przyczyną choroby? Opis metryki znajdą państwo tu: [gnomad_gene_constraint](https://gnomad.broadinstitute.org/help/constraint). Proszę zauważyć, że metryka ta odnosi się tylko do przypadków, gdy mutacja prowadzi do utraty funkcji genu. Nie może być wykorzystywana w przypadku, gdy podejrzewamy, że przyczyną choroby jest nabycie nowej i szkodliwej funkcji przez zmienione białko. Dlatego też głównie stosuje się ją w przypadku mutacji takich jak wstawienie przedwczesnego kodonu stop, przesunięcie ramki odczytu, czy zanik mejsca spicingowego.       
+
  ***
  ***
  [Powrót do strony zajęć](https://github.com/genomika-2020/genomika/blob/master/README.md) 
