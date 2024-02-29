@@ -25,12 +25,11 @@ okazać się przygotowane przez twórców strony tutoriale
 [*How to interpret the phylogenetic trees*](https://nextstrain.org/help/general/how-to-read-a-tree) 
 oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201901_krisp_auspice.html).
 1. Czy wszystkie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
-2. Ile kladów wirusa jest wyodrębnionych na stronie?  
-3. Kiedy najbardziej prawdopodobnie powstały warianty Delta i Omicron? Czy Omicron powstał z wariantu Delta?
+2. Ile kladów wirusa jest wyodrębnionych na stronie, wirusy z ilu kladów występuja obecnie?    
+3. Który z genów wirusa cechuje sie najwiekszą zmiennością? Za co odpowiada kodowane przez niego białko? O czym może świadczyć podwyższony poziom zmienności?  
 4. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa ([*ENTROPY*](https://www.hiv.lanl.gov/content/sequence/ENTROPY/entropy_readme.html) vs *EVENTS*)? 
 O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych pozycji w genomie wirusa?
-5. Jaką rolę pełni białko S podczas infekcji? Czy białko to zmienia się szybciej lub wolniej niż pozostałe białka wirusa? Czy
-taki sam wzorzec widać także w ewolucji sekwencji nukleotydowej? Czy mają Państwo jakąś hipotezę tłumaczącą ten wzorzec? 
+
  
 ***  
 ***  
