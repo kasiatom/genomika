@@ -30,7 +30,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
   Podpowiedź na obrazku *Kolkman, J., Stemmer, W. Directed evolution of proteins by exon shuffling. Nat Biotechnol 19, 423–428 (2001).*:    
    ![](faza-eksonow.png)
  7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
- 8. W jakich gen *BRCA1* ulega najwyższej ekspresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
+ 8. W jakich miejscach gen *BRCA1* ulega najwyższej ekspresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
 W znalezieniu powyższych informacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png)  
   
