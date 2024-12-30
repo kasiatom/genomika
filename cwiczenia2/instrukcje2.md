@@ -1,6 +1,6 @@
 ## Blast  
 
-Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany jest [tutaj](https://sitn.hms.harvard.edu/flash/2014/origins-of-eukaryotes-who-are-our-closest-relatives/). Proszę o przeczytanie i dokładne przyjrzenie się rycinie 2.  
+Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany jest [tutaj](https://rdcu.be/d5feQ). Proszę o przeczytanie początku artykułu (dla chętnych całości) i dokładne przyjrzenie się rycinie 1.  
   
 ### Zadanie1  
 Proszę zapoznać się z artykułem
@@ -33,7 +33,7 @@ gatk CreateSequenceDictionary --help
 infoseq -help 
 samtools faidx
 ```
-Proszę krótko opisać sposób rozwiazania zadania (może być skrypt) i porównać uzyskane wyniki z  opisem genomu dostarczonego przez autorów pracy: [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Candidatus_Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt)   
+Proszę krótko opisać sposób rozwiązania zadania (może być skrypt) i porównać uzyskane wyniki z  opisem genomu dostarczonego przez autorów pracy: [Lokiarchaeum sp. GC14_75](https://ftp.ncbi.nlm.nih.gov/genomes/genbank/archaea/Candidatus_Lokiarchaeum_sp._GC14_75/latest_assembly_versions/GCA_000986845.1_ASM98684v1/GCA_000986845.1_ASM98684v1_assembly_stats.txt)   
 
 #### Wyszukiwanie genów w sekwencji genomowej
 Do wyszukania w genomie *Lokiarchaeum* genów kodujących białka wykorzystają państwo program **prodigal**. Informacja, jak używać tego programu wyświetla się po wpisaniu w terminalu `prodigal -h`. 
@@ -75,7 +75,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
  wnioskować o ich roli.  
  W tym ćwiczeniu przeszukają państwo jedną z udostępnionych przez NCBI 
  (*ang. National Center for Biotechnology Information*) baz danych: (**pdbaa**). Baza ta zawiera sekwencje wszystkich białek 
- zdeponowanych w bazie [PDB](https://www.rcsb.org/) (*ang. protein Data Base*) i została wybrana tylko dlatego, że jest stosunkowo nieduża.
+ zdeponowanych w bazie [PDB](https://www.rcsb.org/) (*ang. Protein Data Base*) i została wybrana tylko dlatego, że jest stosunkowo nieduża.
  Po wpisaniu w terminalu `update_blastdb.pl --showall` otrzymają państwo listę wszystkich dostępnych baz danych.
   Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj. dla programu **blastp**? Proszę uzasadnić.   
 Poproszę też państwa, aby przeszukać bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
@@ -133,7 +133,7 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
  ***
  ### Zadanie4  
  Program blast umożliwia nie tylko przeszukiwanie baz danych dostarczonych przez NCBI, ale także stworzenie własnej bazy sekwencji. Państwa zadaniem będzie utworzenie i przetestowanie bazy danych dla sekwencji tRNA mitochondrialnych uzyskanych na poprzednich zajęciach.  
-  Opis tworzenia bazy daych znajda państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.    
+  Opis tworzenia bazy daych znajdą państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.    
   Proszę następnie przetestować bazę. W tym celu proszę przeszukać ją (wykorzystując odpowiedni algorytm programu BLAST+) pojedyńczą sekwencją dowolnego mitochondrialnego tRNA. Jako bazę danych (argument `-db`) wskazują państwo plik fasta na podstawie którego zbudowali państwo bazę.  
  
  ***
