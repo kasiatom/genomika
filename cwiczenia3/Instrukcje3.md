@@ -46,7 +46,7 @@ został pobrany ze strony gnomAD i przygotowany w następujący sposób:
 ```bash
 wget -c 'https://storage.googleapis.com/gcp-public-data--gnomad/release/4.0/vcf/genomes/gnomad.genomes.v4.0.sites.chr1.vcf.bgz'
 wget -c 'https://storage.googleapis.com/gcp-public-data--gnomad/release/4.0/vcf/genomes/gnomad.genomes.v4.0.sites.chr1.vcf.bgz.tbi'
-tabix gnomad.genomes.v4.0.sites.chr1.vcf.bgz chr1:91500000-94000000 | bgzip > gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz
+tabix -h gnomad.genomes.v4.0.sites.chr1.vcf.bgz chr1:91500000-94000000 | bgzip > gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz
 tabix -p vcf gnomad.genomes.v4.0.sites.chr1.fragment.vcf.gz
 ```
 Powyższe kroki miały na celu jedynie ograniczenie jego wielkości.   
@@ -138,9 +138,7 @@ Program dodaje do kolumny INFO pliku vcf pole ANN, oraz ewentualnie LOF i NMD. P
 #### Odfiltrowanie nieszkodliwych wariantów
 Wykorzystując wszystkie dodane przez siebie adnotacje, proszę odfiltrować z pliku **237-annotated.vcf.gz** te mutacje, które 
 są według państwa nieszkodliwe. Proszę **opisać w punktach**, jakie mutacje chcą państwo zostawić/odrzucić i dlaczego. Bardzo dobrym 
-źródłem informacji na ten temat jest publikacja [*Standards and Guidelines for the Interpretation of Sequence Variants: A Joint Consensus
- Recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular 
- Pathology*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/).   
+źródłem informacji na ten temat jest publikacja [*Standards and Guidelines for the Interpretation of Sequence Variants: A Joint Consensus Recommendation of the American College of Medical Genetics and Genomics and the Association for Molecular Pathology*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/).   
  Do filtrowania proszę wykorzystać program `bcftools filter`.
  Poniżej kilka przykładów wykorzystania programu, więcej znajdą państwo
 w pomocy programu [bcftools filter](http://samtools.github.io/bcftools/bcftools.html#filter).  
