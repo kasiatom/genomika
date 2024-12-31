@@ -49,8 +49,7 @@ Wiele z nich zgodziło się dzielić uzyskanymi wynikami w ramach [The COVID-19 
 2. Proszę przyjrzeć się wynikom badania [`B1_ALL_leave_23andme`](https://www.covid19hg.org/results/): 
    * Ile osób zostało poddanych tym badaniom. Genotypy jakich grup osób, były tu porównywane?
    * Jak zinterpretować przedstawiony poniżej wykres "Manhattan"? 
-     Warianty w ilu regionach były istotnie związane z ciężkim przebiegiem choroby? Zastosowano tutaj bardzo niski próg istotności *p = 5e-8* (pozioma linia na wykresie).
-     Dlaczego?
+     Warianty w ilu regionach były istotnie związane z ciężkim przebiegiem choroby? Zastosowano tutaj bardzo niski próg istotności *p = 5e-8* (pozioma linia na wykresie). Dlaczego?
    * Proszę pobrać odfiltrowany plik z wynikami rozpatrywanego badania (`GRCh38 (filtered)`), pozostawić w nim tylko warianty spełniające powyższy próg istotności (wartosci w kolumnie 9),
      a następnie dowiedzieć się, czy w zidentyfikowananych obszarach leżą jakieś geny (jakie?). Pomóc może tutaj BioMart i Ensembl.  
    * Jakie jest pochodzenie regionu o najsilniejszej asocjacji? [link](https://www.nature.com/articles/s41586-020-2818-3). 
