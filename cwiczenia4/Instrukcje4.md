@@ -46,17 +46,18 @@ Wiele z nich zgodziło się dzielić uzyskanymi wynikami w ramach [The COVID-19 
 
  
 1. Proszę na podstawie powyższego opisu w Wikipedii (albo wiedzy ogólnej) opisać własnymi słowami cel i zasadę badań GWAS  
-2. Proszę przyjrzeć się wynikom badania [`B1_ALL`](https://app.covid19hg.org/?analysisId=r6-leave_23andme-B1_ALL): 
+2. Proszę przyjrzeć się wynikom badania [`B1_ALL_leave_23andme`](https://www.covid19hg.org/results/): 
    * Ile osób zostało poddanych tym badaniom. Genotypy jakich grup osób, były tu porównywane?
    * Jak zinterpretować przedstawiony poniżej wykres "Manhattan"? 
-     Warianty w ilu regionach były istotnie związane z ciężkim przebiegiem choroby? Jaki próg istotności tutaj zastosowano?
+     Warianty w ilu regionach były istotnie związane z ciężkim przebiegiem choroby? Zastosowano tutaj bardzo niski próg istotności *p = 5e-8* (pozioma linia na wykresie).
      Dlaczego?
-   * Co (jakie geny) znajdują się w tych regionach? 
+   * Proszę pobrać odfiltrowany plik z wynikami rozpatrywanego badania (`GRCh38 (filtered)`), pozostawić w nim tylko warianty spełniające powyższy próg istotności (wartosci w kolumnie 9),
+     a następnie dowiedzieć się, czy w zidentyfikowananych obszarach leżą jakieś geny (jakie?). Pomóc może tutaj BioMart i Ensembl.  
    * Jakie jest pochodzenie regionu o najsilniejszej asocjacji? [link](https://www.nature.com/articles/s41586-020-2818-3). 
      Czy obce DNA chroni, czy też zwiększa ryzyko ciężkiego przebiegu choroby? 
    * W jakich populacjach takie DNA występuje, a w jakich nie? Dlaczego? 
      [link](https://en.wikipedia.org/wiki/Neanderthal#Interbreeding_with_modern_humans)
-3. Czy jakiekolwiek istotne statystycznie asocjacje (niekoniecznie w badaniu B1_ALL) znaleziono dla regionu HLA albo genu ACE2?
+3. Czy jakiekolwiek istotne statystycznie asocjacje (niekoniecznie w badaniu B1_ALL_leave_23andme) znaleziono dla genu ACE2? Proszę poszukać odpowiedzi w omówieniu wyników zamieszczonym      [tutaj](https://www.covid19hg.org/blog/2021-07-30-data-freeze-6-summary/).
    Co to za region/gen?
 
 
