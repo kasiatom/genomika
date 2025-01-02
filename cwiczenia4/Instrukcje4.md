@@ -50,7 +50,7 @@ Wiele z nich zgodziło się dzielić uzyskanymi wynikami w ramach [The COVID-19 
    * Ile osób zostało poddanych tym badaniom. Genotypy jakich grup osób, były tu porównywane?
    * Jak zinterpretować przedstawiony poniżej wykres "Manhattan"? 
      Warianty w ilu regionach były istotnie związane z ciężkim przebiegiem choroby? Zastosowano tutaj bardzo niski próg istotności (pozioma linia na wykresie). Dlaczego?
-   * Proszę pobrać odfiltrowany plik z wynikami rozpatrywanego badania (`GRCh38 (filtered)`), pozostawić w nim tylko warianty spełniające próg istotności stosowany zwyczajowo w badaniach GWAS u czlowieka - 5e-08 (wartosci w kolumnie 9),
+   * Proszę pobrać odfiltrowany plik z wynikami rozpatrywanego badania (`GRCh38 (filtered)`), pozostawić w nim tylko warianty spełniające próg istotności stosowany zwyczajowo w badaniach GWAS u czlowieka, tj. *5e-08* (wartości w kolumnie 9),
      a następnie dowiedzieć się, czy w zidentyfikowananych obszarach leżą jakieś geny (jakie?). Pomóc może tutaj BioMart i Ensembl.  
    * Jakie jest pochodzenie regionu o najsilniejszej asocjacji? [link](https://www.nature.com/articles/s41586-020-2818-3). 
      Czy obce DNA chroni, czy też zwiększa ryzyko ciężkiego przebiegu choroby? 
