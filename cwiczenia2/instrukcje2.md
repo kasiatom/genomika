@@ -1,6 +1,6 @@
 ## Blast  
 
-Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany jest [tutaj] (https://rdcu.be/d5feQ). Proszę o przeczytanie początku artykułu (dla chętnych całości) i dokładne przyjrzenie się rycinie 1.  
+Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany jest [tutaj](https: //rdcu.be/d5feQ). Proszę o przeczytanie początku artykułu (dla chętnych całości) i dokładne przyjrzenie się rycinie 1.  
   
 ### Zadanie1  
 Proszę zapoznać się z artykułem
