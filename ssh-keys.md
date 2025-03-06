@@ -20,7 +20,7 @@ Procedura ustawienia dostępu do serwera za pomocą kluczy ssh dla różnych sys
 
 5) Zapisanie klucza **publicznego** do pliku z listą zaufanych kluczy:
    ```bash
-   cat id_ed25519.pub > authorized_keys   
+   cat id_ed25519.pub >> authorized_keys   
    ```
 6) Skopiowanie kluczy na komputer lokalny (Linux, MAC: polecenia scp, Windows: program WinSCP). Klucze najlepiej umieścić w tym samym katalogu, w którym znajduje się plik konfiguracyjny ssh, zazwyczaj będzie to:  
   - Linux/MAC:  `~/.ssh/`  
