@@ -24,19 +24,22 @@ Procedura ustawienia dostępu do serwera za pomocą kluczy ssh dla różnych sys
 6) Skopiowanie kluczy na komputer lokalny (Linux, MAC: polecenia scp, Windows: program WinSCP). Klucze najlepiej umieścić w tym samym katalogu, w którym znajduje się plik konfiguracyjny połączenia z serwerem, zazwyczaj będzie to:  
   - Linux/MAC:  `~/.ssh/`  
   - Windows:  
+Lokalizację pliku mozna sprawdzić w VSCode wybierając opcje *"Open a Remote Window"* (lewy dolny róg) => *"Connect to Host..."* => *"Configure SSH Hosts..."*.  
+
 
 7) Usunięcie kluczy z serwera: 
    ```bash
    rm  id_ed25519.pub id_ed25519
    ```
 8) Dodanie ścieżki do klucza prywatnego w pliku konfiguracyjnym. 
-  Proszę otworzyć plik konfiguracyjny (Linux: `~/.ssh/config`, Windows: ``) i dodać informację o kluczu (ostatnia linia):
+  Proszę otworzyć plik konfiguracyjny (**"Open a Remote Window" => *"Connect to Host..."* => *"Configure SSH Hosts..."* => wybrać plik). W systemie Linux będzie to zazwyczaj plik: `~/.ssh/config`, w Windows: ``) i dodać informację o kluczu (ostatnia linia):
    ```bash
     Host kontiki
       HostName 149.156.165.148
       User user174
-	  IdentityFile ~/.ssh/id_ed25519 ## uzgodnić odpowiednio
-	```  
+	  IdentityFile /home/user_komp_lok/.ssh/id_ed25519 ## uzgodnić odpowiednio, podać pełną ścieżkę. 
+	``` 
+	 
 
 9) Teraz praca na serwerze powinna być możliwa bez podawania hasła. Oczywiście dotyczy to tylko komputera, na którym znajduje się prywatny klucz. Tego klucza nie wolno udostępniać innym osobom!!!  
 
