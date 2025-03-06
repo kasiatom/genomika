@@ -22,10 +22,10 @@ Procedura ustawienia dostępu do serwera za pomocą kluczy ssh dla różnych sys
    ```bash
    cat id_ed25519.pub > authorized_keys   
    ```
-6) Skopiowanie kluczy na komputer lokalny (Linux, MAC: polecenia scp, Windows: program WinSCP). Klucze najlepiej umieścić w tym samym katalogu, w którym znajduje się plik konfiguracyjny połączenia z serwerem, zazwyczaj będzie to:  
+6) Skopiowanie kluczy na komputer lokalny (Linux, MAC: polecenia scp, Windows: program WinSCP). Klucze najlepiej umieścić w tym samym katalogu, w którym znajduje się plik konfiguracyjny ssh, zazwyczaj będzie to:  
   - Linux/MAC:  `~/.ssh/`  
   - Windows:  
-Lokalizację pliku mozna sprawdzić w VSCode wybierając opcje *"Open a Remote Window"* (lewy dolny róg) => *"Connect to Host..."* => *"Configure SSH Hosts..."*.  
+Lokalizację pliku konfiguracyjnego można sprawdzić w VSCode wybierając opcje *"Open a Remote Window"* (lewy dolny róg) => *"Connect to Host..."* => *"Configure SSH Hosts..."*.  
 
 
 7) Usunięcie kluczy z serwera: 
