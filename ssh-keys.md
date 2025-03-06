@@ -13,8 +13,9 @@ Procedura ustawienia dostępu do serwera za pomocą kluczy ssh dla różnych sys
    ```
 4) Utworzenie pary kluczy:
    ```bash
-   ssh-keygen -t ed25519 ## utworzenie kluczy, program będzie pytał o hasło - nic nie podawać, zatwiedzić Enter
+   ssh-keygen -t ed25519 ## utworzenie kluczy
    ```
+   Program będzie pytał o hasło oraz nazwę kluczy - zostawiamy wszystko domyślnie, nic nie wpisujemy, zatwiedzamy kolejne pytania przez naciśniecie klawisza `Enter`.
    W wyniku powyższej komendy w katalogu `.ssh` pojwią sie dwa pliki -  klucz publiczny `id_ed25519.pub` i klucz prywatny `id_ed25519`.
 
 5) Zapisanie klucza **publicznego** do pliku z listą zaufanych kluczy:
