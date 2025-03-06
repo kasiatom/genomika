@@ -33,7 +33,7 @@ Lokalizację pliku konfiguracyjnego można sprawdzić w VSCode wybierając opcje
    rm  id_ed25519.pub id_ed25519
    ```
 8) Dodanie ścieżki do klucza prywatnego w pliku konfiguracyjnym. 
-  Proszę otworzyć plik konfiguracyjny (**"Open a Remote Window" => *"Connect to Host..."* => *"Configure SSH Hosts..."* => wybrać plik). W systemie Linux będzie to zazwyczaj plik: `~/.ssh/config`, w Windows: ``) i dodać informację o kluczu (ostatnia linia):
+  Proszę otworzyć plik konfiguracyjny (*"Open a Remote Window"* => *"Connect to Host..."* => *"Configure SSH Hosts..."* => wybrać plik). W systemie Linux będzie to zazwyczaj plik: `~/.ssh/config`, w Windows: ``) i dodać informację o kluczu (ostatnia linia):
    ```bash
     Host kontiki
       HostName 149.156.165.148
