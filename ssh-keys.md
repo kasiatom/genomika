@@ -24,7 +24,7 @@ Procedura ustawienia dostępu do serwera za pomocą kluczy ssh dla różnych sys
    ```
 6) Skopiowanie kluczy na komputer lokalny (Linux, MAC: polecenia scp, Windows: program WinSCP). Klucze najlepiej umieścić w tym samym katalogu, w którym znajduje się plik konfiguracyjny ssh, zazwyczaj będzie to:  
   - Linux/MAC:  `~/.ssh/`  
-  - Windows:  `C:\Users\user_lok_komp\.ssh\`
+  - Windows:  `C:\Users\user_lok_komp\.ssh\`  
 Lokalizację pliku konfiguracyjnego można sprawdzić w VSCode wybierając opcje *"Open a Remote Window"* (lewy dolny róg) => *"Connect to Host..."* => *"Configure SSH Hosts..."*.  
 
 
