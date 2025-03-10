@@ -38,14 +38,17 @@
 4) Kolejne sesje - logowanie będzie przebiegać tak, jak w ostatnim podpunkcie punktu trzeciego.  
 5) Praca (kilka podpowiedzi):
    - otwarcie terminala: na górnym pasku narzędzi należy wybrać *Terminal* => *New Terminal*
-   - można mieć otwartych kilka okien terminala na raz - ikonki w prawym górnym rogu terminala:  
+   - można mieć otwartych kilka okien terminala na raz - ikonki w prawym górnym rogu terminala:     
     ![](vscode7.png)  
-   - Można mieć podgląd na listę plików/katalogów obecnych na serwerze poprzez otworzenie katalogu roboczego: *File* => *Open Folder...* (wpisać ścieżkę, lub wybrać podany domyślnie katalog domowy użytkownika). Widok listy plików (eksploratora) otwieramy z lewego paska menu: 
-   ![](vscode8.png) 
-   Na pasku tym znajdują się też ikonki pozwalające na instalowanie dodatków, debagowanie, obsługę git i inne.  
-   - Nowe pliki i katalogi można tworzyć wykorzystując ikonki w prawym górnym rogu okna eksplorera: 
-  ![](vscode9.png)  
-   Można także korzystać z wiersza poleceń w terminalu (`mkdir`, `touch`).  
+
+   - Można mieć podgląd na listę plików/katalogów obecnych na serwerze poprzez otworzenie katalogu roboczego: *File* => *Open Folder...* (wpisać ścieżkę, lub wybrać podany domyślnie katalog domowy użytkownika). Widok listy plików (eksploratora) otwieramy z lewego paska menu:    
+    ![](vscode8.png)   
+      
+      Na pasku tym znajdują się też ikonki pozwalające na instalowanie dodatków, debagowanie, obsługę git i inne.  
+    - Nowe pliki i katalogi można tworzyć wykorzystując ikonki w  prawym górnym rogu okna eksplorera: 
+     ![](vscode9.png)   
+
+      Można także korzystać z wiersza poleceń w terminalu (`mkdir`, `touch`).  
    - Zmiany w edytowanych plikach mozna zapisać poprzez naciśniecie `Ctrl+s`.
    - Gdy pracujemy na własnym komputerze warto ustawić sobie dostęp do serwera przez klucze ssh (zmniejszy to sznse na zablokowanie konta przez pomyłkowe wpisanie niodpowiedniego hasła). Procedura opisana jest [tutaj](./ssh-keys.md).  
 
