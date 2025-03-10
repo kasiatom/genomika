@@ -29,7 +29,7 @@
        User user180
 	 ```   
 	 Podobnie do pliku można dodawać kolejne serwery. 
-     Zmiany w pliku konfiguracyjnym zatwierdzamy przez naciśnięcie Ctrl+s.
+     Zmiany w pliku konfiguracyjnym zatwierdzamy przez naciśnięcie `Ctrl+s`.
 
    - Po zapisaniu zmian powtarzamy poprzednie kroki: *"Open a Remote Window"* => *"Connect to Host..."*, po czym wybieramy serwer z listy:  
 	![](vscode6.png)  
