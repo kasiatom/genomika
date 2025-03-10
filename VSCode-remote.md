@@ -11,7 +11,7 @@
   	![](vscode4.png)  
 	po czym otworzyć plik konfiguracyjny ssh (pierwszy z listy). Dla systemu operacyjnego Linux/MAC będzie to zazwyczaj `~/.ssh/config` dla systemu Windows `C:\Users\user_lok_komp\.ssh\config`: 
 	![](vscode5.png)  
-   - W edytorze otworzy sie plik konfiguracyjny, proszę w nim wpisać: 
+   - W edytorze otworzy się plik konfiguracyjny, proszę w nim wpisać: 
      ```bash
 	 Host kontiki
        HostName 149.156.165.148
@@ -49,7 +49,7 @@
     ![](vscode9.png)   
          
     - Zmiany w edytowanych plikach mozna zapisać poprzez naciśniecie `Ctrl+s`.
-   - Gdy pracujemy na własnym komputerze warto ustawić sobie dostęp do serwera przez klucze ssh (zmniejszy to sznse na zablokowanie konta przez pomyłkowe wpisanie niodpowiedniego hasła). Procedura opisana jest [tutaj](./ssh-keys.md).  
+   - Gdy pracujemy na własnym komputerze warto ustawić sobie dostęp do serwera przez klucze ssh (zmniejszy to sznse na zablokowanie dostępu do konta przez pomyłkowe wpisanie niodpowiedniego hasła). Procedura opisana jest [tutaj](./ssh-keys.md).  
 
 
 
