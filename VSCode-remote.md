@@ -45,10 +45,10 @@
     ![](vscode8.png)   
       
       Na pasku tym znajdują się też ikonki pozwalające na instalowanie dodatków, debagowanie, obsługę git i inne.  
-    - Nowe pliki i katalogi można tworzyć wykorzystując ikonki w  prawym górnym rogu okna eksplorera: 
-     ![](vscode9.png)   
-
-      Można także korzystać z wiersza poleceń w terminalu (`mkdir`, `touch`).  
+   - Nowe pliki i katalogi można tworzyć wykorzystując ikonki w  prawym górnym rogu okna eksplorera:    
+    ![](vscode9.png)   
+         
+     Można także korzystać z wiersza poleceń w terminalu (`mkdir`, `touch`).  
    - Zmiany w edytowanych plikach mozna zapisać poprzez naciśniecie `Ctrl+s`.
    - Gdy pracujemy na własnym komputerze warto ustawić sobie dostęp do serwera przez klucze ssh (zmniejszy to sznse na zablokowanie konta przez pomyłkowe wpisanie niodpowiedniego hasła). Procedura opisana jest [tutaj](./ssh-keys.md).  
 
