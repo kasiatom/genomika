@@ -65,7 +65,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
   
  ### Zadanie3
  #### Wyszukiwanie genów homologicznych  
- Aby dowiedzieć się, jaka jest funkacja białek zidentyfikowanych w poprzednim zadaniu wykorzystają państwo aplikację **blastp** 
+ Aby dowiedzieć się, jaka jest funkcja białek zidentyfikowanych w poprzednim zadaniu wykorzystają państwo aplikację **blastp** 
  (wchodzącą w skład programu [BLAST+](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-421)). Dodatkowo
  wykorzystają państwo blastp, aby sprawdzić, czy rzeczywiście część białek *Lokiarchaeum* jest 
  bardziej podobna do białek eukariotycznych, niż bakteryjnych oraz do identyfikacji białek ESP.   
