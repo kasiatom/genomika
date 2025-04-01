@@ -10,12 +10,12 @@ Proszę podać definicję paraloga (**1 pkt**)
   
 #### 2.
 Jak zmodyfikować polecenie z [instrukcji 2](https://github.com/kasiatom/genomika/blob/master/cwiczenia2/instrukcje2.md), aby przeprowadzić analizę blastp z następującymi ustawieniami (**2 pkt**):
-- baza danych: swissprot na stronie NCBI 
+- baza danych: swissprot na **serwerze NCBI**   
 - brak zawężania listy gatunków
 - domyślny próg e-value
 - domyślny format wynikowego pliku
 - maksymalna liczba zwracanych wyników = 10
-- nazwa pliku wynikowego “test-result.txt”
+- nazwa pliku wynikowego “result.txt”
 - ta sama lista sekwencji, która wykorzystana była w ćwiczeniu  
 
 **Rozwiązaniem tego zadania jest tylko polecenie**, proszę nie czekać na uzyskanie wyniku!
@@ -23,7 +23,7 @@ Tu podpowiedź: [https://www.ncbi.nlm.nih.gov/books/NBK569839/#usrman_BLAST_feat
           
     
 #### 3.
-Czy mutacja opisana w pliku `/dane/fbn.vcf` może być przyczyną zespołu Marfana [https://rarediseases.info.nih.gov/diseases/6975/marfan-syndrome-type-1](https://rarediseases.info.nih.gov/diseases/6975/marfan-syndrome-type-1)?  
+Czy mutacja opisana w pliku `/dane/fbn.vcf` może być przyczyną zespołu Marfana [https://en.wikipedia.org/wiki/Marfan_syndrome](hhttps://en.wikipedia.org/wiki/Marfan_syndrome)?  
 Proszę krótko uzasadnić (**maks. 3pkt**).  
 Jaki genotyp ma analizowana osoba? (**1 pkt**)  
 Jaką zmianę powoduje ten wariant na poziomie białka? (**2 pkt**)   
