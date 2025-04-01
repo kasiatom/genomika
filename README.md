@@ -4,7 +4,8 @@
  * [ćwiczenia 1](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/Instrukcje1.md)
  * [ćwiczenia 2](https://github.com/genomika-2020/genomika/blob/master/cwiczenia2/instrukcje2.md)
  * [ćwiczenia 3](https://github.com/genomika-2020/genomika/blob/master/cwiczenia3/Instrukcje3.md)
- * [ćwiczenia 4](https://github.com/genomika-2020/genomika/blob/master/cwiczenia4/Instrukcje4.md)
+ * [ćwiczenia 4](https://github.com/genomika-2020/genomika/blob/master/cwiczenia4/Instrukcje4.md) 
+ * [ćwiczenia 5](https://github.com/genomika-2020/genomika/blob/master/cwiczenia4/Instrukcje5.md)
    
 ***
 ***
@@ -14,11 +15,13 @@ Z serwerem mozna połączyć sie wpisując w terminalu:
 ```bash
 ssh numer_ip -l nazwa_konta
 ```  
+Można także użyć VSCode. Tutaj instrukcje [link](./VSCode-remote.md).  
 
 **Windows**   
-Logowanie wymaga zainstalowania jednego z dwóch programów:  
+Logowanie wymaga zainstalowania jednego programów:  
 * [puTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html);Szczegółowe instrukcje obsługi znajdują się [tutaj](https://the.earth.li/~sgtatham/putty/0.73/puttydoc.txt)  
 * [MobaXterm](https://mobaxterm.mobatek.net/download.html); [tutaj](https://mobaxterm.mobatek.net/documentation.html) pomoc programu
+* VSCode z dodatkiem SSH. Instrukcje [link](./VSCode-remote.md)  
 
 Proszę o zmianę hasła po pierwszym zalogowaniu (polecenie *passwd*)  
 
