@@ -42,7 +42,7 @@ Czy ryzyko ciężkiego przebiegu zakażenia wirusem SARS-CoV-2 jest związane z 
 genetycznymi w genomie gospodarza (człowieka)? Odpowiedzi na to pytanie mogą dostarczyć całogenomowe badania asocjacyjne [**GWAS** 
 (ang. Genome-Wide Association Study)](https://en.wikipedia.org/wiki/Genome-wide_association_study). Od początku epidemii
 badania w kierunku podatności na zakażenie wirusem SARS-CoV-2 były prowadzone przez wiele grup badawczych. 
-Wiele z nich zgodziło się dzielić uzyskanymi wynikami w ramach [The COVID-19 Host Genetics Initiative](https://www.covid19hg.org/).
+Wiele z nich zgodziło się dzielić uzyskanymi wynikami w ramach [The COVID-19 Host Genetics Initiative](https://www.nature.com/articles/s41431-020-0636-6).
 
  
 1. Proszę na podstawie powyższego opisu w Wikipedii (albo wiedzy ogólnej) opisać własnymi słowami cel i zasadę badań GWAS  
