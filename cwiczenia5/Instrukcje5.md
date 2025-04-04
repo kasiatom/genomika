@@ -47,7 +47,7 @@ Dalsza część ćwiczenia będzie dotyczyć wynników jednego z takich badań [
  
 1. Proszę na podstawie powyższego opisu w Wikipedii (albo wiedzy ogólnej) opisać własnymi słowami cel i zasadę badań GWAS  
 2. Proszę przejrzeć powyższy artykuł i odpowedzieć na następujące pytania:
-	* Jak w pracy zdefiniowane były grupy kontrolne i badawcze (tabela1)? Jakie były liczebnosci tych grup?  
+	* Jak w pracy zdefiniowane były grupy kontrolne i badane (tabela1)? Jakie były liczebnosci tych grup?  
 	* Jak zdefiniowano rzadkie i częste warianty?
 	* Proszę przyjrzeć się Fig1. Na jakich chromosomach leżą regiony istotnie zasocjowane z podatnością na COVID-19?. Jaki próg istotnosci tutaj przyjęto? Dlaczego? Jakie geny leżą w pobliżu/w zidentyfikowanych regionach? Jak nazywa się typ wykresu przedstawiony na rycinie?
 	* Proszę popatrzeć na Fig2. Czy wariant rs190509934 prowadzi do zmian podatnosci na COVID-19? Czy jego allel C jest związany z wyższym, czy niższym ryzykiem zachorowania? Jak tutaj wyznaczany jest iloraz szans **OR** (ang. odds ratio)? Definicję OR znajdą państwo [tutaj](https://pl.wikipedia.org/wiki/Iloraz_szans).  
