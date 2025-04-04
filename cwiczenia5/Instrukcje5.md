@@ -42,22 +42,22 @@ Czy ryzyko ciężkiego przebiegu zakażenia wirusem SARS-CoV-2 jest związane z 
 genetycznymi w genomie gospodarza (człowieka)? Odpowiedzi na to pytanie mogą dostarczyć całogenomowe badania asocjacyjne [**GWAS** 
 (ang. Genome-Wide Association Study)](https://en.wikipedia.org/wiki/Genome-wide_association_study). Od początku epidemii
 badania w kierunku podatności na zakażenie wirusem SARS-CoV-2 były prowadzone przez wiele grup badawczych. 
-Wiele z nich zgodziło się dzielić uzyskanymi wynikami w ramach [The COVID-19 Host Genetics Initiative](https://www.nature.com/articles/s41431-020-0636-6).
+Dalsza część ćwiczenia będzie dotyczyć wynników jednego z takich badań [Genome-wide analysis provides genetic evidence that ACE2 influences COVID-19 risk and yields risk scores associated with severe disease](https://www.nature.com/articles/s41588-021-01006-7).  
 
  
 1. Proszę na podstawie powyższego opisu w Wikipedii (albo wiedzy ogólnej) opisać własnymi słowami cel i zasadę badań GWAS  
-2. Proszę przyjrzeć się wynikom badania [`B1_ALL_leave_23andme`](https://www.covid19hg.org/results/): 
-   * Ile osób zostało poddanych tym badaniom. Genotypy jakich grup osób, były tu porównywane?
-   * Jak zinterpretować przedstawiony poniżej wykres "Manhattan"? 
-     Warianty w ilu regionach były istotnie związane z ciężkim przebiegiem choroby? Zastosowano tutaj bardzo niski próg istotności (pozioma linia na wykresie). Dlaczego?
-   * Proszę pobrać odfiltrowany plik z wynikami rozpatrywanego badania (`GRCh38 (filtered)`), pozostawić w nim tylko warianty spełniające próg istotności stosowany zwyczajowo w badaniach GWAS u czlowieka, tj. *5e-08* (wartości w kolumnie 9),
-     a następnie dowiedzieć się, czy w zidentyfikowananych obszarach leżą jakieś geny (jakie?). Pomóc może tutaj BioMart i Ensembl.  
-   * Jakie jest pochodzenie regionu o najsilniejszej asocjacji? [link](https://www.nature.com/articles/s41586-020-2818-3). 
-     Czy obce DNA chroni, czy też zwiększa ryzyko ciężkiego przebiegu choroby? 
-   * W jakich populacjach takie DNA występuje, a w jakich nie? Dlaczego? 
+2. Proszę przejrzeć powyższy artykuł i odpowedzieć na następujące pytania:
+	* Jak w pracy zdefiniowane były grupy kontrolne i badawcze (tabela1)? Jakie były liczebnosci tych grup?  
+	* Jak zdefiniowano rzadkie i częste warianty?
+	* Proszę przyjrzeć się Fig1. Na jakich chromosomach leżą regiony istotnie zasocjowane z podatnością na COVID-19?. Jaki próg istotnosci tutaj przyjęto? Dlaczego? Jakie geny leżą w pobliżu/w zidentyfikowanych regionach? Jak nazywa się typ wykresu przedstawiony na rycinie?
+	* Proszę popatrzeć na Fig2. Czy wariant rs190509934 prowadzi do zmian podatnosci na COVID-19? Czy jego allel C jest związany z wyższym, czy niższym ryzykiem zachorowania? Jak tutaj wyznaczany jest iloraz szans **OR** (ang. odds ratio)? Definicję OR znajdą państwo [tutaj](https://pl.wikipedia.org/wiki/Iloraz_szans).  
+	* Autorów zainteresowała asocjacja w pobliżu genu *ACE2*. Dlaczego? Co to za gen? Jakie wyjaśnienie zwiazku wariantu z fenotypem autorzy zaproponowali i przetestowali?
+2.  Region najsilniej zasocjowany z ryzykiem zachorowania na COVID-19 znajduje się na chromosomie 3 (Fig1). 
+	* Jakie geny leżą w jego obrębie/pobliżu - Fig1, tekst? 
+	* Jakie jest pochodzenie tego regionu [link](https://www.nature.com/articles/s41586-020-2818-3). Czy obce DNA chroni, czy też zwiększa ryzyko ciężkiego przebiegu choroby? 
+    * W jakich populacjach takie DNA występuje, a w jakich nie? Dlaczego? 
      [link](https://en.wikipedia.org/wiki/Neanderthal#Interbreeding_with_modern_humans)
-3. Czy jakiekolwiek istotne statystycznie asocjacje (niekoniecznie w badaniu B1_ALL_leave_23andme) znaleziono dla genu ACE2? Proszę poszukać odpowiedzi w omówieniu wyników zamieszczonym      [tutaj](https://www.covid19hg.org/blog/2021-07-30-data-freeze-6-summary/).
-   Co to za region/gen?
+
 
 
 
