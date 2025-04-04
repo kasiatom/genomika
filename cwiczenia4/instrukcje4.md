@@ -23,7 +23,7 @@ Tu podpowiedź: [https://www.ncbi.nlm.nih.gov/books/NBK569839/#usrman_BLAST_feat
           
     
 #### 3.
-Czy mutacja opisana w pliku `/dane/fbn.vcf` może być przyczyną zespołu Marfana [https://en.wikipedia.org/wiki/Marfan_syndrome](hhttps://en.wikipedia.org/wiki/Marfan_syndrome)?  
+Czy mutacja opisana w pliku `/dane/fbn1.vcf` może być przyczyną zespołu Marfana [https://en.wikipedia.org/wiki/Marfan_syndrome](https://en.wikipedia.org/wiki/Marfan_syndrome)?  
 Proszę krótko uzasadnić (**maks. 3pkt**).  
 Jaki genotyp ma analizowana osoba? (**1 pkt**)  
 Jaką zmianę powoduje ten wariant na poziomie białka? (**2 pkt**)   
