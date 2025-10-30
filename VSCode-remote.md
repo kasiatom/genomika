@@ -16,6 +16,7 @@
 	 Host kontiki
        HostName 149.156.165.148
        User user174 
+	   PreferredAuthentications password
 	 ```	  
 	 Pierwsza linia zawiera nazwę serwera - to dowolna nazwa podana przez użytkownika, która ma jednoznacznie identyfikować serwer. W drugiej linii wpisane jest IP serwera, w kolejnej nazwa konta użytkownika na serwerze. Uwaga: wcięcie jest tu ważne!   
 	 Jeśli na danym komputerze pracuje kilka osób (co może się zdarzyć w pracowni), to dla każdej z nich należy stworzyć osobny wpis w pliku konfiguracyjnym:  
@@ -23,10 +24,12 @@
 	 Host kontiki-student1
         HostName 149.156.165.148
        User user174 
+	   PreferredAuthentications password
 
      Host kontiki-student2
        HostName 149.156.165.148
        User user180
+	   PreferredAuthentications password
 	 ```   
 	 Podobnie do pliku można dodawać kolejne serwery. 
      Zmiany w pliku konfiguracyjnym zatwierdzamy przez naciśnięcie `Ctrl+s`.
