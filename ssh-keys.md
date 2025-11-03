@@ -40,7 +40,7 @@ Lokalizację pliku konfiguracyjnego można sprawdzić w VSCode wybierając opcje
       User user174
 	  IdentityFile /home/user_lok_komp/.ssh/id_ed25519 ## uzgodnić odpowiednio, podać pełną ścieżkę. 
 	``` 
-	 
+Jeśli w pliku konfiguracyjnym był wpis	wymuszający logowanie z hasłem (PreferredAuthentications password), to należy go usunąć.
 
 9) Teraz praca na serwerze powinna być możliwa bez podawania hasła. Oczywiście dotyczy to tylko komputera, na którym znajduje się prywatny klucz. Tego klucza nie wolno udostępniać innym osobom!!!  
 
