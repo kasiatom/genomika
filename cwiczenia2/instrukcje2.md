@@ -135,6 +135,11 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
  Program blast umożliwia nie tylko przeszukiwanie baz danych dostarczonych przez NCBI, ale także stworzenie własnej bazy sekwencji. Państwa zadaniem będzie utworzenie i przetestowanie bazy danych dla sekwencji tRNA mitochondrialnych uzyskanych na poprzednich zajęciach.  
   Opis tworzenia bazy daych znajdą państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.    
   Proszę następnie przetestować bazę. W tym celu proszę przeszukać ją (wykorzystując odpowiedni algorytm programu BLAST+) pojedyńczą sekwencją dowolnego mitochondrialnego tRNA. Jako bazę danych (argument `-db`) wskazują państwo plik fasta na podstawie którego zbudowali państwo bazę.  
+
+ ### Nowsza litteratura dotycząca pochodzenia komórek eukarioyycznych  
+
+ https://comptes-rendus.academie-sciences.fr/biologies/articles/10.5802/crbiol.118/  
+ https://www.nature.com/articles/s41586-025-09960-6?WT.ec_id=NATURE-202601  
  
  ***
  ***
