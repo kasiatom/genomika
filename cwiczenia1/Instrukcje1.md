@@ -5,9 +5,9 @@ Proszę otworzyć stronę [Ensembl](https://www.ensembl.org/index.html) i rozejr
 Jaki typ danych można tu znaleźć? 
   
 Proszę zauważyć, że dane dotyczące wielu pozostałych gatunków można uzyskać, korzystając z podobnie zorganizowanych "stron siostrzanych":
- [Ensembl Bacteria](http://bacteria.ensembl.org/index.html), [Ensembl Protists](http://protists.ensembl.org/index.html), 
- [Ensembl Fungi](http://fungi.ensembl.org/index.html), [Ensembl Plants](http://plants.ensembl.org/index.html) oraz 
- [Ensembl Metazoa](http://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
+ [Ensembl Bacteria](https://bacteria.ensembl.org/index.html), [Ensembl Protists](https://protists.ensembl.org/index.html), 
+ [Ensembl Fungi](https://fungi.ensembl.org/index.html), [Ensembl Plants](https://plants.ensembl.org/index.html) oraz 
+ [Ensembl Metazoa](https://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
 
 ***
 ***
@@ -59,7 +59,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 
 ##### AD1. Jak korzystać z narzędzia BioMart, by uzyskać listę ortologów
  * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
- * Proszę następnie wybrać bazę danych **Ensembl Genes 113** (113 to wersja bazy danych, baza jest uaktualniana dość często -
+ * Proszę następnie wybrać bazę danych **Ensembl Genes 115** (115 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione.    
  * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p14**). Co oznacza skrót GRCh38.p14? 
  * Po lewej stronie pojawił się teraz pasek z filtrami oraz atrybutami do wyboru.
