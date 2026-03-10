@@ -79,29 +79,7 @@ Następnie sprawdzą Państwo, czy tasowanie domen jest częstsze po duplikacji 
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
  nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [scp](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer) lub
   [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer).    
-  Alternatywnie plik można pobrać bezpośrednio na serwer. W tym celu należy wybrać opcję: **XML** (na górze strony) -
-   wybrane atrybuty i filtry zostaną wtedy przetłumaczone na zapytanie xml.
-    Należy je wyedytować, tak aby całość zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
-   pobrania pliku z wynikami.  
-   Tutaj dokładne instrukcje [link](https://www.ensembl.org/info/data/biomart/biomart_restful.html). 
-   W naszym przypadku będzie to:
-   ```xml
-   <?xml version="1.0" encoding="UTF-8"?>
-   <!DOCTYPE Query>
-   <Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" >
-			
-	    <Dataset name = "hsapiens_gene_ensembl" interface = "default" >
-		    <Filter name = "biotype" value = "protein_coding"/>
-		    <Attribute name = "ensembl_gene_id" />
-		    <Attribute name = "mmusculus_homolog_ensembl_gene" />
-		    <Attribute name = "mmusculus_homolog_orthology_type" />
-	    </Dataset>
-   </Query>
-   ```  
-   Komenda do pobrania pliku (wynikowy plik będzie nazywał się *results.txt* - można zmienić):
-    ```bash
-    wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
-   ```
+  
  *  Pobrany plik ma około 30 tys. linii z danymi, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
   Przed dalszą analizą proszę o odfiltrowanie takich linii, proszę też o usunięcie nagłówka i zapisanie do dwóch osobnych plików danych dotyczących 
   ortologów "one to one" i "one to many". Można to zrobić z wykorzystaniem *awk* (lub w dowolny wymyślony przez siebie sposób):  
@@ -130,19 +108,28 @@ Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka.
    Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
    w których występuje domena nieobecna w białku ortologicznym z drugiego gatunku oraz id tej domeny.
    Mogą państwo zastosować dowolny sposób analizy.
-   Można także wykorzystać poniższe polecenie (działające jednak dość wolno). **Uwaga** polecenie zadziała tylko jeśli wejściowe pliki maja dokładnie etaki układ danych jak opisano w poprzednich punktach. Jeśli kolejność kolumn jest inna, polecenie należy zmodyfikować:
+   Można także wykorzystać poniższe polecenie. **Uwaga** polecenie zadziała tylko jeśli wejściowe pliki mają dokładnie etaki układ danych jak opisano w poprzednich punktach. Jeśli kolejność kolumn jest inna, polecenie należy zmodyfikować:
    ```bash
-     printf "human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
-     while read f; do \
-              human=$( echo $f | cut -f1 -d ' ' ); \
-              mouse=$( echo $f | cut -f2 -d ' ' ); \
-              awk -v human=$human '$1 == human {print $2}' human-domains.txt | sort | uniq > human-tmp.txt ; \
-              awk -v mouse=$mouse '$1 == mouse {print $2}' mouse-domains.txt | sort | uniq > mouse-tmp.txt; \
-              human_only=$( grep -v -w -f mouse-tmp.txt human-tmp.txt | tr '\n' ';' | sed 's/;$//' ); \
-              mouse_only=$( grep -v -w -f human-tmp.txt mouse-tmp.txt | tr '\n' ';' | sed 's/;$//' ); \
-              printf "$human\t$human_only\t$mouse\t$mouse_only\n" >> wynik-one2one.txt;\
-              done<one2one-homologs.txt
-      rm human-tmp.txt mouse-tmp.txt
+    printf "human gene\thuman only domain\tmouse gene\tmouse only domain\n" > wynik-one2one.txt
+    awk '
+		ARGIND==1 { human[$1][$2]=1; next }
+		ARGIND==2 { mouse[$1][$2]=1; next }
+
+		{
+			hid=$1
+			mid=$2
+
+			hu=""; mu=""
+
+			for(d in human[hid]) if(!(d in mouse[mid])) hu=hu d ";"
+			for(d in mouse[mid]) if(!(d in human[hid])) mu=mu d ";"
+
+			sub(/;$/,"",hu)
+			sub(/;$/,"",mu)
+
+			print hid"\t"hu"\t"mid"\t"mu
+		}
+	' human-domains.txt mouse-domains.txt one2one-homologs.txt >> wynik-one2one.txt
 ```
   
   W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdują się identyfikatory genów, odpowiednio ludzkich i mysich, a w
