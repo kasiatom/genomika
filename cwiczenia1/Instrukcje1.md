@@ -49,8 +49,8 @@ Następnie sprawdzą Państwo, czy tasowanie domen jest częstsze po duplikacji 
   Należy do niej dodatkowo dodać informację o rodzaju ortologii, która będzie potrzebna do wykrycia duplikacji genów. 
   Proszę obejrzeć wygenerowany przez ChatGPT schemat, który przedstawia zależność pomiędzy typem ortologii a duplikacjami na przykładzie ewolucji hemoglobin. Jeśli coś jest niejasne, proszę pytać prowadzącego. ![Schemat ortologii i duplikacji](./Evolution%20of%20globin%20genes%20diagram.png)
   2. Pozyskanie listy nazw domen (według klasyfikacji [Pfam](https://pfam.xfam.org/)) dla wszystkich białek człowieka i myszy
-  3. Połączenie i odfiltrowanie powyższych list, tak aby wybrać identyfikatory genów mających odmienny skałd domen oraz nazwy domen 
-  występujących tylko u jednego gatunku. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
+  3. Połączenie i odfiltrowanie powyższych list, tak aby a) znaleźć identyfikatory genów mających odmienny skałd domen pomiędzy porównywanymi gatunkami oraz b) dodatkowo wypisać nazwy domen 
+  występujących tylko u jednego z gatunków. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
   a jego mysi odpowiednik A i B, to skład domen się nie zmienił. Interesować nas będą przypadki, 
    A, B, C vs A, B oraz A, B vs A, B, C.   
   4. Wyliczenie prostych statystyk: jak często pojawiły się unikatowe domeny na gałęzi prowadzącej od wspólnego przodka 
