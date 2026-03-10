@@ -41,11 +41,13 @@ W znalezieniu powyższych informacji mogą pomóc załączone ryciny [informacje
 Ze strony Ensembl można także wygodnie pozyskać informacje dotyczące większej ilości genów/białek/regionów na raz, z 
 wykorzystaniem narzędzia **BioMart**. W tym ćwiczeniu użyją państwo tego narzędzia, aby sprawdzić, czy w czasie niezależnej 
 ewolucji białek ludzkich i mysich dochodziło do tasowania domen. Inaczej mówiąc, porównają państwo skład domen wchodzących w skład 
-białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś domena jest obecna u jednego gatunku, a nie ma jej u drugiego.    
+białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś domena jest obecna u jednego gatunku, a nie występuje u drugiego. 
+Następnie sprawdzą Państwo, czy tasowanie domen jest częstsze po duplikacji genu, co potwierdzałoby tezę, że duplikacja genu sprzyja nabywaniu nowych funkcji.   
   
  Zadanie to można podzielić na następujące etapy:  
   1. Pozyskanie listy identyfikatorów wszystkich genów kodujących białka u człowieka i odpowiadających im mysich ortologów. 
-  Do listy tej dodatkowo należy dodać informację o rodzaju ortologii.  
+  Należy do niej dodatkowo dodać informację o rodzaju ortologii, która będzie potrzebna do wykrycia duplikacji genów. 
+  Proszę obejrzeć wygenerowany przez ChatGPT schemat, który przedstawia zależność pomiędzy typem ortologii a duplikacjami na przykładzie ewolucji hemoglobin. Jeśli coś jest niejasne, proszę pytać prowadzącego. ![Schemat ortologii i duplikacji](./Evolution%20of%20globin%20genes%20diagram.png)
   2. Pozyskanie listy nazw domen (według klasyfikacji [Pfam](https://pfam.xfam.org/)) dla wszystkich białek człowieka i myszy
   3. Połączenie i odfiltrowanie powyższych list, tak aby wybrać identyfikatory genów mających odmienny skałd domen oraz nazwy domen 
   występujących tylko u jednego gatunku. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
@@ -100,7 +102,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
     ```bash
     wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
    ```
- *  Pobrany plik ma 28090 linii z danymi, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
+ *  Pobrany plik ma około 30 tys. linii z danymi, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
   Przed dalszą analizą proszę o odfiltrowanie takich linii, proszę też o usunięcie nagłówka i zapisanie do dwóch osobnych plików danych dotyczących 
   ortologów "one to one" i "one to many". Można to zrobić z wykorzystaniem *awk* (lub w dowolny wymyślony przez siebie sposób):  
     ```bash
@@ -127,8 +129,8 @@ Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka.
   ##### AD3. Połączenie list i wybranie odpowiednich danych
    Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
    w których występuje domena nieobecna w białku ortologicznym z drugiego gatunku oraz id tej domeny.
-    Mogą państwo zastosować dowolny sposób analizy.
-   Można także wykorzystać poniższe polecenie (działające jednak dość wolno):
+   Mogą państwo zastosować dowolny sposób analizy.
+   Można także wykorzystać poniższe polecenie (działające jednak dość wolno). **Uwaga** polecenie zadziała tylko jeśli wejściowe pliki maja dokładnie etaki układ danych jak opisano w poprzednich punktach. Jeśli kolejność kolumn jest inna, polecenie należy zmodyfikować:
    ```bash
      printf "human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
      while read f; do \
