@@ -1,6 +1,6 @@
 ## Blast  
 
-Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany jest [tutaj](https://rdcu.be/d5feQ). Proszę o przeczytanie początku artykułu (dla chętnych całości) i dokładne przyjrzenie się rycinie 1.  
+Istnieją dwie hipotezy wyjaśniające pochodzenie eukariontów. Jedna z nich mówi, że eukarionty i archeony tworzą grupy siostrzane. Natomiast druga postuluje, że eukarionty powstały wewnątrz grupy archeonów i są właściwie ich podrgupą. Problem dobrze opisany jest [tutaj](https://rdcu.be/d5feQ). Proszę o przeczytanie początku artykułu (dla chętnych całości) i dokładne przyjrzenie się rycinie 1 oraz 2.  
   
 ### Zadanie1  
 Proszę zapoznać się z artykułem
@@ -71,15 +71,14 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
  bardziej podobna do białek eukariotycznych, niż bakteryjnych oraz do identyfikacji białek ESP.   
   
  Aplikacja **blastp** porównuje zadane sekwencje aminokwasowe do sekwencji białek zdeponowanych w bazach danych. W ten sposób można dla 
- białek o nieznanej funkcji wyszukać białka najbardziej do nich podobne (najbliższe ewolucyjnie) i na tej zasadzie 
+ białek o nieznanej funkcji wyszukać białka najbardziej do nich podobne (potencjalnie  - najbliższe ewolucyjnie) i na tej zasadzie 
  wnioskować o ich roli.  
  W tym ćwiczeniu przeszukają państwo jedną z udostępnionych przez NCBI 
  (*ang. National Center for Biotechnology Information*) baz danych: (**pdbaa**). Baza ta zawiera sekwencje wszystkich białek 
- zdeponowanych w bazie [PDB](https://www.rcsb.org/) (*ang. Protein Data Base*) i została wybrana tylko dlatego, że jest stosunkowo nieduża.
+ zdeponowanych w bazie [PDB](https://www.rcsb.org/) (*ang. Protein Data Base*) i została wybrana głównie ze względu na niewielki rozmiar. Jej dodatkową zaletą jest obecność dobrze scharakteryzowanych strukturalnie białek, co ułatwia interpretację wyników analiz homologii.  
  Po wpisaniu w terminalu `update_blastdb.pl --showall` otrzymają państwo listę wszystkich dostępnych baz danych.
-  Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj. dla programu **blastp**? Proszę uzasadnić.   
-Poproszę też państwa, aby przeszukać bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku, 
-otrzymaliby państwo prawie wyłacznie homologii z tej grupy. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
+  Która (które) z nich byłyby odpowiednie dla celów ćwiczenia, tj. dla programu **blastp**? Proszę uzasadnić.    
+Poproszę też państwa, aby przeszukać bazę **pdbaa** z wyłączeniem gatunków z grupy *Archaea*. W przeciwnym wypadku otrzymaliby Państwo w większości homologiczne dopasowania w obrębie Archaea, co utrudniałoby analizę kontrastu bakterie vs eukarionty. Od czasu scharakteryzowania *Lokiarchaeum* odkryto wiele podobnych *Archaea* - 
 co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea"). Sekwencje ich genomów są już zdeponowanane w bazach danych wykorzystywanych przez blast.    
 ***   
  
@@ -109,12 +108,13 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
      export BLASTDB=/usr/local/share
      blastp -db pdbaa \
             -query loki-proteins.fa \
-            -evalue 0.02 \
+            -evalue 0.00001 \
             -negative_taxidlist archaea-taxid-list.txt \
-            -outfmt  "7 delim=; qseqid sseqid sacc evalue staxid ssciname scomname sblastname sskingdom stitle" \
+            -outfmt  "7 delim=; qseqid sseqid sacc evalue pident qlen length staxid ssciname scomname sblastname sskingdom stitle" \
             -out loki-output.txt  \
             -subject_besthit \
-            -max_target_seqs 1
+            -max_target_seqs 1 \
+			-num_threads 8
                     
        ```
     Przed uruchomieniem analizy proszę przestudiować pomoc i rozszyfrować znaczenie poszczególnych argumentów - 
@@ -122,12 +122,13 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
     programu blastp, ale pomogą ograniczyć wielkość wynikowego pliku. `/usr/local/share/pdbaa` to położenie bazy danych. 
     Samo przeszukiwanie potrwa dość długo i dobrze go uruchomić w programie [screen](https://github.com/genomika-2020/genomika/blob/master/README.md#program-screen)
     
-3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania:  
- * Dla ilu białek *Lokiarchaeum* udało się zidentyfikować białko homologiczne
-   (np. policzyć ile razy w wynikowym pliku pojawia się wyrażenie regularne `'[1-5] hits found'`)  
- * Dla ilu białek nie zidentyfikowano homologa, przy ustawionym poziomie e-value 
-  (np. policzyć ile razy w wynikowym pliku pojawia się fraza `'0 hits found'`)
- * Ile razy znaleziony "najlepszy homolog" należy do bakterii, a ile razy do eukariontów?  
+3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania:
+ * Dla ilu białek Lokiarchaeum udało się zidentyfikować homologiczne dopasowania (np. na podstawie wystąpień wzorca `[1-5] hits found`)? 
+* Ile razy najlepszy homolog należy do bakterii, a ile razy do eukariontów?
+* Na podstawie wyników BLAST oceń, czy homologiczne trafienia dla białek Lokiarchaeum występują częściej wśród bakterii czy eukariontów, i zinterpretuj ten wzorzec w kontekście ewolucji eukariontów.
+* Jak można wyjaśnić mozaikowy charakter homologii białek *Lokiarchaeum* (bakterie vs eukarionty) w świetle procesów ewolucyjnych?
+* Czy najlepszy hit BLAST można traktować jako najbliższego ewolucyjnie krewnego? Uzasadnij odpowiedź.
+* Na podstawie których kolumn wyników BLAST można odróżnić wiarygodne dopasowania od przypadkowych? Czy istnieją uniwersalne progi stosowane w analizie homologii?
        
   ***
  ***
@@ -136,7 +137,7 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
   Opis tworzenia bazy daych znajdą państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.    
   Proszę następnie przetestować bazę. W tym celu proszę przeszukać ją (wykorzystując odpowiedni algorytm programu BLAST+) pojedyńczą sekwencją dowolnego mitochondrialnego tRNA. Jako bazę danych (argument `-db`) wskazują państwo plik fasta na podstawie którego zbudowali państwo bazę.  
 
- ### Nowsza litteratura dotycząca pochodzenia komórek eukarioyycznych  
+ ### Nowsza litteratura dotycząca pochodzenia komórek eukariotycznych  
 
  https://comptes-rendus.academie-sciences.fr/biologies/articles/10.5802/crbiol.118/  
  https://www.nature.com/articles/s41586-025-09960-6?WT.ec_id=NATURE-202601  
