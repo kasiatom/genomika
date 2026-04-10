@@ -122,16 +122,18 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
     programu blastp, ale pomogą ograniczyć wielkość wynikowego pliku. `/usr/local/share/pdbaa` to położenie bazy danych. 
     Samo przeszukiwanie potrwa dość długo i dobrze go uruchomić w programie [screen](https://github.com/genomika-2020/genomika/blob/master/README.md#program-screen)
     
-3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania:
- * Dla ilu białek Lokiarchaeum udało się zidentyfikować homologiczne dopasowania (np. na podstawie wystąpień wzorca `[1-5] hits found`)? 
+3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania: 
+
+* Dla ilu białek Lokiarchaeum udało się zidentyfikować homologiczne dopasowania (np. na podstawie wystąpień wzorca [1-5] hits found)?
 * Ile razy najlepszy homolog należy do bakterii, a ile razy do eukariontów?
-* Na podstawie wyników BLAST oceń, czy homologiczne trafienia dla białek Lokiarchaeum występują częściej wśród bakterii czy eukariontów, i zinterpretuj ten wzorzec w kontekście ewolucji eukariontów.
-* Jak można wyjaśnić mozaikowy charakter homologii białek *Lokiarchaeum* (bakterie vs eukarionty) w świetle procesów ewolucyjnych?
-* Czy najlepszy hit BLAST można traktować jako najbliższego ewolucyjnie krewnego? Uzasadnij odpowiedź.
-* Na podstawie których kolumn wyników BLAST można odróżnić wiarygodne dopasowania od przypadkowych? Czy istnieją uniwersalne progi stosowane w analizie homologii?
+* Na podstawie wyników BLAST oceń, czy homologiczne trafienia dla białek Lokiarchaeum częściej występują wśród bakterii czy eukariontów, i zinterpretuj ten wzorzec w kontekście ewolucji eukariontów.
+* Czy najlepszy hit BLAST można traktować jako najbliższego ewolucyjnie krewnego? Uzasadnij.
+* Na podstawie których kolumn wyników BLAST można odróżnić wiarygodne dopasowania od przypadkowych? Czy istnieją uniwersalne progi w analizie homologii?
+
+Przedyskutuj krótko uzyskane wyniki, odnosząc się do ograniczeń interpretacyjnych BLAST, w tym wpływu biasu bazy danych oraz konserwacji sekwencji i horyzontalnego transferu genów.
        
-  ***
- ***
+***
+***
  ### Zadanie4  
  Program blast umożliwia nie tylko przeszukiwanie baz danych dostarczonych przez NCBI, ale także stworzenie własnej bazy sekwencji. Państwa zadaniem będzie utworzenie i przetestowanie bazy danych dla sekwencji tRNA mitochondrialnych uzyskanych na poprzednich zajęciach.  
   Opis tworzenia bazy daych znajdą państwo pod tym [linkiem](https://www.ncbi.nlm.nih.gov/books/NBK569841/). Proszę pamiętać, że będzie to baza danych nukleotydowych (`-dbtype nucl`). Proszę pominąć argument `-taxid_map`.    
