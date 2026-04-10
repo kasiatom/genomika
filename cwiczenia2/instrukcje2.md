@@ -125,12 +125,9 @@ co dobrze podsumowuje poniższa rycina ![](asgard_archaea.png "Asgard archaea").
 3. Proszę przeszukać wynikowy plik i odpowiedzieć na pytania: 
 
 * Dla ilu białek Lokiarchaeum udało się zidentyfikować homologiczne dopasowania (np. na podstawie wystąpień wzorca [1-5] hits found)?
-* Ile razy najlepszy homolog należy do bakterii, a ile razy do eukariontów?
-* Na podstawie wyników BLAST oceń, czy homologiczne trafienia dla białek Lokiarchaeum częściej występują wśród bakterii czy eukariontów, i zinterpretuj ten wzorzec w kontekście ewolucji eukariontów.
-* Czy najlepszy hit BLAST można traktować jako najbliższego ewolucyjnie krewnego? Uzasadnij.
+* Czy najlepszy hit BLAST można traktować jako najbliższego ewolucyjnie krewnego? Uzasadnij, uwzględniając możliwy wpływ biasu bazy danych, horyzontalnego transferu genów oraz ograniczeń wynikających z konserwacji sekwencji.
 * Na podstawie których kolumn wyników BLAST można odróżnić wiarygodne dopasowania od przypadkowych? Czy istnieją uniwersalne progi w analizie homologii?
-
-Przedyskutuj krótko uzyskane wyniki, odnosząc się do ograniczeń interpretacyjnych BLAST, w tym wpływu biasu bazy danych oraz konserwacji sekwencji i horyzontalnego transferu genów.
+* Ile razy najlepszy homolog należy do bakterii, a ile razy do eukariontów? Zinterpretuj uzyskany wzorzec w kontekście ewolucji eukariontów, uwzględniając możliwe źródła podobieństwa, takie jak konserwacja sekwencji, horyzontalny transfer genów oraz wspólne pochodzenie ewolucyjne. Pamiętaj o ograniczeniach metody BLAST. 
        
 ***
 ***
