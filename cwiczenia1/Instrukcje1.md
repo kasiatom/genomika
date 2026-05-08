@@ -5,9 +5,9 @@ Proszę otworzyć stronę [Ensembl](https://www.ensembl.org/index.html) i rozejr
 Jaki typ danych można tu znaleźć? 
   
 Proszę zauważyć, że dane dotyczące wielu pozostałych gatunków można uzyskać, korzystając z podobnie zorganizowanych "stron siostrzanych":
- [Ensembl Bacteria](http://bacteria.ensembl.org/index.html), [Ensembl Protists](http://protists.ensembl.org/index.html), 
- [Ensembl Fungi](http://fungi.ensembl.org/index.html), [Ensembl Plants](http://plants.ensembl.org/index.html) oraz 
- [Ensembl Metazoa](http://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
+ [Ensembl Bacteria](https://bacteria.ensembl.org/index.html), [Ensembl Protists](https://protists.ensembl.org/index.html), 
+ [Ensembl Fungi](https://fungi.ensembl.org/index.html), [Ensembl Plants](https://plants.ensembl.org/index.html) oraz 
+ [Ensembl Metazoa](https://metazoa.ensembl.org/index.html). Proszę o obejrzenie jednej z nich.    
 
 ***
 ***
@@ -29,7 +29,7 @@ Proszę o wyszukanie następujących informacji o ludzkim genie *BRCA1*:
  powstałoby funkcjonalne białko? Dlaczego?   
   Podpowiedź na obrazku *Kolkman, J., Stemmer, W. Directed evolution of proteins by exon shuffling. Nat Biotechnol 19, 423–428 (2001).*:    
    ![](faza-eksonow.png)
- 7. Jaką funkcję molekularną pełni białko BRCA1? (**GO: Molecular function**)
+ 7. Czy mutacje w tym genie są powiązane z chorobami? (**Phenotypes**)
  8. W jakich miejscach gen *BRCA1* ulega najwyższej ekspresji (według Genotype-Tissue Expression **GTEx**)? W jakiej części mózgu gen ten jest eksprymowany?
 
 W znalezieniu powyższych informacji mogą pomóc załączone ryciny [informacje na poziomie genu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/gene-level.png), [informacje na poziomie transkryptu](https://github.com/genomika-2020/genomika/blob/master/cwiczenia1/transcript-level.png)  
@@ -41,14 +41,16 @@ W znalezieniu powyższych informacji mogą pomóc załączone ryciny [informacje
 Ze strony Ensembl można także wygodnie pozyskać informacje dotyczące większej ilości genów/białek/regionów na raz, z 
 wykorzystaniem narzędzia **BioMart**. W tym ćwiczeniu użyją państwo tego narzędzia, aby sprawdzić, czy w czasie niezależnej 
 ewolucji białek ludzkich i mysich dochodziło do tasowania domen. Inaczej mówiąc, porównają państwo skład domen wchodzących w skład 
-białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś domena jest obecna u jednego gatunku, a nie ma jej u drugiego.    
+białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś domena jest obecna u jednego gatunku, a nie występuje u drugiego. 
+Następnie sprawdzą Państwo, czy tasowanie domen jest częstsze po duplikacji genu, co potwierdzałoby tezę, że duplikacja genu sprzyja nabywaniu nowych funkcji.   
   
  Zadanie to można podzielić na następujące etapy:  
   1. Pozyskanie listy identyfikatorów wszystkich genów kodujących białka u człowieka i odpowiadających im mysich ortologów. 
-  Do listy tej dodatkowo należy dodać informację o rodzaju ortologii.  
+  Należy do niej dodatkowo dodać informację o rodzaju ortologii, która będzie potrzebna do wykrycia duplikacji genów. 
+  Proszę obejrzeć wygenerowany przez ChatGPT schemat, który przedstawia zależność pomiędzy typem ortologii a duplikacjami na przykładzie ewolucji hemoglobin. Jeśli coś jest niejasne, proszę pytać prowadzącego. ![Schemat ortologii i duplikacji](./Evolution%20of%20globin%20genes%20diagram.png)
   2. Pozyskanie listy nazw domen (według klasyfikacji [Pfam](https://pfam.xfam.org/)) dla wszystkich białek człowieka i myszy
-  3. Połączenie i odfiltrowanie powyższych list, tak aby wybrać identyfikatory genów mających odmienny skałd domen oraz nazwy domen 
-  występujących tylko u jednego gatunku. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
+  3. Połączenie i odfiltrowanie powyższych list, tak aby a) znaleźć identyfikatory genów mających odmienny skałd domen pomiędzy porównywanymi gatunkami oraz b) dodatkowo wypisać nazwy domen 
+  występujących tylko u jednego z gatunków. Uwaga, dla potrzeb ćwiczenia przyjmiemy, że jeśli ludzki gen ma domeny A, A i B, 
   a jego mysi odpowiednik A i B, to skład domen się nie zmienił. Interesować nas będą przypadki, 
    A, B, C vs A, B oraz A, B vs A, B, C.   
   4. Wyliczenie prostych statystyk: jak często pojawiły się unikatowe domeny na gałęzi prowadzącej od wspólnego przodka 
@@ -59,7 +61,7 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
 
 ##### AD1. Jak korzystać z narzędzia BioMart, by uzyskać listę ortologów
  * Proszę kliknąć w zakładkę **BioMart** (na górze strony) 
- * Proszę następnie wybrać bazę danych **Ensembl Genes 113** (113 to wersja bazy danych, baza jest uaktualniana dość często -
+ * Proszę następnie wybrać bazę danych **Ensembl Genes 115** (115 to wersja bazy danych, baza jest uaktualniana dość często -
   zazwyczaj dwa razy w roku). Proszę spojrzeć jakie inne bazy danych są udostępnione.    
  * Proszę teraz wybrać zakres danych (**Human Genes GRCh38.p14**). Co oznacza skrót GRCh38.p14? 
  * Po lewej stronie pojawił się teraz pasek z filtrami oraz atrybutami do wyboru.
@@ -77,30 +79,8 @@ białek człowieka i ich mysich ortologów i policzą przypadki, gdy jakaś dome
  *Export result as* => *File* => *TSV* => *Go* (proszę też zaznaczyć opcję *Unique results only*). Pobrany plik proszę zapisać na dysku i 
  nadać mu jakąś sensowną nazwę. Plik proszę następnie przenieść na swoje konto na serwerze wykorzystując [scp](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer) lub
   [WinSCP](https://github.com/genomika-2020/genomika/blob/master/README.md#przenoszenie-plików-na-serwer).    
-  Alternatywnie plik można pobrać bezpośrednio na serwer. W tym celu należy wybrać opcję: **XML** (na górze strony) -
-   wybrane atrybuty i filtry zostaną wtedy przetłumaczone na zapytanie xml.
-    Należy je wyedytować, tak aby całość zapisać w jednej linii, po czym użyć programu *wget* lub *curl* do 
-   pobrania pliku z wynikami.  
-   Tutaj dokładne instrukcje [link](https://www.ensembl.org/info/data/biomart/biomart_restful.html). 
-   W naszym przypadku będzie to:
-   ```xml
-   <?xml version="1.0" encoding="UTF-8"?>
-   <!DOCTYPE Query>
-   <Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" >
-			
-	    <Dataset name = "hsapiens_gene_ensembl" interface = "default" >
-		    <Filter name = "biotype" value = "protein_coding"/>
-		    <Attribute name = "ensembl_gene_id" />
-		    <Attribute name = "mmusculus_homolog_ensembl_gene" />
-		    <Attribute name = "mmusculus_homolog_orthology_type" />
-	    </Dataset>
-   </Query>
-   ```  
-   Komenda do pobrania pliku (wynikowy plik będzie nazywał się *results.txt* - można zmienić):
-    ```bash
-    wget -O result.txt 'http://www.ensembl.org/biomart/martservice?query=<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE Query><Query  virtualSchemaName = "default" formatter = "TSV" header = "0" uniqueRows = "0" count = "" datasetConfigVersion = "0.6" > <Dataset name = "hsapiens_gene_ensembl" interface = "default" ><Filter name = "biotype" value = "protein_coding"/><Attribute name = "ensembl_gene_id" /><Attribute name = "mmusculus_homolog_ensembl_gene" /><Attribute name = "mmusculus_homolog_orthology_type" /></Dataset></Query>'
-   ```
- *  Pobrany plik ma 28090 linii z danymi, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
+  
+ *  Pobrany plik ma około 30 tys. linii z danymi, niektóre z nich nie mają wpisu w kolumnach 2 i 3 (geny bez mysich ortologów).
   Przed dalszą analizą proszę o odfiltrowanie takich linii, proszę też o usunięcie nagłówka i zapisanie do dwóch osobnych plików danych dotyczących 
   ortologów "one to one" i "one to many". Można to zrobić z wykorzystaniem *awk* (lub w dowolny wymyślony przez siebie sposób):  
     ```bash
@@ -127,20 +107,29 @@ Proszę ponownie usunąć linie z pustą drugą kolumną oraz linie nagłówka.
   ##### AD3. Połączenie list i wybranie odpowiednich danych
    Proszę przeanalizować otrzymane i odfiltrowane pliki, tak aby uzyskać listę genów mysich i ludzkich,
    w których występuje domena nieobecna w białku ortologicznym z drugiego gatunku oraz id tej domeny.
-    Mogą państwo zastosować dowolny sposób analizy.
-   Można także wykorzystać poniższe polecenie (działające jednak dość wolno):
+   Mogą państwo zastosować dowolny sposób analizy.
+   Można także wykorzystać poniższe polecenie. **Uwaga** polecenie zadziała tylko jeśli wejściowe pliki mają dokładnie etaki układ danych jak opisano w poprzednich punktach. Jeśli kolejność kolumn jest inna, polecenie należy zmodyfikować:
    ```bash
-     printf "human gene\thuman only domain\tmouse gene\tmouse only domain\n" >> wynik-one2one.txt
-     while read f; do \
-              human=$( echo $f | cut -f1 -d ' ' ); \
-              mouse=$( echo $f | cut -f2 -d ' ' ); \
-              awk -v human=$human '$1 == human {print $2}' human-domains.txt | sort | uniq > human-tmp.txt ; \
-              awk -v mouse=$mouse '$1 == mouse {print $2}' mouse-domains.txt | sort | uniq > mouse-tmp.txt; \
-              human_only=$( grep -v -w -f mouse-tmp.txt human-tmp.txt | tr '\n' ';' | sed 's/;$//' ); \
-              mouse_only=$( grep -v -w -f human-tmp.txt mouse-tmp.txt | tr '\n' ';' | sed 's/;$//' ); \
-              printf "$human\t$human_only\t$mouse\t$mouse_only\n" >> wynik-one2one.txt;\
-              done<one2one-homologs.txt
-      rm human-tmp.txt mouse-tmp.txt
+    printf "human gene\thuman only domain\tmouse gene\tmouse only domain\n" > wynik-one2one.txt
+    awk '
+		ARGIND==1 { human[$1][$2]=1; next }
+		ARGIND==2 { mouse[$1][$2]=1; next }
+
+		{
+			hid=$1
+			mid=$2
+
+			hu=""; mu=""
+
+			for(d in human[hid]) if(!(d in mouse[mid])) hu=hu d ";"
+			for(d in mouse[mid]) if(!(d in human[hid])) mu=mu d ";"
+
+			sub(/;$/,"",hu)
+			sub(/;$/,"",mu)
+
+			print hid"\t"hu"\t"mid"\t"mu
+		}
+	' human-domains.txt mouse-domains.txt one2one-homologs.txt >> wynik-one2one.txt
 ```
   
   W wynikowym pliku *wynik-one2one.txt* w kolumnach 1 i 3 znajdują się identyfikatory genów, odpowiednio ludzkich i mysich, a w
