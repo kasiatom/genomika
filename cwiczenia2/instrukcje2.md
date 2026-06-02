@@ -54,7 +54,7 @@ Proszę zastanowić się i przedyskutować użycie dodatkowych argumentów: *-g*
   kodujących tRNA oraz rRNA.   
   Proszę także obejrzeć wynikowy plik **loki-features.gff** i podać:  
   * Ile genów wyszukał program (można policzyć linie bez znaku `#` lub linie z tekstem `CDS` - program `grep`). 
-  * Dla ilu z nich prawdopodobieństwo, że są to rzeczywiste geny jest wyższe niż 0.95 (*conf*) - 
+  * Dla ilu z nich prawdopodobieństwo, że są to rzeczywiste geny jest wyższe niż 95% (*conf*) - 
   (program `grep` , `awk` - lub inny wymyślony przez siebie sposób).   
   
   Tutaj znajdują się informacje dotyczące
