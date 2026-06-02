@@ -24,8 +24,8 @@ Proszę obejrzeć animację i rozejrzeć się na stronie, tak aby znaleźć odpo
 okazać się przygotowane przez twórców strony tutoriale 
 [*How to interpret the phylogenetic trees*](https://nextstrain.org/help/general/how-to-read-a-tree) 
 oraz [*Exploring interactive phylogenies with Auspice*](https://neherlab.org/201901_krisp_auspice.html).
-1. Czy wszystkie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
-2. Ile kladów wirusa jest wyodrębnionych na stronie, wirusy z ilu kladów występuja obecnie?    
+1. Czy wszystkie pokazane na stronie wirusy SARS-CoV-2 zostały wyizolowane z człowieka? 
+2. Ile kladów wirusa jest wyodrębnionych na stronie, wirusy z ilu kladów występowały przy ostatniej aktualizacji danych (wrzesień 2025)?       
 3. Który z genów wirusa cechuje sie najwiekszą zmiennością? Za co odpowiada kodowane przez niego białko? O czym może świadczyć podwyższony poziom zmienności?  
 4. Czym różnią się dwie zastosowane na stronie nextstrain miary zmienności danej pozycji wirusa ([*ENTROPY*](https://www.hiv.lanl.gov/content/sequence/ENTROPY/entropy_readme.html) vs *EVENTS*)? 
 O czym mogą świadczyć wysokie wartości tych miar obserwowane dla niektórych pozycji w genomie wirusa?
@@ -47,10 +47,10 @@ Dalsza część ćwiczenia będzie dotyczyć wynników jednego z takich badań [
  
 1. Proszę na podstawie powyższego opisu w Wikipedii (albo wiedzy ogólnej) opisać własnymi słowami cel i zasadę badań GWAS  
 2. Proszę przejrzeć powyższy artykuł i odpowedzieć na następujące pytania:
-	* Jak w pracy zdefiniowane były grupy kontrolne i badane (tabela1)? Jakie były liczebnosci tych grup?  
-	* Jak zdefiniowano rzadkie i częste warianty?
+	* Jak w pracy zdefiniowane były grupy kontrolne i badane dla analiz *Risk of infection that required hospitalization* oraz *Risk of hospitalization in individuals infected with the virus* (tabela1)? Jakie były liczebnosci tych grup?  
+	* Jak zdefiniowano rzadkie i częste warianty? Co oznacza skrót *MAF*?
 	* Proszę przyjrzeć się Fig1. Na jakich chromosomach leżą regiony istotnie zasocjowane z podatnością na COVID-19?. Jaki próg istotnosci tutaj przyjęto? Dlaczego? Jakie geny leżą w pobliżu/w zidentyfikowanych regionach? Jak nazywa się typ wykresu przedstawiony na rycinie?
-	* Proszę popatrzeć na Fig2. Czy wariant rs190509934 prowadzi do zmian podatnosci na COVID-19? Czy jego allel C jest związany z wyższym, czy niższym ryzykiem zachorowania? Jak tutaj wyznaczany jest iloraz szans **OR** (ang. odds ratio)? Definicję OR znajdą państwo [tutaj](https://pl.wikipedia.org/wiki/Iloraz_szans).  
+	* Proszę popatrzeć na Fig2. Czy wariant rs190509934 prowadzi do zmian podatności na COVID-19? Czy jego allel C jest związany z wyższym, czy niższym ryzykiem zachorowania? Jak tutaj wyznaczany jest iloraz szans **OR** (ang. odds ratio)? Definicję OR znajdą państwo [tutaj](https://pl.wikipedia.org/wiki/Iloraz_szans).  
 	* Autorów zainteresowała asocjacja w pobliżu genu *ACE2*. Dlaczego? Co to za gen? Jakie wyjaśnienie zwiazku wariantu z fenotypem autorzy zaproponowali i przetestowali?
 2.  Region najsilniej zasocjowany z ryzykiem zachorowania na COVID-19 znajduje się na chromosomie 3 (Fig1). 
 	* Jakie geny leżą w jego obrębie/pobliżu - Fig1, tekst? 
