@@ -36,7 +36,7 @@ Lokalizację pliku konfiguracyjnego można sprawdzić w VSCode wybierając opcje
   Proszę otworzyć plik konfiguracyjny (*"Open a Remote Window"* => *"Connect to Host..."* => *"Configure SSH Hosts..."* => wybrać plik). W systemie Linux będzie to zazwyczaj plik: `~/.ssh/config`, w Windows: `C:\Users\user_lok_komp\.ssh\config`) i dodać informację o kluczu (ostatnia linia):
    ```bash
     Host kontiki
-      HostName 149.156.165.148
+      HostName 149.156.165.150
       User user174
 	  IdentityFile /home/user_lok_komp/.ssh/id_ed25519 ## uzgodnić odpowiednio, podać pełną ścieżkę. 
 	``` 
